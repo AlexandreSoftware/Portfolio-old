@@ -13,12 +13,14 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import GetIcon from './GetIcon';
 import ThemeChanger from './useThemeChanger';
-import { useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import ThemeContext from '../utils/ThemeContext';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const ResponsiveAppBar = () => {
-
+const Navbar = () => {
+    let [context,SetContext] =useContext(ThemeContext)
+    const [icon,SetIcon] = useState(GetIcon(context))
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -36,7 +38,15 @@ const ResponsiveAppBar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-
+  
+  useEffect(()=>{
+        console.log("getting initial icon")
+        SetIcon(GetIcon(context))
+    },[])
+    useEffect(()=>{
+        console.log("getting update icon")
+        SetIcon(GetIcon(context))
+    },[context])
   return (
     <AppBar position="static">
         <Container maxWidth="xl">
@@ -47,7 +57,7 @@ const ResponsiveAppBar = () => {
                 component="div"
                 sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
             >
-                {GetIcon()}
+                {icon}
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -140,4 +150,4 @@ const ResponsiveAppBar = () => {
     </AppBar>
   );
 };
-export default ResponsiveAppBar;
+export default Navbar;
