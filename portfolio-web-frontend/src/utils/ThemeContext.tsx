@@ -15,13 +15,13 @@ interface ThemeContextProps{
 }
 
 export const ThemeContextProvider = (props : ThemeContextProps)=>{
-  const [theme, setTheme] = useState<Theme>(Theme.Base)
-  useEffect(()=>{       
-    let theme =localStorage.getItem("theme")
-    let themeindex = (theme == undefined ? "Base" : theme) as unknown as Theme
-    console.log(themeindex)
-    localStorage.setItem("theme",theme == undefined ? "Base" : theme)
-    setTheme(themeindex)
-  },[])
+  let themeIndex = Theme.Base;
+  if(typeof window !== 'undefined' &&localStorage){
+    let storedTheme =localStorage.getItem("theme")
+    themeIndex = (storedTheme== undefined ? "Base" : storedTheme) as unknown as Theme
+    localStorage.setItem("theme",storedTheme== undefined ? "Base" : storedTheme)
+    
+  }
+  const [theme, setTheme] = useState<Theme>(themeIndex)
   return (<ThemeContext.Provider value={[theme, setTheme]}>{props.children}</ThemeContext.Provider>);
 }

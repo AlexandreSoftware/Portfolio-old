@@ -12,7 +12,6 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import GetIcon from './GetIcon';
-import ThemeChanger from './useThemeChanger';
 import { useContext, useEffect, useState } from 'react';
 import ThemeContext from '../utils/ThemeContext';
 const pages = ['Products', 'Pricing', 'Blog'];
@@ -23,7 +22,6 @@ const Navbar = () => {
     const [icon,SetIcon] = useState(GetIcon(context))
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -61,6 +59,15 @@ const Navbar = () => {
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                <Typography
+                    variant="h6"
+                    noWrap
+                    component="div"
+                    sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+                >
+                    {icon}
+                </Typography>
+
                 <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -102,6 +109,7 @@ const Navbar = () => {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
             >
+                {icon}
                 LOGO
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
