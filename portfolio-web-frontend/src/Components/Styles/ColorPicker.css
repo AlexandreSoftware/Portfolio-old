@@ -1,0 +1,7 @@
+.ColorPicker{
+    border: 2px solid black;
+    border-radius: 20%;
+    padding: 1vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
