@@ -3,10 +3,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    background-color: red;
 }
 .Navbar-Header > *{
     margin-right: auto;
-}
-.Navbar-Icon{
-
 }

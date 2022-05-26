@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from 'react';
 import ThemeContext from '../utils/ThemeContext';
 import AlignedText from './AlignedText';
 import ColorPicker from './ColorPicker';
+import DropDownMenu from './DropDownMenu';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -19,14 +20,17 @@ const Navbar = () => {
         SetIcon(GetIcon(context))
     },[context])
   return (
-    <header className='Navbar-Header'>
-      <div className='Navbar-Icon'>{icon}</div>
-        <AlignedText>Projects</AlignedText>
-        <AlignedText>Blog</AlignedText>
-        <AlignedText>Skills</AlignedText>
-        <AlignedText>About</AlignedText>
-        <ColorPicker/>
-      </header>
+      <>
+        <header className='Navbar-Header'>
+          <div className='Navbar-Icon'>{icon}</div>
+          <AlignedText>Projects</AlignedText>
+          <AlignedText>Blog</AlignedText>
+          <AlignedText>Skills</AlignedText>
+          <AlignedText>About</AlignedText>
+          <ColorPicker/>
+        </header>
+        <DropDownMenu/>
+      </>
   );
 };
 export default Navbar;
