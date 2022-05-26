@@ -15,10 +15,10 @@ interface ThemeContextProps{
 }
 
 export const ThemeContextProvider = (props : ThemeContextProps)=>{
-  let themeIndex = Theme.Base;
+  let themeIndex:Theme = Theme.Base;
   if(typeof window !== 'undefined' &&localStorage){
     let storedTheme =localStorage.getItem("theme")
-    themeIndex = (storedTheme== undefined ? "Base" : storedTheme) as unknown as Theme
+    themeIndex = (storedTheme== undefined ? Theme.Base : Theme[storedTheme as keyof typeof Theme]) 
     localStorage.setItem("theme",storedTheme== undefined ? "Base" : storedTheme)
     
   }

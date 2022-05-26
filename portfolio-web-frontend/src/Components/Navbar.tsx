@@ -34,7 +34,7 @@ const Navbar = () => {
         SetIcon(GetIcon(context))
     },[context])
   return (
-    {icon}
+    <>{icon}</>
   );
 };
 export default Navbar;
