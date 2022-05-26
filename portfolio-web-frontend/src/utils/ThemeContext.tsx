@@ -24,5 +24,10 @@ export const ThemeContextProvider = (props : ThemeContextProps)=>{
     localStorage.setItem("theme",storedTheme== undefined ? "Base" : storedTheme)
   }
   const [theme, setTheme] = useState<Theme>(themeIndex)
+  useEffect(()=>{
+    console.log("i ran")
+    localStorage.setItem("theme",theme== undefined ? "Base" : theme as unknown as keyof Theme)
+  },[theme])
+  console.log("passed")
   return (<ThemeContext.Provider value={[theme, setTheme]}>{props.children}</ThemeContext.Provider>);
 }
