@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 export enum Theme{
     Base,
-    HighTechRed,
     HighTechPurple,
+    HighTechRed,
     KissLand
 }
 const ThemeContext = React.createContext<[Theme,React.Dispatch<React.SetStateAction<Theme>>]>
