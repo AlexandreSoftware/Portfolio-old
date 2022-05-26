@@ -1,7 +1,10 @@
 import * as React from 'react';
+import "./Styles/Navbar.css"
 import GetIcon from './GetIcon';
 import { useContext, useEffect, useState } from 'react';
 import ThemeContext from '../utils/ThemeContext';
+import AlignedText from './AlignedText';
+import ColorPicker from './ColorPicker';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -16,7 +19,14 @@ const Navbar = () => {
         SetIcon(GetIcon(context))
     },[context])
   return (
-    <>{icon}</>
+    <header className='Navbar-Header'>
+      <div className='Navbar-Icon'>{icon}</div>
+        <AlignedText>Projects</AlignedText>
+        <AlignedText>Blog</AlignedText>
+        <AlignedText>Skills</AlignedText>
+        <AlignedText>About</AlignedText>
+        <ColorPicker/>
+      </header>
   );
 };
 export default Navbar;
