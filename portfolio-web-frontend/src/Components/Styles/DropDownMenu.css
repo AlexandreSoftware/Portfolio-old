@@ -1,0 +1,17 @@
+.DropDownMenu{
+    position: absolute;
+    width: 15%;
+    border: 2px solid black;
+    border-radius: 10%;
+    padding: 2%;
+    list-style-type: none;
+    margin-top: 1%;
+    right: 1%;
+
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.DropDownMenu > li {
+    margin: 30%;
+    text-align: center;
+}
