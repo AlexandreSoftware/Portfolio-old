@@ -21,13 +21,12 @@ export const ThemeContextProvider = (props : ThemeContextProps)=>{
   if(typeof window !== 'undefined' &&localStorage){
     let storedTheme =localStorage.getItem("theme")
     themeIndex = (storedTheme== undefined ? Theme.Base : Theme[storedTheme as keyof typeof Theme]) 
-    localStorage.setItem("theme",storedTheme== undefined ? "Base" : storedTheme)
+
   }
   const [theme, setTheme] = useState<Theme>(themeIndex)
   useEffect(()=>{
-    console.log("i ran")
-    localStorage.setItem("theme",theme== undefined ? "Base" : theme as unknown as keyof Theme)
+    let themeString:string = Theme[theme] 
+    localStorage.setItem("theme",theme== undefined ? "Base" : themeString)
   },[theme])
-  console.log("passed")
   return (<ThemeContext.Provider value={[theme, setTheme]}>{props.children}</ThemeContext.Provider>);
 }

@@ -1,5 +1,6 @@
 import { click } from "@testing-library/user-event/dist/click"
 import { useContext, useState } from "react"
+import OldThemeContext from "../utils/OldThemeContext"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
 import "./Styles/ColorSquare.css"
 interface ColorProps{
@@ -7,19 +8,23 @@ interface ColorProps{
     Theme:Theme
 }
 export default function Color(props:ColorProps) {
-    let [context,SetContext] = useContext(ThemeContext)
+    let [themecontext,SetThemeContext] = useContext(ThemeContext)
+    let [oldThemeContext,SetOldThemeContext] = useContext(OldThemeContext)
     let clicked = false;
-    let oldtheme = context;
     return(
         <div className="Color" 
-        onMouseEnter={()=>{SetContext(props.Theme)}}
+        onMouseEnter={()=>{
+            SetOldThemeContext(themecontext)
+            SetThemeContext(props.Theme)
+        }}
         onMouseLeave={()=>{
-            console.log(clicked)
+            console.log(themecontext)
             if(!clicked){
-                SetContext(oldtheme)
+                SetThemeContext(oldThemeContext)
             }
             else{
                 clicked = false
+                SetOldThemeContext(props.Theme)
             }
         }}
         onClick={
