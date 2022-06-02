@@ -20,7 +20,7 @@ const Navbar = () => {
         SetIcon(GetIcon(context))
     },[context])
   return (
-      <>
+      <div className="ExtendedNavbarContainer">
         <header className="Navbar-Header">
           <div className='Navbar-Icon'>{icon}</div>
           <AlignedText>Projects</AlignedText>
@@ -30,7 +30,7 @@ const Navbar = () => {
           <ColorPicker closeStateDispatch={SetCloseDialog} closeState={closeDialog}/>
         </header>
         {closeDialog?<></>:<DropDownMenu/>}
-      </>
+      </div>
   );
 };
 export default Navbar;

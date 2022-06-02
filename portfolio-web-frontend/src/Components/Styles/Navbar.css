@@ -4,6 +4,9 @@
     align-items: center;
     justify-content: space-around;
 }
+.ExtendedNavbarContainer{
+    position: relative;
+}
 .Navbar-Header > *{
     margin-right: auto;
 }
