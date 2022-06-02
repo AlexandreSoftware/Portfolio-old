@@ -11,3 +11,57 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#root{
+  height: 100%;
+  
+  --base-primarycolor : #171A21;
+  --base-primarycolor-alt : #323031;
+  --base-secondarycolor : #DAD2D8;
+  --base-sucess : #CCFFCB; 
+  --base-info : #6B7FD7;
+  --white : #FFFFFF;
+
+  --Purpletech-Primarycolor : #3C1361;
+  --Purpletech-Primarycolor-alt: #3F2E56;
+  --Purpletech-Secondarycolor : #F05E23;
+  --Purpletech-altpurple : #B298DC;
+  --Purpletech-altpink : #FFA9E7;
+  --Purpletech-purplegradient : linear-gradient(219.29deg, #3C1361 18.67%, #FE4900 86%);
+  --Purpletech-PurpleOrangeGradientDiagonal : linear-gradient(145.71deg, #3C1361 28.69%, #F05E23 88.53%);
+  --Purpletech-PurpleOrangeGradientVertical : linear-gradient(180deg, #3C1361 14.17%, #F05E23 94.57%);
+  
+  
+  --HighTechRed-PrimaryColor : #FF0000;
+  --HighTechRed-SecondaryColor : #2F1114;
+  --HighTechRed-SecondaryColor-alt : #240F11;
+  --HighTechRed-SecondaryColor-alt2 : #191316;
+  --HighTechRed-TertiaryColor : #605960;
+  --HighTechRed-TertiaryColor-alt : #424248;
+  --HighTechRed-TertiaryColor-alt2 : #693636;
+  --HighTechRed-black : #150B0E;
+  --HighTechRed-black2 : #231C21;
+  --HighTechRed-gradient : linear-gradient(132.27deg, #000000 0.27%, #FF0000 53.99%, #191316 105.24%);
+  --HighTechRed-gradient2 : linear-gradient(240.56deg, #150B0E 14.95%, #FF0000 53.63%, #150B0E 84.96%);
+  --HighTechRed-gradientWhite : linear-gradient(240.56deg, #150B0E 14.95%, #FFFFFF 53.63%, #150B0E 84.96%);
+
+  --Kissland-primaryColor : #0A0D0A;
+  --Kissland-SecondaryColor: #012323;
+  --Kissland-SecondaryColor-alt : #191316;
+  --KissLand-TertiaryColor : #229867;
+  --KissLand-TertiaryColor-alt : #015555;
+  --KissLand-TertiaryColor-alt2 : #44CD89;
+  --Kissland-Black : #99BA89;
+  --Kissland-green : #7ED8B4;
+  --Kissland-blue : #449BAA;
+  --Kissland-blue-alt2 : #017798;
+  --Kissland-blue-alt3 : #003287;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  
+  height: 100%;
+}
