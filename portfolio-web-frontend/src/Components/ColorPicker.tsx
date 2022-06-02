@@ -1,11 +1,17 @@
 import { faPalette } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Dispatch, SetStateAction } from "react"
 import DropDownMenu from "./DropDownMenu"
 import "./Styles/ColorPicker.css"
-export default function ColorPicker() {
+interface ColorPickerProps{
+    closeStateDispatch : Dispatch<SetStateAction<boolean>>
+    closeState : boolean;
+}
+
+export default function ColorPicker(props:ColorPickerProps) {
     return (
         <>
-            <div className="ColorPicker">
+            <div className="ColorPicker" onClick={()=>{props.closeStateDispatch(!props.closeState)}}>
                 <FontAwesomeIcon icon={faPalette} />
                 
             </div>
