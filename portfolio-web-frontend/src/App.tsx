@@ -1,21 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from './logo.svg';
 import './Styles/App.css';
-import { Theme, ThemeContextProvider } from './utils/ThemeContext';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
-import { OldThemeContextProvider } from './utils/OldThemeContext';
-
+import ThemeContext, { Theme } from './utils/ThemeContext';
 
 function App() {
+  let [context,SetContext] =useContext(ThemeContext)
   return (
-    <ThemeContextProvider>
-      <OldThemeContextProvider>
-        <Navbar/>   
-            
-        <Footer/>
-      </OldThemeContextProvider>
-    </ThemeContextProvider>
+    <div className={`App App-${Theme[context]}`}>
+      <Navbar/>   
+          
+      <Footer/>
+    </div>
   );
 }
 

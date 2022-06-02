@@ -3,13 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './Styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { OldThemeContextProvider } from './utils/OldThemeContext';
+import { ThemeContextProvider } from './utils/ThemeContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeContextProvider>
+      <OldThemeContextProvider>
+        <App />
+      </OldThemeContextProvider>
+    </ThemeContextProvider>
+    
+    
   </React.StrictMode>
 );
 
