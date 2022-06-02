@@ -10,3 +10,10 @@
 .Navbar-Header > *{
     margin-right: auto;
 }
+.unstiledLink{
+    text-decoration: none;
+    color: white;
+}
+.Navbar-Header-KissLand{
+    background-color: #0A0D0A;
+}
