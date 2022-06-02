@@ -1,7 +1,7 @@
 .DropDownMenu{
     position: absolute;
     width: 15vh;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10%;
     padding: 2%;
     list-style-type: none;
@@ -12,6 +12,8 @@
     grid-template-columns: auto auto;
     align-items: center;
     justify-content: center;
+    background-color: rgb(53, 53, 53);
+
 }
 .DropDownMenu > li {
     margin: 10px;
