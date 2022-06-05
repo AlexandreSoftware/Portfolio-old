@@ -9,13 +9,14 @@ import Projects from './Pages/Projects';
 import About from './Pages/About';
 import Skills from './Pages/Skills';
 import Blog from './Pages/Blog';
+import Background from './Components/Background';
 
 function App() {
-  let [context] =useContext(ThemeContext)
   return (
-    <div className={`App App-${Theme[context]}`}>
+    <div className='App'>
       <BrowserRouter>
-        <Navbar/>   
+        <Navbar/>
+        <Background/>   
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/Projects" element={<Projects/>}/>
