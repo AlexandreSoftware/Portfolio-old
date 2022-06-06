@@ -1,12 +1,19 @@
 .SkillCard{
-    border: 2px solid red;
+    border: 2px solid black;
     border-radius: 10%;
 }
-.SkillCard-KissLand{
-    background-color: #0A0D0A;
+
+.SkillCard-HighTechRed{
+    background: #840404;
+    color: white;
 }
+.SkillCard-KissLand{
+    background: #0A0D0A;
+    color: white;
+}
+
 .SkillCardIcon{
-    border: 2px solid red;
+    border: 2px solid black;
     width: 20%;
     height: 15%;
     margin-left:  10%;
@@ -15,15 +22,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: black;
 }
-
+.SkillCardIcon-Base{
+    background: var(--base-info);
+}
+.SkillCardIcon-HighTechPurple{
+    background: var(--Purpletech-Secondarycolor);
+}
+.SkillCardIcon-HighTechRed{
+    background: white;
+}
 .SkillCardIcon-KissLand{
     background-color: white;
 }
 
 .SkillCardIcon > *{
-    width: 30%;
-    height: 30%;
+    width: 40%;
+    height: 40%;
 }
 .SkillCard > p{
     text-align: left;

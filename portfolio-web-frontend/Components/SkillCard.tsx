@@ -16,8 +16,8 @@ export default function SkillCard(props:SkillCardProps) {
     useEffect(()=>{
         setIsSSR(false)
     },[])
-    return (<div className={`${Styles.SkillCard} ${isSSR?"":Styles[`SkillCard-${Theme[context]}`]}`} style={{width:props.sizex+"vw",height:props.sizey+"vh"}}>
-        <div className={Styles.SkillCardIcon}>
+    return (<div className={`${Styles.SkillCard} ${isSSR?"":Styles[`SkillCard-${Theme[context]}`]}`} style={{width:props.sizex+"vh",height:props.sizey+"vh"}}>
+        <div className={Styles.SkillCardIcon + ` ${isSSR?"":Styles[`SkillCardIcon-${Theme[context]}`]}`}>
             <FontAwesomeIcon icon={props.icon} />
         </div>
         <p>
