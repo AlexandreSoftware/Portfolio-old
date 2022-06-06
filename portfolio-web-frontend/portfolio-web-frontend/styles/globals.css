@@ -14,3 +14,200 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#__next {
+  text-align: center;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  background: transparent;
+  color: white;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+#root{
+  height: 100%;
+  
+  --base-primarycolor : #171A21;
+  --base-primarycolor-alt : #323031;
+  --base-secondarycolor : #DAD2D8;
+  --base-sucess : #CCFFCB; 
+  --base-info : #6B7FD7;
+  --white : #FFFFFF;
+
+  --Purpletech-Primarycolor : #3C1361;
+  --Purpletech-Primarycolor-alt: #3F2E56;
+  --Purpletech-Secondarycolor : #F05E23;
+  --Purpletech-altpurple : #B298DC;
+  --Purpletech-altpink : #FFA9E7;
+  --Purpletech-purplegradient : linear-gradient(219.29deg, #3C1361 18.67%, #FE4900 86%);
+  --Purpletech-PurpleOrangeGradientDiagonal : linear-gradient(145.71deg, #3C1361 28.69%, #F05E23 88.53%);
+  --Purpletech-PurpleOrangeGradientVertical : linear-gradient(180deg, #3C1361 14.17%, #F05E23 94.57%);
+  
+  
+  --HighTechRed-PrimaryColor : #FF0000;
+  --HighTechRed-SecondaryColor : #2F1114;
+  --HighTechRed-SecondaryColor-alt : #240F11;
+  --HighTechRed-SecondaryColor-alt2 : #191316;
+  --HighTechRed-TertiaryColor : #605960;
+  --HighTechRed-TertiaryColor-alt : #424248;
+  --HighTechRed-TertiaryColor-alt2 : #693636;
+  --HighTechRed-black : #150B0E;
+  --HighTechRed-black2 : #231C21;
+  --HighTechRed-gradient : linear-gradient(132.27deg, #000000 0.27%, #FF0000 53.99%, #191316 105.24%);
+  --HighTechRed-gradient2 : linear-gradient(240.56deg, #150B0E 14.95%, #FF0000 53.63%, #150B0E 84.96%);
+  --HighTechRed-gradientWhite : linear-gradient(240.56deg, #150B0E 14.95%, #FFFFFF 53.63%, #150B0E 84.96%);
+
+  --Kissland-primaryColor : #0A0D0A;
+  --Kissland-SecondaryColor: #012323;
+  --Kissland-SecondaryColor-alt : #191316;
+  --KissLand-TertiaryColor : #229867;
+  --KissLand-TertiaryColor-alt : #015555;
+  --KissLand-TertiaryColor-alt2 : #44CD89;
+  --Kissland-Black : #99BA89;
+  --Kissland-green : #7ED8B4;
+  --Kissland-blue : #449BAA;
+  --Kissland-blue-alt2 : #017798;
+  --Kissland-blue-alt3 : #003287;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  
+  height: 100%;
+}
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+
+

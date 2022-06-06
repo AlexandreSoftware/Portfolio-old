@@ -4,8 +4,7 @@ import HightechredLogo from "../Icons/XandrfDevLogoHighTechRed.svg"
 import KissLandLogo from "../Icons/XandrfDevLogoKissLand.svg"
 import { Theme } from "../utils/ThemeContext"
 export default function GetIcon(context:Theme) {
-    console.log("contexto")
-    return <img src={context== Theme.Base ? BaseLogo: context === Theme.HighTechPurple ?purplelogo :context===Theme.HighTechRed ? HightechredLogo:KissLandLogo
+    return <img src={context== Theme.Base ? BaseLogo.src: context === Theme.HighTechPurple ?purplelogo.src :context===Theme.HighTechRed ? HightechredLogo.src:KissLandLogo.src
             } width={70} 
     height={70} alt="logo" />
 }

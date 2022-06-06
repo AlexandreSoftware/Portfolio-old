@@ -1,4 +1,4 @@
-import "./Styles/AlignedText.css"
+import Style from "./Styles/AlignedText.module.css"
 export default function AlignedText(props:any) {
     return(
         <text className="aligned-text">
