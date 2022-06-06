@@ -23,10 +23,10 @@ useEffect(()=>{
       <div className={Styles.ExtendedNavbarContainer}>
         <header className={`${Styles["Navbar-Header"]} ${isSSR?"":Styles[`Navbar-Header-${Theme[context]}`]}`}>
           {!isSSR && <Link href={"/"} className='Navbar-Icon'>{icon}</Link>}
-          <Link className="unstiledLink" href={"Projects"}><AlignedText>Projects</AlignedText></Link>
-          <Link className="unstiledLink" href={"Blog"}><AlignedText>Blog</AlignedText></Link>
-          <Link className="unstiledLink" href={"Skills"}><AlignedText>Skills</AlignedText></Link>
-          <Link className="unstiledLink" href={"About"}><AlignedText>About</AlignedText></Link>
+          <Link className="unstiledLink" href={"Projects"}><a><AlignedText>Projects</AlignedText></a></Link>
+          <Link className="unstiledLink" href={"Blog"}><a><AlignedText>Blog</AlignedText></a></Link>
+          <Link className="unstiledLink" href={"Skills"}><a><AlignedText>Skills</AlignedText></a></Link>
+          <Link className="unstiledLink" href={"About"}><a><AlignedText>About</AlignedText></a></Link>
           <ColorPicker closeStateDispatch={SetCloseDialog} closeState={closeDialog}/>
         </header>
         {closeDialog?<></>:<DropDownMenu/>}
