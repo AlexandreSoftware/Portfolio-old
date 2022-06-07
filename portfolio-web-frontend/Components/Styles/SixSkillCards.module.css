@@ -1,0 +1,25 @@
+.SixSkillCards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.SixSkillCards > *{
+    margin: 3%;
+}
+
+.SixSkillCards-Base{
+    background-color: var(--base-info);
+}
+
+.SixSkillCards-HighTechPurple{
+    background-color: var(--Purpletech-Secondarycolor);
+}
+
+.SixSkillCards-HighTechRed{
+    background-color: var(--KissLand-TertiaryColor-alt);
+}
+
+.SixSkillCards-KissLand{
+    background-color: var(--KissLand-TertiaryColor-alt);
+}

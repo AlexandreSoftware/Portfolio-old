@@ -5,8 +5,9 @@ import ThemeContext, { Theme } from "../utils/ThemeContext";
 import Styles from "./Styles/Skillcard.module.css"
 interface SkillCardProps{
     icon :IconDefinition,
-    children: JSX.Element,
+    children: any,
     sizex : number,
+    Title : String,
     sizey : number
 }
 
@@ -20,6 +21,7 @@ export default function SkillCard(props:SkillCardProps) {
         <div className={Styles.SkillCardIcon + ` ${isSSR?"":Styles[`SkillCardIcon-${Theme[context]}`]}`}>
             <FontAwesomeIcon icon={props.icon} />
         </div>
+        <h2>{props.Title}</h2>
         <p>
             {props.children}
         </p>

@@ -1,5 +1,8 @@
+import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons"
 import { useContext, useEffect, useState } from "react"
 import GetIcon from "../Components/GetIcon"
+import SixSkillCards from "../Components/SixSkillCards"
+import SkillCard from "../Components/SkillCard"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
 import Style from "./Styles/Home.module.css"
 export default function Home() {
@@ -24,6 +27,10 @@ export default function Home() {
                 Im currently working as a freelancer developer
                 and i’m open to formal work
             </p>}
+            <div className={Style.SixSkillCardsContainer}>
+                <SixSkillCards/>
+            </div>
+
         </div>      
     </div>
 }
