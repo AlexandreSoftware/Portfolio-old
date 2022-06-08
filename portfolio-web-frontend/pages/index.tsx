@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react"
 import GetIcon from "../Components/GetIcon"
 import ProjectCard from "../Components/ProjectCard"
 import ProjectCards from "../Components/ProjectCards"
+import ProjectPricingCards from "../Components/ProjectPricingCards"
 import SixSkillCards from "../Components/SixSkillCards"
 import SkillCard from "../Components/SkillCard"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
@@ -36,8 +37,8 @@ export default function Home() {
                 <h2>Projects</h2>
                 <ProjectCards/>
             </div>
-            <div>
-                
+            <div className={Style.ProjectpricingCards}>
+                <ProjectPricingCards/>
             </div>
         </div>      
     </div>

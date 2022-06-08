@@ -1,11 +1,11 @@
 .ProjectPricingCardContainer{
-    aspect-ratio: 2/3;
-    max-height: 60vh ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .ProjectPricingCard{
     border: 1px solid black;
     aspect-ratio: 2/3;
-    max-height: 60vh ;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;   
@@ -13,8 +13,6 @@
 }
 .ProjectPricingCard-KissLand{
     background-color: var(--Kissland-primaryColor);
-}
-.ProjectPricingCard ol{
 }
 .ProjectPricingCard ol li{
     list-style: "*";
@@ -28,7 +26,7 @@
     text-align: center;
 }
 .ProjectButton{
-    height: 10%;
+    height: 6vh;
     border-radius: 15%;
     margin-top: auto;
     margin-bottom: 20%;

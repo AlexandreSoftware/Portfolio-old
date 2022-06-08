@@ -1,0 +1,23 @@
+.ProjectPricingCards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.ProjectPricingCards > *{
+    margin: 2px;
+    height: 50%;
+}
+.ProjectPricingCards > :nth-child(2){
+    height: 100%;
+}
+@media (max-aspect-ratio: 16/9){
+    .ProjectPricingCards{
+        flex-direction: column;
+    }
+    .ProjectPricingCards > *{
+        height: 100%;
+    }
+    
+}

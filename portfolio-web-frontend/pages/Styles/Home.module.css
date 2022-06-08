@@ -20,3 +20,9 @@
 .Home-logo .ProjectsContainer{
     padding-bottom: 5%;
 }
+.Home-logo > .ProjectpricingCards{
+    display: flex;
+    
+    overflow: hidden;
+    justify-content: center;    
+}
