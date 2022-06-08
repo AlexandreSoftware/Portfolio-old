@@ -41,9 +41,11 @@ export default function Home() {
                 <ProjectPricingCards/>
             </div>
             <div className={Style.ButtonContainer}>
-                <button className={Style[`Button-${Theme[context]}`]}>
-                    Contact Me
-                </button>    
+                <a href="mailto:xandrf@xandrfdev.com">
+                    <button className={Style[`Button-${Theme[context]}`]}>
+                        Contact Me
+                    </button>    
+                </a>
             </div>
         </div>      
     </div>
