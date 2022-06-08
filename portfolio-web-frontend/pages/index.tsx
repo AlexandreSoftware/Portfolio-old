@@ -30,7 +30,10 @@ export default function Home() {
             <div className={Style.SixSkillCardsContainer}>
                 <SixSkillCards/>
             </div>
-
+            <h2>Projects</h2>
+            <div> 
+                
+            </div>
         </div>      
     </div>
 }

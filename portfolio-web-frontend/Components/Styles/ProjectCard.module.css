@@ -1,0 +1,41 @@
+.ProjectCard{
+    
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 10% 90%;
+    align-items: center;
+    grid-template-areas:
+      "header image"
+      "paragraph image";
+     
+
+}
+.ProjectCard > h3 {
+    grid-area: header;
+    text-align: left;
+    vertical-align: top;
+    padding-left: 5%;   
+}
+.ProjectCard > p {
+    grid-area: paragraph;
+    text-align: left;
+    align-self: flex-start;
+    padding-left: 5%;
+}
+.ProjectCard .image{
+    grid-area: image;
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+
+}
+.ProjectCard .image span{
+    grid-area: image;
+    width: 100% !important;
+    height: 100% !important;
+}
+.ProjectCard .image img{
+    vertical-align: top;
+    margin-top: 0;
+}

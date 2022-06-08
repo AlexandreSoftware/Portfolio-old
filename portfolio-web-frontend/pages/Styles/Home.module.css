@@ -18,6 +18,9 @@
     background-color: #0A0D0A;
 }
 .Home-logo .SixSkillCardsContainer{
-    display: flex;
+    padding-bottom: 20%;
     
+}
+.Home-logo h2{
+    padding-bottom: 20%;
 }
