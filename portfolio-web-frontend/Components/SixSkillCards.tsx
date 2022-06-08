@@ -11,7 +11,7 @@ export default function SixSkillCards() {
     },[])
     return (
         <div className={Styles.SixSkillCards + ` ${isSSR?"":Styles[`SixSkillCards-${Theme[context]}`]}`}>
-            <SkillCard  Title={"test"}icon={faCartArrowDown} sizex={45} sizey={60}>
+            <SkillCard  Title={"test"}icon={faCartArrowDown} >
                 Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. 
                 Porta senectus rhoncus
@@ -20,7 +20,7 @@ export default function SixSkillCards() {
                 auctor proin nibh volutpat, enim nullam
                 . Enim quisque lectus fusce placerat.
             </SkillCard>
-            <SkillCard  Title={"test"}icon={faCartArrowDown} sizex={45} sizey={60}>
+            <SkillCard  Title={"test"}icon={faCartArrowDown} >
                 Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. 
                 Porta senectus rhoncus
@@ -29,7 +29,7 @@ export default function SixSkillCards() {
                 auctor proin nibh volutpat, enim nullam
                 . Enim quisque lectus fusce placerat.
             </SkillCard>
-            <SkillCard  Title={"test"}icon={faCartArrowDown} sizex={45} sizey={60}>
+            <SkillCard  Title={"test"}icon={faCartArrowDown} >
                 Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. 
                 Porta senectus rhoncus
@@ -38,7 +38,7 @@ export default function SixSkillCards() {
                 auctor proin nibh volutpat, enim nullam
                 . Enim quisque lectus fusce placerat.
             </SkillCard>
-            <SkillCard  Title={"test"}icon={faCartArrowDown} sizex={45} sizey={60}>
+            <SkillCard  Title={"test"}icon={faCartArrowDown} >
                 Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. 
                 Porta senectus rhoncus
@@ -47,7 +47,7 @@ export default function SixSkillCards() {
                 auctor proin nibh volutpat, enim nullam
                 . Enim quisque lectus fusce placerat.
             </SkillCard>
-            <SkillCard  Title={"test"}icon={faCartArrowDown} sizex={45} sizey={60}>
+            <SkillCard  Title={"test"}icon={faCartArrowDown} >
                 Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. 
                 Porta senectus rhoncus
@@ -56,7 +56,7 @@ export default function SixSkillCards() {
                 auctor proin nibh volutpat, enim nullam
                 . Enim quisque lectus fusce placerat.
             </SkillCard>
-            <SkillCard  Title={"test"}icon={faCartArrowDown} sizex={45} sizey={60}>
+            <SkillCard  Title={"test"}icon={faCartArrowDown} >
                 Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. 
                 Porta senectus rhoncus

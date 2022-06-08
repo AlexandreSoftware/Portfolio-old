@@ -6,9 +6,7 @@ import Styles from "./Styles/Skillcard.module.css"
 interface SkillCardProps{
     icon :IconDefinition,
     children: any,
-    sizex : number,
     Title : String,
-    sizey : number
 }
 
 export default function SkillCard(props:SkillCardProps) {
