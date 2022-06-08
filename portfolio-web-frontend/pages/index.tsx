@@ -1,6 +1,8 @@
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons"
 import { useContext, useEffect, useState } from "react"
 import GetIcon from "../Components/GetIcon"
+import ProjectCard from "../Components/ProjectCard"
+import ProjectCards from "../Components/ProjectCards"
 import SixSkillCards from "../Components/SixSkillCards"
 import SkillCard from "../Components/SkillCard"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
@@ -32,7 +34,7 @@ export default function Home() {
             </div>
             <h2>Projects</h2>
             <div> 
-                
+                <ProjectCards/>
             </div>
         </div>      
     </div>

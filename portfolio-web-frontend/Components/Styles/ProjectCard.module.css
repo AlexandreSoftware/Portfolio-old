@@ -1,6 +1,4 @@
 .ProjectCard{
-    
-    height: 40vh;
     display: grid;
     grid-template-columns: 55% 45%;
     grid-template-rows: 10% 90%;
@@ -8,8 +6,38 @@
     grid-template-areas:
       "header image"
       "paragraph image";
-     
-
+}
+@media (max-aspect-ratio: 16/9)  {
+    .ProjectCard{
+        grid-template-columns: auto;
+        grid-template-rows: 4fr min-content 1fr;
+        grid-template-areas: "image"
+                             "header"
+                             "paragraph";
+        margin-bottom: 20%;
+    }   
+    .ProjectCard > h3 {
+        text-align: left;
+        vertical-align: top;
+        padding-left: 5%;   
+        margin-top: 0;
+        margin-bottom: 0;
+        
+    }    
+    .ProjectCard > p {
+        grid-area: paragraph;
+        text-align: left;
+        align-self: flex-start;
+        padding-left: 5%;
+    }
+    .ProjectCard .image {
+        grid-area: image;
+        padding: 0 !important;
+    }
+    .ProjectCard .ProjectCard_image {
+        grid-area: image;
+        padding: 0;
+    }
 }
 .ProjectCard > h3 {
     grid-area: header;
@@ -28,7 +56,6 @@
     height: 100%;
     width: 100%;
     padding: 5%;
-
 }
 .ProjectCard .image span{
     grid-area: image;
