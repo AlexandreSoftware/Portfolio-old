@@ -1,4 +1,3 @@
-import { click } from "@testing-library/user-event/dist/click"
 import { useContext, useState } from "react"
 import OldThemeContext from "../utils/OldThemeContext"
 import ThemeContext, { Theme } from "../utils/ThemeContext"

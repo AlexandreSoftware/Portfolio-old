@@ -1,6 +1,6 @@
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons"
 import { useContext, useEffect, useState } from "react";
-import ThemeContext, { Theme } from "../utils/ThemeContext";
+import ThemeContext, { Theme } from "../../utils/ThemeContext";
 import SkillCard from "./SkillCard"
 import Styles from "./Styles/SixSkillCards.module.css"
 export default function SixSkillCards() {

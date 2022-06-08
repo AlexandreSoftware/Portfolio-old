@@ -1,7 +1,7 @@
 import { ReactElement, useContext, useEffect, useState } from "react"
 import Style from "./Styles/ProjectPricingCard.module.css"
 import Listelement from "./ListElement"
-import ThemeContext, { Theme } from "../utils/ThemeContext"
+import ThemeContext, { Theme } from "../../utils/ThemeContext"
 interface ProjectPricingCardProps{
     title: string,
     pricing : number,
