@@ -12,7 +12,7 @@ const Navbar = () => {
     const [icon,SetIcon] = useState(GetIcon(Theme.Base))
     const [closeDialog,SetCloseDialog] = useState(true)
     const [isSSR, setIsSSR] = useState(true);
-useEffect(()=>{
+    useEffect(()=>{
         SetIcon(GetIcon(context))
         setIsSSR(false)
     },[])

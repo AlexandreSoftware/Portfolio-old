@@ -1,0 +1,43 @@
+.ProjectPricingCardContainer{
+    aspect-ratio: 2/3;
+    max-height: 60vh ;
+}
+.ProjectPricingCard{
+    border: 1px solid black;
+    aspect-ratio: 2/3;
+    max-height: 60vh ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;   
+    align-items: center; 
+}
+.ProjectPricingCard-KissLand{
+    background-color: var(--Kissland-primaryColor);
+}
+.ProjectPricingCard ol{
+}
+.ProjectPricingCard ol li{
+    list-style: "*";
+    padding-left: 2%;
+    text-align: left;
+}
+.asterisk{
+    padding-left: 18%;
+    padding-right: 18%;
+    font-size: 0.6em;
+    text-align: center;
+}
+.ProjectButton{
+    height: 10%;
+    border-radius: 15%;
+    margin-top: auto;
+    margin-bottom: 20%;
+    justify-self: center;
+}
+.ProjectButton-KissLand{
+    background-color: var(--Kissland-blue-alt2);
+    color: white;
+}
+.ProjectButton-KissLand:hover{
+    background-color: var(--Kissland-blue);
+}
