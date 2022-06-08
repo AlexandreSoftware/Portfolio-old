@@ -40,6 +40,11 @@ export default function Home() {
             <div className={Style.ProjectpricingCards}>
                 <ProjectPricingCards/>
             </div>
+            <div className={Style.ButtonContainer}>
+                <button className={Style[`Button-${Theme[context]}`]}>
+                    Contact Me
+                </button>    
+            </div>
         </div>      
     </div>
 }
