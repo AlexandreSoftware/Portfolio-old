@@ -1,0 +1,13 @@
+.ButtonContainer{
+    margin-bottom: 10%;
+}
+.ButtonContainer button{
+    border-radius: 12%;
+}
+.Button-KissLand{
+    background-color: var(--Kissland-blue-alt2);
+    color: white;
+}
+.Button-KissLand:hover{
+    background-color: var(--Kissland-blue);
+}

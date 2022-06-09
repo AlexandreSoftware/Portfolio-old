@@ -4,6 +4,7 @@ import GetIcon from "../Components/GetIcon"
 import ProjectCards from "../Components/Home/ProjectCards"
 import ProjectPricingCards from "../Components/Home/ProjectPricingCards"
 import SixSkillCards from "../Components/Home/SixSkillCards"
+import StyledButton from "../Components/StyledButton"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
 import Style from "./Styles/Home.module.css"
 export default function Home() {
@@ -38,13 +39,9 @@ export default function Home() {
             <div className={Style.ProjectpricingCards}>
                 <ProjectPricingCards/>
             </div>
-            <div className={Style.ButtonContainer}>
-                <a href="mailto:xandrf@xandrfdev.com">
-                    <button className={Style[`Button-${Theme[context]}`]}>
-                        Contact Me
-                    </button>    
-                </a>
-            </div>
+            <StyledButton link="xandrf@xandrfdev.com" whereTo="external" width={18} height={8}>
+                Contact Me
+            </StyledButton>
         </div>      
     </div>
 }

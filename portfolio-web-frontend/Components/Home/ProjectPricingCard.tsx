@@ -2,6 +2,7 @@ import { ReactElement, useContext, useEffect, useState } from "react"
 import Style from "./Styles/ProjectPricingCard.module.css"
 import Listelement from "./ListElement"
 import ThemeContext, { Theme } from "../../utils/ThemeContext"
+import StyledButton from "../StyledButton"
 interface ProjectPricingCardProps{
     title: string,
     pricing : number,
@@ -21,7 +22,11 @@ export default function ProjectPricingCard(props: ProjectPricingCardProps) {
                 <div>Pricing Starting at </div>
                 <div>${props.pricing}</div>
                 <ol>{props.children}</ol>
-                <button className={`${Style.ProjectButton} ${isSSR?"":Style[`ProjectButton-${Theme[context]}`]}`}>Contact Me</button>
+                <div className={Style.ProjectButton}>
+                    <StyledButton link="/Home" whereTo="internal" width={15} height={6}>
+                        Contact Me
+                    </StyledButton>
+                </div>
             </div>
             <div className={Style.asterisk}>*{props.asterisk}</div>
         </div>

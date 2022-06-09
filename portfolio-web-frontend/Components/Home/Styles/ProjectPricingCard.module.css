@@ -25,17 +25,3 @@
     font-size: 0.6em;
     text-align: center;
 }
-.ProjectButton{
-    height: 6vh;
-    border-radius: 15%;
-    margin-top: auto;
-    margin-bottom: 20%;
-    justify-self: center;
-}
-.ProjectButton-KissLand{
-    background-color: var(--Kissland-blue-alt2);
-    color: white;
-}
-.ProjectButton-KissLand:hover{
-    background-color: var(--Kissland-blue);
-}
