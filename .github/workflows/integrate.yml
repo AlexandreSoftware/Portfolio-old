@@ -4,8 +4,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-    paths:
-    - "portfolio-web-frontend/**"
+    paths: "portfolio-web-frontend/**"
 
 
 
