@@ -39,7 +39,6 @@ jobs:
         working-directory: "./portfolio-web-frontend"
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
-        working-directory: "./portfolio-web-frontend"
         with:
           branch: gh-pages
           folder: out
