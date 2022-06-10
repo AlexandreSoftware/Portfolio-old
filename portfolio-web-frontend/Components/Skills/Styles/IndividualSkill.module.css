@@ -1,0 +1,21 @@
+.IndividualSkill{
+    list-style: none;
+    position: relative;
+}
+.SkillCard{
+    margin: 1%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+}
+.SkillCard > *{
+    
+    margin-right: 1vw;
+}
+.text{
+    position: absolute; 
+    right: 100%;
+    
+    
+}

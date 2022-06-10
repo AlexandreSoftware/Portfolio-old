@@ -1,0 +1,17 @@
+.Card{
+    aspect-ratio:  5 / 3;
+    height: 90%;
+    vertical-align: middle;
+    background-color: white;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);    
+}
+.CardContainer{
+    aspect-ratio:  5 / 3;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+
+}
