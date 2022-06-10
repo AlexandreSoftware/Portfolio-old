@@ -4,13 +4,13 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+    
 
 
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
 
     strategy:
       matrix:
@@ -27,14 +27,19 @@ jobs:
      
       - name: Install packages
         run: npm ci
+        working-directory: "./portfolio-web-frontend"
       - name: Build project
         run: npm run build
+        working-directory: "./portfolio-web-frontend"
       - name: Export static files
         run: npm run export
+        working-directory: "./portfolio-web-frontend"
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
+        working-directory: "./portfolio-web-frontend"
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
+        working-directory: "./portfolio-web-frontend"
         with:
           branch: gh-pages
           folder: out
