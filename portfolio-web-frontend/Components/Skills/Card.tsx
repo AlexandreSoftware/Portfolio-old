@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from "react";
-import ThemeContext from "../../utils/ThemeContext";
+import ThemeContext, { Theme } from "../../utils/ThemeContext";
 import Style from "./Styles/Card.module.css"
 
 export default function Card() {
@@ -9,7 +9,7 @@ export default function Card() {
         setIsSSR(false)
     },[])
     return (
-        <div className={Style.CardContainer}>
+        <div className={`${Style.CardContainer} ${Style[`CardContainer-${Theme[context]}`]}`}>
             <div className={Style.Card}></div>
         </div>
     )

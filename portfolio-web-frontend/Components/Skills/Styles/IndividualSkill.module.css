@@ -9,9 +9,17 @@
     align-items: center;
     
 }
+
+
 .SkillCard > *{
     
     margin-right: 1vw;
+}
+.SkillCard > div:last-of-type {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);    
+}
+.SkillCard > div:last-of-type > * {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);    
 }
 .text{
     position: absolute; 

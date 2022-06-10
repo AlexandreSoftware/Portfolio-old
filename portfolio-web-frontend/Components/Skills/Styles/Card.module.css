@@ -1,9 +1,9 @@
 .Card{
     aspect-ratio:  5 / 3;
     height: 90%;
+    width: 90%;
     vertical-align: middle;
     background-color: white;
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);    
 }
 .CardContainer{
     aspect-ratio:  5 / 3;
@@ -11,7 +11,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    background-color: black;
+}
+.CardContainer-HighTechPurple > * {
+    background-color : var(--Purpletech-altpurple)
+}
 
+.CardContainer-KissLand{
+    background-color: #01FF67;
+}
+.CardContainer-HighTechRed {
+    background-color: #ff0000;
+    
 }
