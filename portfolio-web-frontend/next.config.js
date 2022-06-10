@@ -13,8 +13,8 @@ module.exports = withPlugins([
     },
   }],
   {
-    basePath : '/',
-    assetPrefix : '/',
+    basePath : '',
+    assetPrefix : './',
     reactStrictMode: true
   },
 ]);
