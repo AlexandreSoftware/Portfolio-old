@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Style from "./Styles/ProjectCard.module.css"
 interface ProjectCardProps{
     image : string,
@@ -11,7 +10,7 @@ export default function ProjectCard(props:ProjectCardProps) {
             <h3>{props.title}</h3>
             <p>{props.children}</p>
             <div  className={Style.image}>
-                <Image src={props.image} width={100} height={100}></Image>
+                <img src={props.image} width={100} height={100}/>
             </div>
         </div>
     )

@@ -1,4 +1,3 @@
-import Image from "next/image"
 import StyledButton from "../StyledButton"
 import Style from "./Styles/ProjectSummaryCard.module.css"
 interface ProjectSummaryCardProps{
@@ -10,7 +9,7 @@ export default function ProjectSummaryCard(props:ProjectSummaryCardProps) {
     return (
         <div className={Style.ProjectSummaryCard}>
             <div className={Style.ImageContainer}>
-                <Image src={props.imageLink} width={100} height={100}/>
+                <img src={props.imageLink} width={100} height={100}/>
             </div>
             <h2>
                 {props.Title}
