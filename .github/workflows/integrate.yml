@@ -14,7 +14,10 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x]
-
+  on:
+  push:
+    paths:
+    - 'C:\Users\xandrf\Desktop\Portfolio\portfolio-web-frontend/**'
 
     steps:
       
@@ -24,8 +27,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Setup dir
-        run: cd ./portfolio-web-frontend
+     
       - name: Install packages
         run: npm ci
       - name: Build project
