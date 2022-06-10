@@ -8,5 +8,7 @@ const nextConfig = {
 
 module.exports ={
   ...nextConfig,
+  basePath: '/',
+  assetPrefix: '/',
   assetPrefix: isProd ? 'https://cdn.statically.io/gh/xandrf/xandrf.github.io/gh-pages/' : ''
 }
