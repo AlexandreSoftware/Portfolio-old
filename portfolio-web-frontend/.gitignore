@@ -33,3 +33,10 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+.next
+.next/*
+_next/*
+_next
+
+out
+out/*
