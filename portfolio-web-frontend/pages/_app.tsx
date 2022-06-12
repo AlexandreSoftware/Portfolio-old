@@ -6,11 +6,15 @@ import { OldThemeContextProvider } from '../utils/OldThemeContext'
 import Background from '../Components/Background'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
   <ThemeContextProvider>
     <OldThemeContextProvider>
+        <Head>
+          <title>Xandrf Portfolio</title>
+        </Head>
         <Navbar/>
         <Background/>   
           <Component {...pageProps} />

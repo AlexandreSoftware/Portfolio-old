@@ -16,16 +16,16 @@ color: white;
 color: white;
 }
 .Background-HighTechRed{
-    background: url("../../Backgrounds/HighTechRed-BaseBackGround.svg") #840404;
+    background: url("/Backgrounds/HighTechRed-BaseBackGround.svg") #840404;
     background-repeat: repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: right top;
     color: white;
 }
 .Background-KissLand{
-    background: url("../../Backgrounds/KissLand-Base.svg") #0A0D0A;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background: url("/Backgrounds/KissLand-Base.svg") #0A0D0A;
+    background-repeat: repeat;
+    background-size: cover;
     background-position: left top;
     color: white;
 }

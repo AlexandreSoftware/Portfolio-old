@@ -1,20 +1,8 @@
 /** @type {import('next').NextConfig} */
-const withPlugins = require('next-compose-plugins');
-const optimizedImages = require('next-optimized-images');
-module.exports = withPlugins([
-  [optimizedImages, {
-    mozjpeg: {
-      quality: 80,
-    },
-    pngquant: {
-      speed: 3,
-      strip: true,
-      verbose: true,
-    },
-  }],
-  {
-    basePath : '',
-    assetPrefix : './',
-    reactStrictMode: true
-  },
-]);
+const withOptimizedImages = require('next-optimized-images');
+const isProd = process.env.NODE_ENV === 'production'
+const withImages = require('next-images')
+module.exports = withImages({
+  assetPrefix: isProd ? './' : '',
+  reactStricktMode : true
+});
