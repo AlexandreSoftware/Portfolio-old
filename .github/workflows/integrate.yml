@@ -38,7 +38,7 @@ jobs:
         run: touch ./out/.nojekyll
         working-directory: "./portfolio-web-frontend"
       - name: adds CNAME file 
-        run : touch "xandrfdev.com" CNAME
+        run : touch "xandrfdev.com" ./out/CNAME
         working-directory: "./portfolio-web-frontend"
 
       - name: Pushes to another repository
