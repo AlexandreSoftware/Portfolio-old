@@ -38,8 +38,10 @@ jobs:
         run: touch ./out/.nojekyll
         working-directory: "./portfolio-web-frontend"
       - name: adds CNAME file 
-        run : touch "xandrfdev.com" ./out/CNAME
-        working-directory: "./portfolio-web-frontend"
+        uses: "finnp/create-file-action@master"
+        env:
+          FILE_NAME: "./portfolio-web-frontend/out/CNAME"
+          FILE_DATA: "xandrfdev.com"
 
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
