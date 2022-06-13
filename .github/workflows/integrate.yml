@@ -37,6 +37,10 @@ jobs:
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
         working-directory: "./portfolio-web-frontend"
+      - name: adds CNAME file 
+        run : touch "xandrfdev.com" CNAME
+        working-directory: "./portfolio-web-frontend"
+
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
