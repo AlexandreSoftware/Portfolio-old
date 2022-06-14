@@ -8,22 +8,28 @@ import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
+import Loading from '../Components/Loading'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [isLoading,setIsLoading] = useState(true)
   const [isSSR, setIsSSR] = useState(true);
   useEffect(()=>{
-    setIsSSR(false)
+      setIsSSR(false)
   },[])
   return (
   <ThemeContextProvider>
     <OldThemeContextProvider>
-      <Head>
-        <title>Xandrf Portfolio</title>
-      </Head>
-      <Navbar/>
-        {!isSSR &&<Background/>}
-        <Component {...pageProps} />
-      <Footer/>
+        <Head>
+          <title>Xandrf Portfolio</title>
+        </Head>
+      {!isSSR?
+        <>
+        <Navbar/>
+          {!isSSR &&<Background/>}
+          <Component {...pageProps} />
+        <Footer/>
+        </>:<Loading/>
+      }
     </OldThemeContextProvider>
   </ThemeContextProvider>
   )
