@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "noImplicitAny": false,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "Node"
+    },
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Recommended"
+  }
