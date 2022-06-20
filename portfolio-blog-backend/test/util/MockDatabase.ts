@@ -2,6 +2,8 @@
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
 let mongod ;
+import AutoIncrement from "mongoose-sequence"
+
 async function checkOrCreateServer(){
     if(mongod==undefined){ 
         mongod = await MongoMemoryServer.create();
@@ -12,6 +14,7 @@ async function checkOrCreateServer(){
  * Connect to the in-memory database.
  */
 let connect = async () => {
+    
     await checkOrCreateServer()
     const uri = await mongod.getUri();
     
