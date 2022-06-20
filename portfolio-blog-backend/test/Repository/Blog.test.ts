@@ -11,10 +11,11 @@ import Get from "./Blog/Get.test";
 import GetAll from "./Blog/GetAll.test";
 import Post from "./Blog/Post.test";
 import Put from "./Blog/Put.test";
-let mockData :BlogPost[]= []
+import Delete from "./Blog/Delete.test";
+let mockData :Array<BlogPost| null>= []
 before(async function (){
     await connect()
-    let number = randomNumberBetween(101,200)
+    let number = randomNumberBetween(141,200)
     for (let i = 0; i <=number ; i++) {
         let fakeObj = CreateFakeData()
         let modelScheme = new model({
@@ -37,17 +38,26 @@ before(async function (){
     chai.config.showDiff=false;
 })
 
-Get(mockData);
-GetAll(mockData);
-Post(mockData);
-Put(mockData)
+Get(mockData)
+    .then(()=>{
+        console.log("finished Get tests")
+        GetAll(mockData).then(()=>{
+            console.log("finished GetAll tests")
+            Post(mockData).then(()=>{
+                console.log("finished Post tests")
+                Put(mockData).then(()=>{
+                    console.log("finished put tests")
+                    Delete(mockData)
+                })
+            });
+        });
+    });
+
+
+
 
 
 after(async function (){
-    model.collection.stats(function(err, results) {
-        if(results)
-            console.log(results.storageSize);
-    });
     await clearDatabase();
     await closeDatabase();
 })

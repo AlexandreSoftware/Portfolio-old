@@ -35,7 +35,6 @@ export async function PostBlog(blog :BlogPost) : Promise<boolean> {
             await model.updateOne({_id:blog._id},blog)
             return true;
         }
-        console.log("it brokey")
         return false;
     }
     catch{
@@ -60,5 +59,9 @@ export async function PutBlog(blog :BlogPost) : Promise<number> {
     }
 }
 export async function DeleteBlog(id:number) : Promise<boolean> {
-    return true;
+        if(await model.exists({_id:id})){
+            await model.deleteOne({_id:id})
+            return true;
+        }
+        return false
 }
