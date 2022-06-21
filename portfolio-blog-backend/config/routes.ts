@@ -1,7 +1,13 @@
 import express from "express"
-import {Auth} from "../Api/Auth";
-import {GetAllBlogs}  from "../Api/Repository/Blog";
-module.exports=function live(app:express.Application){
+import { DeleteBlogApi, GetAllBlogsApi, GetBlogApi, PostBlogApi, PutBlogApi } from "../Api/BlogApi";
+module.exports=function routes(app:express.Application){
     app.route("/Blog")
-    .get(GetAllBlogs)
+        .post(PostBlogApi)
+        .put(PutBlogApi)
+    app.route("/Blog/id/:id")
+        .get(GetBlogApi)
+        .delete(DeleteBlogApi)
+    app.route("/Blog/page/:page")
+        .get(GetAllBlogsApi)
+    
 }

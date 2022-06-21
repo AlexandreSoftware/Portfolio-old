@@ -2,7 +2,7 @@
   "name": "portfolio-blog-backend",
   "version": "1.0.0",
   "description": "Backend for the blog portion of the portfolio",
-  "exports": "./index.js",
+  "main": "index.ts",
   "scripts": {
     "dev": "ts-node index.ts",
     "test": "mocha -r ts-node/register 'test/**/*.ts' "
