@@ -3,21 +3,6 @@
     max-width: 45vh;
     min-height: 60vh;
 }
-.SkillCard-Base{
-    background: var(--base-Primarycolor);
-}
-.SkillCardIcon-HighTechPurple{
-    background: var(--Purpletech-Secondarycolor);
-}
-.SkillCard-HighTechRed{
-    background: #840404;
-    color: white;
-}
-.SkillCard-KissLand{
-    background: #0A0D0A;
-    color: white;
-}
-
 .SkillCardIcon{
     border: 2px solid black;
     width: 20%;
@@ -30,19 +15,9 @@
     align-items: center;
     justify-content: center;
     color: black;
+    background: var(--white);
 }
-.SkillCardIcon-Base{
-    background: var(--base-info);
-}
-.SkillCardIcon-HighTechPurple{
-    background: var(--Purpletech-Secondarycolor);
-}
-.SkillCardIcon-HighTechRed{
-    background: white;
-}
-.SkillCardIcon-KissLand{
-    background-color: white;
-}
+
 .SkillCard h2{
     text-align: left;
     margin-left: 12%;
@@ -50,9 +25,27 @@
 .SkillCardIcon > *{
     width: 40%;
     height: 40%;
+    
 }
 .SkillCard > p{
     text-align: left;
     margin-left: 10%;
     margin-right: 15%;
+}
+
+
+.SkillCard-Base{
+    background: var(--base-primarycolor);
+}
+.SkillCard-HighTechPurple{
+    background: var(--Purpletech-Primarycolor);
+}
+.SkillCard-HighTechRed{
+    background: var(--HighTechRed-PrimaryColor);
+    color: white;
+}
+.SkillCard-KissLand{
+    background: #0A0D0A;
+    background: var(--Kissland-primaryColor);
+    color: white;
 }
