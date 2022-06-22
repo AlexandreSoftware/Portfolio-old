@@ -3,25 +3,29 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.623);
 }
-
-
 .ExtendedNavbarContainer{
     position: fixed;
     top: 0;
     width: 100%;
     height: 10vh;
     z-index: 10;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 
 }
-.Navbar-Header > img{
+.Navbar-Header > .ImageContainer {
+    margin-right: auto;
+    text-align: left;
+    flex: 0.5;
+}
+.Navbar-Header > .ImageContainer > img{
     width: 10vh;
     height: 10vh;
 }
 .Navbar-Header > *{
-    margin-right: auto;
+    flex: 1;
 }
+
 .unstiledLink{
     text-decoration: none;
     color: white;
@@ -39,4 +43,14 @@
 }
 .Navbar-Header-KissLand{
     background-color: #0A0D0A;
+}
+
+.ColorButtonPicker{
+    display: flex;
+    justify-content: center;
+}
+@media (max-aspect-ratio: 16/9) {
+    .Navbar-Header > .ColorPicker{
+        flex: 1.5;
+    }
 }

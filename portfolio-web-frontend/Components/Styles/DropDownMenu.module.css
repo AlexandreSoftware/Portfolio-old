@@ -1,12 +1,12 @@
 .DropDownMenu{
     position: absolute;
-    width: 15vh;
+
     border: 1px solid black;
     border-radius: 10%;
-    padding: 2%;
+    padding: 0.5% 0.5%;
     list-style-type: none;
     margin-top: 1%;
-    right: 5vw;
+    right: 1%;
 
     display: grid;
     grid-template-columns: auto auto;
@@ -16,6 +16,20 @@
 
 }
 .DropDownMenu > li {
-    margin: 10px;
+    padding: 0;
+    margin: 1vh 1vw;
     text-align: center;
+}
+.DropDownMenu-Base{
+    background: var(--base-primarycolor);
+}
+.DropDownMenu-HighTechPurple{
+    background-color: var(--Purpletech-Primarycolor);
+}
+.DropDownMenu-HighTechRed{
+    background-color: var(--HighTechRed-PrimaryColor);
+}
+.DropDownMenu-KissLand{
+    background: #0A0D0A;
+
 }

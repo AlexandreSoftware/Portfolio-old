@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import OldThemeContext from "../utils/OldThemeContext"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
-import Style from "./Styles/ColorSquare.module.css"
+import Style from "./Styles/ColorCircle.module.css"
 interface ColorProps{
     Color:string
     Theme:Theme
