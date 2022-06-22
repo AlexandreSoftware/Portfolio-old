@@ -1,0 +1,69 @@
+.BlogPost{
+    grid-template-columns: auto;
+    grid-template-rows: 4fr min-content 1fr;
+    grid-template-areas: "image"
+                         "header"
+                         "paragraph";
+                         overflow: hidden;
+}
+.BlogPost > ImageContainer {
+    margin-bottom: 5%;
+}
+
+.BlogPost p{
+    grid-area: paragraph;
+    padding: 0 10vw;
+    
+}
+.BlogPost > .Date{
+    text-align: left;
+    padding: 0 15vw;
+    margin: 0;
+    margin-bottom: 0;
+}
+.ImageContainer{
+
+    grid-area: image;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ImageContainer .ImageBox img{
+    width: 100% !important;
+    height: 100%  !important;
+}
+
+.ImageContainer .ImageBox{
+    width: 70vw !important;
+    height: max-content !important;
+}
+.BlogCard .ImageContainer{
+    grid-area: image;
+    width: 100% ;
+    height: 100%;
+}
+.BlogPost h2{
+    grid-area: header;
+}
+.ImageContainer img{
+    vertical-align: top;
+    margin-top: 0;
+}
+@media (max-aspect-ratio: 16/9)  {
+    .BlogPost p{
+        padding: 0 5vw;
+        
+    }
+    .ImageContainer .ImageBox{
+        width: 80vw !important;
+        height: max-content !important;
+    }
+    .BlogPost > .Date{
+        text-align: left;
+        padding: 0 10vw;
+        margin: 0;
+        margin-bottom: 0;
+    }
+
+}

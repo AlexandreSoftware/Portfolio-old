@@ -5,8 +5,10 @@ import { DeleteBlog, GetAllBlogs, GetBlog, PostBlog, PutBlog } from "./Repositor
 export function GetAllBlogsApi(req:Request,res:Response){
     let page = req.params.page
     if(page&& parseInt(page) !=NaN){
+        console.log(page)
         GetAllBlogs(+page).then((result)=>{
             res.status(200)
+            console.log(result)
             res.send(result)
         },
         ()=>{
@@ -68,17 +70,16 @@ export function PostBlogApi(req:Request,res:Response){
     }
 }
 export function PutBlogApi(req:Request,res:Response){
-    if(Date.parse(req.body.Date) && req.body.Title && req.body.Date && req.body.ImageLink && req.body.Post){
+    if(req.body.Title && req.body.ImageLink && req.body.Post){
         let blog :BlogPost= {
             Title: req.body.Title,
-            Date:new Date(req.body.Date),
+            Date:new Date(Date.now()),
             ImageLink: req.body.ImageLink,
             Post: req.body.Post,            
         };
-        
         PutBlog(blog).then((result)=>{
             res.status(200);
-            res.send(result);
+            res.send(result.toString());
         },
         ()=>{
             res.status(500);

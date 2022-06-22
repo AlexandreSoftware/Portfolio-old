@@ -5,8 +5,8 @@ export default function AlignedText(props:any) {
     const [context,SetContext] =useContext(ThemeContext)
 
     return(
-        <text className="aligned-text">
+        <span className="aligned-text">
             {props.children}
-        </text>
+        </span>
     )
 }
