@@ -1,4 +1,5 @@
 import { useContext, useState, useEffect } from "react";
+import BackgroundWLetters from "../Components/BackgroundWLetters";
 import GetIcon from "../Components/GetIcon";
 import IndividualSkill from "../Components/Skills/IndividualSkill";
 import SkillsContainer from "../Components/Skills/SkillsContainer";
@@ -17,6 +18,7 @@ export default function Skills() {
     },[context])
     return (
         <div className={Style.Skills}>
+            {!isSSR &&<BackgroundWLetters/>}
             {!isSSR && icon}
             <div className={Style.SkillsContainer}>
                 <SkillsContainer>

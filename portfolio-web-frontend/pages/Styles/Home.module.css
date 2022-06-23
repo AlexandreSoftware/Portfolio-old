@@ -1,14 +1,16 @@
 .Home-logo{
+    position: relative;
     text-align: center;
 }
 .Home-logo > img{
-    width: 40%;
+    width: 40vw;
     height: 50vh;
 }
 .Home-logo > .Home-paragraph{
     margin-left: 30%;
     margin-right: 30%;
-    margin-bottom: 10%;
+    padding-bottom: 10%;
+    margin-bottom: 0;
     
 }
 .Home-logo > .Home-paragraph-HighTechRed{

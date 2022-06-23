@@ -1,5 +1,6 @@
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons"
 import { useContext, useEffect, useState } from "react"
+import BackgroundWLetters from "../Components/BackgroundWLetters"
 import GetIcon from "../Components/GetIcon"
 import ProjectCards from "../Components/Home/ProjectCards"
 import ProjectPricingCards from "../Components/Home/ProjectPricingCards"
@@ -19,7 +20,8 @@ export default function Home() {
         SetIcon(GetIcon(context))
     },[context])
     return <div>
-        <div className={Style["Home-logo"]}>
+        <div className={`${Style["Home-logo"]} ${Style[`Home-${Theme[context]}`]}`}>
+            {!isSSR &&<BackgroundWLetters/>}
             {!isSSR && icon}
             <h1>Welcome to my Portfolio</h1>
             {!isSSR && <p className={`${Style["Home-paragraph"]}   ${Style[`Home-paragraph-${Theme[context]}`]}`}>
@@ -29,6 +31,7 @@ export default function Home() {
                 Im currently working as a freelancer developer
                 and i’m open to formal work
             </p>}
+        </div>      
             <div className={Style.SixSkillCardsContainer}>
                 <SixSkillCards/>
             </div>
@@ -42,6 +45,5 @@ export default function Home() {
             <StyledButton link="xandrf@xandrfdev.com" whereTo="external" width={18} height={8}>
                 Contact Me
             </StyledButton>
-        </div>      
     </div>
 }

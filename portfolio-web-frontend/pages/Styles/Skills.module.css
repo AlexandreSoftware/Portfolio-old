@@ -1,4 +1,5 @@
 .Skills{
+    position: relative;
     text-align: center;
 }
 .Skills > img{
