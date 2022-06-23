@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <title>Xandrf Portfolio</title>
         </Head>
         <App>
-          <AnimatePresence>
+          <AnimatePresence exitBeforeEnter>
             <Component {...pageProps} />
           </AnimatePresence>
         </App>

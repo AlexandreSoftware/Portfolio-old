@@ -25,9 +25,7 @@ export default function About() {
             },
             animate:{
                 opacity:1,
-                transition:{
-                    delay:0.8
-                }
+                
             }
 
         }}className={Style.About}>

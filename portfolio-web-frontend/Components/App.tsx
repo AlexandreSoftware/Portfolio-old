@@ -19,7 +19,6 @@ export default function App(props:AppProps) {
             <>
                 <Navbar/>
                 {(!isSSR && context==Theme.HighTechRed) && <>
-                {console.log(context)}
                 <LightBar side="Left"></LightBar><LightBar side="Right"></LightBar>
                  </>}
                 <SocialsCard/>
