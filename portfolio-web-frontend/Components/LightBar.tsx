@@ -1,0 +1,11 @@
+import Style from "./Styles/LightBar.module.css"
+interface LightBarProps{
+    side:"Left"| "Right"
+}
+export default function LightBar(props:LightBarProps) {
+    return(
+        <div className={`${Style.LightBar} ${Style[`LightBar-${props.side}`]}`}>
+
+        </div>
+    )
+}

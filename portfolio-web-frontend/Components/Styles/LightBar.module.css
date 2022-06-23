@@ -1,0 +1,18 @@
+.LightBar{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 3.5vh;
+    z-index: -1;
+    border: 2px solid black;
+    border-top: none;
+    border-bottom: none;
+    box-shadow: 0px 0 2vw 0 black;
+    background-color: white;
+}
+.LightBar-Left{
+    left: 10vw;
+}
+.LightBar-Right{
+    right: 10vw;
+}

@@ -1,37 +1,29 @@
 import '../styles/globals.css'
 import "../styles/index.css"
 import type { AppProps } from 'next/app'
-import { ThemeContextProvider } from '../utils/ThemeContext'
+import ThemeContext, { Theme, ThemeContextProvider } from '../utils/ThemeContext'
 import { OldThemeContextProvider } from '../utils/OldThemeContext'
 import Background from '../Components/Background'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Loading from '../Components/Loading'
 import SocialsCard from '../Components/SocialsCard'
+import LightBar from '../Components/LightBar'
+import App from '../Components/App'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [isLoading,setIsLoading] = useState(true)
-  const [isSSR, setIsSSR] = useState(true);
-  useEffect(()=>{
-      setIsSSR(false)
-  },[])
+  
   return (
   <ThemeContextProvider>
     <OldThemeContextProvider>
         <Head>
           <title>Xandrf Portfolio</title>
         </Head>
-      {!isSSR?
-        <>
-        <Navbar/>
-          <SocialsCard/>
-          {!isSSR &&<Background/>}
+        <App>
           <Component {...pageProps} />
-        <Footer/>
-        </>:<Loading/>
-      }
+        </App>
     </OldThemeContextProvider>
   </ThemeContextProvider>
   )

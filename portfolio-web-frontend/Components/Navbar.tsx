@@ -35,6 +35,9 @@ const Navbar = () => {
         }
     },[])
     useEffect(()=>{
+      SetCloseDialog(true)
+    },[isPortait])
+    useEffect(()=>{
         SetIcon(GetIcon(context))
     },[context])
   return (

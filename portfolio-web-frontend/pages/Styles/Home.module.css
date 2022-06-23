@@ -1,6 +1,7 @@
 .Home-logo{
     position: relative;
     text-align: center;
+    overflow: hidden;
 }
 .Home-logo > img{
     width: 40vw;
