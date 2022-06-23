@@ -12,6 +12,7 @@ import Loading from '../Components/Loading'
 import SocialsCard from '../Components/SocialsCard'
 import LightBar from '../Components/LightBar'
 import App from '../Components/App'
+import { AnimatePresence } from 'framer-motion'
 
 function MyApp({ Component, pageProps }: AppProps) {
   
@@ -22,7 +23,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           <title>Xandrf Portfolio</title>
         </Head>
         <App>
-          <Component {...pageProps} />
+          <AnimatePresence>
+            <Component {...pageProps} />
+          </AnimatePresence>
         </App>
     </OldThemeContextProvider>
   </ThemeContextProvider>

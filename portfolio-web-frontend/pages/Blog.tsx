@@ -1,4 +1,5 @@
 import axios from "axios";
+import { motion } from "framer-motion";
 import BlogSummaryCard from "../Components/Blog/BlogSummaryCard";
 import ProjectSummaryCard from "../Components/Projects/ProjectSummaryCard";
 import BlogPost from "../model/BlogPost";
@@ -7,9 +8,20 @@ interface BlogProps{
     posts:BlogPost[]
 }
 export default function Blog(props:BlogProps) {
-    return <div>
+    return <motion.div
+            initial="initial"
+            animate="animate"
+            variants={{
+                initial:{
+                    opacity:0
+                },
+                animate:{
+                    opacity:1
+                }
+        }}
+        >
             {props.posts.map(element => {return(<BlogSummaryCard Title={element.Title} imageLink={element.ImageLink} id={element._id} key={element._id}  >{element.Post}</BlogSummaryCard>)})}
-        </div>
+        </motion.div>
 }
 async function getPosts(){
     try{

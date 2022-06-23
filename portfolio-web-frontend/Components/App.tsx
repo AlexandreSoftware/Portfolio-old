@@ -24,7 +24,9 @@ export default function App(props:AppProps) {
                  </>}
                 <SocialsCard/>
                 {!isSSR &&<Background/>}
-                {props.children}
+                <div >
+                    {props.children}
+                </div>
                 <Footer/>
             </>)
 }
