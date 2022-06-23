@@ -9,6 +9,7 @@ import Footer from '../Components/Footer'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import Loading from '../Components/Loading'
+import SocialsCard from '../Components/SocialsCard'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isLoading,setIsLoading] = useState(true)
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {!isSSR?
         <>
         <Navbar/>
+          <SocialsCard/>
           {!isSSR &&<Background/>}
           <Component {...pageProps} />
         <Footer/>
