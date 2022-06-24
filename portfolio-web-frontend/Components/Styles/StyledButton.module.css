@@ -8,26 +8,32 @@
 .Button-Base{
     background-color: var(--base-info);
     color: white;
+    transition: background-color 300ms linear;
 }
 .Button-Base:hover{
     background-color: var(--Kissland-blue);
+    transition: background-color 300ms linear;
 }
 
 
 .Button-HighTechPurple{
     background-color: var(--Purpletech-altpurple);
     color: white;
+    transition: background-color 300ms linear;
 }
 .Button-HighTechPurple:hover{
     background-color: var(--Purpletech-altpink);
+    transition: background-color 300ms linear;
 }
 
 .Button-KissLand{
     background-color: var(--Kissland-blue-alt2);
     color: white;
+    transition: background-color 300ms linear;
 }
 .Button-KissLand:hover{
     background-color: var(--Kissland-blue);
+    transition: background-color 300ms linear;
 }
 
 .Button-KissLand{
