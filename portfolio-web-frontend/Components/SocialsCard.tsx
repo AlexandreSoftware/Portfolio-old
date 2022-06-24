@@ -1,4 +1,5 @@
-import { faDev, faGithub, faReddit, faTwitch, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faDev, faGitAlt, faGithub, faGitlab, faReddit, faTwitch, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faCruzeiroSign, faPortrait } from "@fortawesome/free-solid-svg-icons"
 import { motion } from "framer-motion"
 import BlackLine from "./BlackLine"
 import SocialMedia from "./SocialMedia"
@@ -21,11 +22,10 @@ export default function SocialsCard() {
             }
         }}
         className={Style.SocialsCard}>
-            <SocialMedia delay={1.2} icon={faTwitter} link="https://www.twitter.com/XandrfDev" color="#1DA1F2" ></SocialMedia>
-            <SocialMedia delay={0.9} icon={faGithub} link="https://www.twitter.com/XandrfDev" color="white"></SocialMedia>
-            <SocialMedia delay={0.6} icon={faReddit} link="https://www.twitter.com/XandrfDev" color="#FF5700"></SocialMedia>
-            <SocialMedia delay={0.3} icon={faTwitch} link="https://www.twitter.com/XandrfDev" color="#6441a5"></SocialMedia>
-            <SocialMedia delay={0} icon={faDev} link="https://www.twitter.com/XandrfDev" color="white"></SocialMedia>
+            <SocialMedia delay={0.9} icon={faTwitter} link="https://www.twitter.com/XandrfDev" color="black" ></SocialMedia>
+            <SocialMedia delay={0.6} icon={faGithub} link="https://github.com/xandrf" color="black"></SocialMedia>
+            <SocialMedia delay={0.3} icon={faTwitch} link="https://www.twitch.tv/xandrf" color="black"></SocialMedia>
+            <SocialMedia delay={0} icon={faDev} link="https://www.twitter.com/XandrfDev" color="black"></SocialMedia>
             <BlackLine/>
         </motion.div>
         )
