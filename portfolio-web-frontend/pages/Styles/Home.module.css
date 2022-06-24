@@ -30,3 +30,6 @@
     justify-content: center;    
     margin-bottom: 10%;
 }
+.HomePage{
+    overflow-x: hidden;
+}

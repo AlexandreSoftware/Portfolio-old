@@ -38,7 +38,7 @@ export default function Home() {
                         delay:0.2
                     }
                 }
-            }}>
+            }} className={Style.HomePage}>
                 <div className={`${Style["Home-logo"]} ${Style[`Home-${Theme[context]}`]}`}>
                     {!isSSR && <motion.img
                         key={icon}
@@ -91,7 +91,7 @@ export default function Home() {
             <div className={Style.ProjectpricingCards}>
                 <ProjectPricingCards/>
             </div>
-            <StyledButton link="xandrf@xandrfdev.com" whereTo="external" width={18} height={8}>
+            <StyledButton link="mailto:xandrf@xandrfdev.com" whereTo="external" width={18} height={8}>
                 Contact Me
             </StyledButton>
         </motion.div>
