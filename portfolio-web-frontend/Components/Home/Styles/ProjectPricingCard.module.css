@@ -3,16 +3,25 @@
     flex-direction: column;
     justify-content: center;
 }
+.ProjectPricingCard-Base{
+    background: var(--base-primarycolor-alt);
+}
+.ProjectPricingCard-HighTechPurple{
+    background: var(--Purpletech-PurpleOrangeGradientDiagonal);
+}
+.ProjectPricingCard-HighTechRed{
+    background: var(--HighTechRed-black);
+}
+.ProjectPricingCard-KissLand{
+    background: var(--Kissland-SecondaryColor);
+}
 .ProjectPricingCard{
     border: 1px solid black;
     aspect-ratio: 2/3;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;   
+    justify-content: flex;   
     align-items: center; 
-}
-.ProjectPricingCard-KissLand{
-    background-color: var(--Kissland-primaryColor);
 }
 .ProjectPricingCard ol li{
     list-style: "*";
@@ -24,4 +33,11 @@
     padding-right: 18%;
     font-size: 0.6em;
     text-align: center;
+}
+.ProjectButton{
+    margin-bottom: 20%;
+    margin-top: auto;
+}
+.list{
+    margin-top: auto;
 }

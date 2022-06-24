@@ -1,25 +1,43 @@
 .ProjectPricingCards{
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;   
     
+    width: 60vw;
+    overflow: hidden;
 }
 
 .ProjectPricingCards > *{
     margin: 2px;
-    height: 50%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
+    flex: 0.5;
 }
 .ProjectPricingCards > :nth-child(2){
     height: 100%;
+    width: 100%;
+    flex: 0.7;
+    font-size: 1.5em;
+}
+.ProjectPricingCards > :nth-child(2) h3{
+    font-size: 1.6em;
 }
 @media (max-aspect-ratio: 16/9){
     .ProjectPricingCards{
         flex-direction: column;
+        height: 100%;
+
+    }
+    .ProjectPricingCards > :nth-child(2){
+        font-size: 1em;
+    }
+    .ProjectPricingCards > :nth-child(2) h3{
+     font-size: 1.17em
     }
     .ProjectPricingCards > *{
         width: 100%;
         height: 100%;
+        flex: 1;
     }
     
 }

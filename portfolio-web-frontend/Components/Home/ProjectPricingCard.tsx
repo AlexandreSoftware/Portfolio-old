@@ -20,8 +20,8 @@ export default function ProjectPricingCard(props: ProjectPricingCardProps) {
             <div className={`${Style.ProjectPricingCard} ${isSSR?"":Style[`ProjectPricingCard-${Theme[context]}`]}`}>
                 <h3>{props.title}</h3>
                 <div>Pricing Starting at </div>
-                <div>${props.pricing}</div>
-                <ol>{props.children}</ol>
+                <div className={Style.pricing}>${props.pricing}</div>
+                <ol className={Style.list}>{props.children}</ol>
                 <div className={Style.ProjectButton}>
                     <StyledButton link="/Home" whereTo="internal" width={15} height={6}>
                         Contact Me
