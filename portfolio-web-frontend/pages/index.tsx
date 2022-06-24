@@ -22,7 +22,9 @@ export default function Home() {
     },[context])
     return (
         <>
-            {!isSSR &&<BackgroundWLetters/>}
+            <AnimatePresence exitBeforeEnter>
+                {!isSSR && <BackgroundWLetters/>}
+            </AnimatePresence>
             <motion.div
             initial="initial"
             animate="animate"
@@ -38,9 +40,22 @@ export default function Home() {
                 }
             }}>
                 <div className={`${Style["Home-logo"]} ${Style[`Home-${Theme[context]}`]}`}>
-                <AnimatePresence exitBeforeEnter>
-                    {!isSSR && icon}
-                </AnimatePresence>
+                    {!isSSR && <motion.img
+                        key={icon}
+                        initial="imageInitial"
+                        animate="imageAnimate"
+                        variants={{
+                            imageInitial:{
+                                opacity:0.2,
+                            },
+                            imageAnimate:{
+                                opacity:1,
+                                rotate:[0,10,-10,0],
+                                transition:{
+                                    duration:0.3
+                                }
+                            }
+                        }} src={icon} />}
                 <motion.h1
                     initial="headerInitial"
                     animate="headerAnimate"

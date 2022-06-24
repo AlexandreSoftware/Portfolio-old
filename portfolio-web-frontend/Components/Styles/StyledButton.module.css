@@ -4,6 +4,32 @@
 .ButtonContainer button{
     border-radius: 12%;
 }
+
+.Button-Base{
+    background-color: var(--base-info);
+    color: white;
+}
+.Button-Base:hover{
+    background-color: var(--Kissland-blue);
+}
+
+
+.Button-HighTechPurple{
+    background-color: var(--Purpletech-altpurple);
+    color: white;
+}
+.Button-HighTechPurple:hover{
+    background-color: var(--Purpletech-altpink);
+}
+
+.Button-KissLand{
+    background-color: var(--Kissland-blue-alt2);
+    color: white;
+}
+.Button-KissLand:hover{
+    background-color: var(--Kissland-blue);
+}
+
 .Button-KissLand{
     background-color: var(--Kissland-blue-alt2);
     color: white;

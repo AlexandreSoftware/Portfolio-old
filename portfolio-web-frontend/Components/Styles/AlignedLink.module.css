@@ -1,0 +1,10 @@
+.AlignedLink{
+    /*for some reason just setting the height to 100% does nothing*/
+    height: 70%;
+    width: 70%;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
+}

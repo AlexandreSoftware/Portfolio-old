@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion"
 import { useState, useContext, useEffect } from "react"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
 import Background from "./Background"

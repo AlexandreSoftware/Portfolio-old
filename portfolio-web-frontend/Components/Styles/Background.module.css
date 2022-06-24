@@ -10,10 +10,12 @@
 .Background-Base{
     background-color: var(--base-primarycolor);
     color: white;
+    transition: background 500ms linear;
 }
 .Background-HighTechPurple{
     background: var(--Purpletech-PurpleOrangeGradientVertical);
     color: white;
+    transition: background 500ms linear;
 }
 .Background-HighTechRed{
     background:#840404;
@@ -21,6 +23,7 @@
     background-size: cover;
     background-position: right top;
     color: white;
+    transition: background 500ms linear;
 }
 .Background-KissLand{
     background: #0A0D0A;
@@ -28,4 +31,5 @@
     background-size: cover;
     background-position: left top;
     color: white;
+    transition: background 500ms linear;
 }

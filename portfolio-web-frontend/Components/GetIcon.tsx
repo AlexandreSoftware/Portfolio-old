@@ -13,24 +13,5 @@ export default function GetIcon(context:Theme) {
                         HightechredLogo
                             :KissLandLogo;
 
-    return <motion.img
-        initial="imageInitial"
-        animate="imageAnimate"
-        exit="imageExit"
-        variants={{
-            imageInitial:{
-                opacity:0
-            },
-            imageAnimate:{
-                opacity:1
-            },
-            imageExit:{
-                opacity:0,
-                transition:{
-                    duration:0.4
-                }
-            }
-
-        }}
-    src={iconConditional}/>
+    return iconConditional
 }
