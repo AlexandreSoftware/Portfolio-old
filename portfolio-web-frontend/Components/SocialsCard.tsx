@@ -22,10 +22,10 @@ export default function SocialsCard() {
             }
         }}
         className={Style.SocialsCard}>
-            <SocialMedia delay={0.9} icon={faTwitter} link="https://www.twitter.com/XandrfDev" color="black" ></SocialMedia>
-            <SocialMedia delay={0.6} icon={faGithub} link="https://github.com/xandrf" color="black"></SocialMedia>
-            <SocialMedia delay={0.3} icon={faTwitch} link="https://www.twitch.tv/xandrf" color="black"></SocialMedia>
-            <SocialMedia delay={0} icon={faDev} link="https://www.twitter.com/XandrfDev" color="black"></SocialMedia>
+            <SocialMedia delay={0.9} icon={faTwitter} link="https://www.twitter.com/XandrfDev" color="white" ></SocialMedia>
+            <SocialMedia delay={0.6} icon={faGithub} link="https://github.com/xandrf" color="white"></SocialMedia>
+            <SocialMedia delay={0.3} icon={faTwitch} link="https://www.twitch.tv/xandrf" color="white"></SocialMedia>
+            <SocialMedia delay={0} icon={faDev} link="https://www.twitter.com/XandrfDev" color="white"></SocialMedia>
             <BlackLine/>
         </motion.div>
         )

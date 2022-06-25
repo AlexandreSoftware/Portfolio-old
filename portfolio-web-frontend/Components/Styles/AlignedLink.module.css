@@ -1,10 +1,13 @@
+.AlignedLinkContainer{
+    display: flex;
+    justify-content: center;
+}
 .AlignedLink{
     /*for some reason just setting the height to 100% does nothing*/
-    height: 70%;
-    width: 70%;
-    border-radius: 10%;
+    aspect-ratio: 2/1;
+    border-radius: 7%;
+    min-width: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2vh;
 }

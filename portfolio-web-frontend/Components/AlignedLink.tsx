@@ -12,18 +12,21 @@ export default function AlignedLink(props :AlignedLinkProps) {
     let [context,SetContext] = useContext(ThemeContext)
     return (
     <Link href={props.href}>
-    <motion.div className={Style.AlignedLink}
-        whileHover="hover"
-        variants={{
-            hover:{
-                border:"1px solid black",
-                scale:1.2,
-                backgroundColor:GetTheme(context),
-                zIndex:5
-            }
-        }}
-    ><AlignedText>{props.children}</AlignedText></motion.div>
-    </Link>)
+        <div className={Style.AlignedLinkContainer}>
+            <motion.div className={Style.AlignedLink}
+                whileHover="hover"
+                variants={{
+                    hover:{
+                        border:"1px solid black",
+                        scale:1.2,
+                        backgroundColor:GetTheme(context),
+                        zIndex:5
+                    }
+                }}
+            ><AlignedText>{props.children}</AlignedText></motion.div>
+        </div>
+    </Link>
+    )
 }
 
 function GetTheme(theme:Theme){
