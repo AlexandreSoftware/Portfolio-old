@@ -1,9 +1,15 @@
 .About{
+    position: relative;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.About > .ProfilePictures{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
 }
 .About > img{
     width: 100%;

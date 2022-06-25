@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import ThemeContext, { Theme } from "../../utils/ThemeContext";
 import Style from "./Styles/ProjectCard.module.css"
 interface ProjectCardProps{
     image : string,

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import Link from "next/link"
 import { useContext } from "react"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
@@ -12,7 +13,18 @@ interface StyledButtonProps{
 export default function StyledButton(props:StyledButtonProps) {
     const [context,SetContext] =useContext(ThemeContext)
     return (
-        <div className={Style.ButtonContainer}>
+        <motion.div
+        whileHover="hover"
+        initial="initial"
+        variants={{
+            initial:{
+                scale:1
+            },
+            hover:{
+                scale:1.1
+            }
+        }}
+        className={Style.ButtonContainer}>
             {props.whereTo == "internal" ? 
                 <Link href={props.link}>
                     <button className={Style[`Button-${Theme[context]}`]} style={{height : props.height + "vh", width: props.width + "vh"}}>
@@ -27,6 +39,6 @@ export default function StyledButton(props:StyledButtonProps) {
                 </a>
 
             }
-        </div>
+        </motion.div>
     )
 }

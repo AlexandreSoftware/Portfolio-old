@@ -1,14 +1,17 @@
 .Home-logo{
     text-align: center;
+    overflow: hidden;
+    z-index: 0;
 }
 .Home-logo > img{
-    width: 40%;
+    width: 40vw;
     height: 50vh;
 }
 .Home-logo > .Home-paragraph{
     margin-left: 30%;
     margin-right: 30%;
-    margin-bottom: 10%;
+    padding-bottom: 10%;
+    margin-bottom: 0;
     
 }
 .Home-logo > .Home-paragraph-HighTechRed{
@@ -26,4 +29,10 @@
     overflow: hidden;
     justify-content: center;    
     margin-bottom: 10%;
+}
+.HomePage{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

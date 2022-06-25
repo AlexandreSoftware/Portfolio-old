@@ -17,11 +17,11 @@ a {
 
 #__next {
   text-align: center;
-  margin-top: 10%;
+  padding-top: 10%;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  z-index: -1;
+  z-index: 0;
   background: transparent;
   color: white;
 }
@@ -230,14 +230,14 @@ body{
   color: white;
 }
 .Background-HighTechRed{
-  background: url("/Backgrounds/HighTechRed-BaseBackGround.svg") #840404;
+  background:#840404;
   background-repeat: repeat;
   background-size: cover;
   background-position: right top;
   color: white;
 }
 .Background-KissLand{
-  background: url("/Backgrounds/KissLand-Base.svg") #0A0D0A;
+  background: #0A0D0A;
   background-repeat: repeat;
   background-size: cover;
   background-position: left top;

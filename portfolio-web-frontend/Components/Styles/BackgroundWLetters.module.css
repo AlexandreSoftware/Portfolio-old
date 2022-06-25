@@ -1,0 +1,23 @@
+.Background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    left: 0;
+}
+.Background-HighTechRed{
+    background: url("/Backgrounds/HighTechRed-BaseBackGround.svg") #840404;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: right top;
+    color: white;
+    transition: background 500ms linear;
+}
+.Background-KissLand{
+    background: url("/Backgrounds/KissLand-Base.svg") #0A0D0A;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: left top;
+    color: white;
+    transition: background 500ms linear;
+}

@@ -36,16 +36,20 @@
 
 .SkillCard-Base{
     background: var(--base-primarycolor);
+    transition: background 500ms linear;
 }
 .SkillCard-HighTechPurple{
     background: var(--Purpletech-Primarycolor);
+    transition: background 500ms linear;
 }
 .SkillCard-HighTechRed{
     background: var(--HighTechRed-PrimaryColor);
     color: white;
+    transition: background 500ms linear;
 }
 .SkillCard-KissLand{
     background: #0A0D0A;
     background: var(--Kissland-primaryColor);
     color: white;
+    transition: background 500ms linear;
 }

@@ -1,0 +1,11 @@
+.ProfileImage{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 20%;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.ProfileImage img {
+    height: 100%;
+    width: 100%;
+}

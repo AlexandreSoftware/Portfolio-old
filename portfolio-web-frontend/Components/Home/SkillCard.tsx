@@ -1,5 +1,6 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 import { useContext, useState, useEffect } from "react";
 import ThemeContext, { Theme } from "../../utils/ThemeContext";
 import Styles from "./Styles/Skillcard.module.css"
@@ -15,7 +16,15 @@ export default function SkillCard(props:SkillCardProps) {
     useEffect(()=>{
         setIsSSR(false)
     },[])
-    return (<div className={`${Styles.SkillCard} ${isSSR?"":Styles[`SkillCard-${Theme[context]}`]}`}>
+    return (
+    <motion.div
+    whileHover="hover"
+    variants={{
+        hover:{
+            scale:1.1
+        }
+    }}
+    className={`${Styles.SkillCard} ${isSSR?"":Styles[`SkillCard-${Theme[context]}`]}`}>
         <div className={Styles.SkillCardIcon + ` ${isSSR?"":Styles[`SkillCardIcon-${Theme[context]}`]}`}>
             <FontAwesomeIcon icon={props.icon} />
         </div>
@@ -23,5 +32,5 @@ export default function SkillCard(props:SkillCardProps) {
         <p>
             {props.children}
         </p>
-    </div>)
+    </motion.div>)
 }

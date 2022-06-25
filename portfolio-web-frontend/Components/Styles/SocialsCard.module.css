@@ -1,0 +1,12 @@
+.SocialsCard{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 7vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 5;
+}
