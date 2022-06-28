@@ -13,20 +13,23 @@ import SocialsCard from '../Components/SocialsCard'
 import LightBar from '../Components/LightBar'
 import App from '../Components/App'
 import { AnimatePresence } from 'framer-motion'
+import { OldHtmlContextProvider } from '../utils/OldHtmlContext'
 
 function MyApp({ Component, pageProps }: AppProps) {
   
   return (
   <ThemeContextProvider>
     <OldThemeContextProvider>
-        <Head>
-          <title>Xandrf Portfolio</title>
-        </Head>
-        <App>
-          <AnimatePresence exitBeforeEnter>
-            <Component {...pageProps} />
-          </AnimatePresence>
-        </App>
+        <OldHtmlContextProvider>
+          <Head>
+            <title>Xandrf Portfolio</title>
+          </Head>
+            <AnimatePresence>
+              <App>
+                  <Component {...pageProps} />
+              </App>
+            </AnimatePresence>
+        </OldHtmlContextProvider>
     </OldThemeContextProvider>
   </ThemeContextProvider>
   )

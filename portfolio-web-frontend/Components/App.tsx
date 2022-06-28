@@ -1,4 +1,4 @@
-import { AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import { useState, useContext, useEffect } from "react"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
 import Background from "./Background"
@@ -17,16 +17,19 @@ export default function App(props:AppProps) {
         setIsSSR(false)
     },[])
     return (
-            <>
-                <Navbar/>
-                {(!isSSR && context==Theme.HighTechRed) && <>
-                <LightBar side="Left"></LightBar><LightBar side="Right"></LightBar>
-                 </>}
+        <>
+        <Navbar/>
+        {(!isSSR && context==Theme.HighTechRed) && <>
+        <LightBar side="Left"></LightBar><LightBar side="Right"></LightBar>
+         </>}
+            <motion.div>
+                
                 <SocialsCard/>
                 {!isSSR &&<Background/>}
                 <div >
                     {props.children}
                 </div>
                 <Footer/>
+            </motion.div>
             </>)
 }

@@ -26,7 +26,7 @@ export default function SkillCard(props:SkillCardProps) {
     }}
     className={`${Styles.SkillCard} ${isSSR?"":Styles[`SkillCard-${Theme[context]}`]}`}>
         <div className={Styles.SkillCardIcon + ` ${isSSR?"":Styles[`SkillCardIcon-${Theme[context]}`]}`}>
-            <FontAwesomeIcon icon={props.icon} />
+            <FontAwesomeIcon icon={props.icon} width={100} height={100} />
         </div>
         <h2>{props.Title}</h2>
         <p>

@@ -243,3 +243,6 @@ body{
   background-position: left top;
   color: white;
 }
+.overflow_hidden{
+  overflow: hidden;
+}

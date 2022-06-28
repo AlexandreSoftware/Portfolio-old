@@ -1,0 +1,33 @@
+.BackgroundChangeBall{
+    position: fixed;
+    top: 0;
+    right:  0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 30;
+}
+.OverlayBall{
+    position: fixed;
+    z-index: 30;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+
+}
+
+.OverlayBall-Base{
+    background: var(--base-primarycolor);
+}
+
+.OverlayBall-HighTechPurple{
+    background: var(--Purpletech-Primarycolor);
+}
+
+.OverlayBall-HighTechRed{
+    background: var(--HighTechRed-PrimaryColor);
+}
+
+.OverlayBall-KissLand{
+    background: var(--Kissland-primaryColor);
+}

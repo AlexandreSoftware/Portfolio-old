@@ -41,7 +41,6 @@ export default function Home() {
             }} className={Style.HomePage}>
                 <div className={`${Style["Home-logo"]} ${Style[`Home-${Theme[context]}`]}`}>
                     {!isSSR && <motion.img
-                        key={icon}
                         initial="imageInitial"
                         animate="imageAnimate"
                         variants={{

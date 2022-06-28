@@ -5,22 +5,26 @@
 }
 .SkillCardIcon{
     border: 2px solid black;
-    width: 20%;
-    height: 15%;
+    width: 10vh;
+    height: 10vh;
     margin-left: 10%;
     margin-top:  10%;
-    padding: 5% 0 5% 0;
-    border-radius: 20%;
+    border-radius: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: black;
     background: var(--white);
 }
-
+.SkillCardIcon svg{
+    width: 50%;
+    height: 50%;
+}
 .SkillCard h2{
     text-align: left;
-    margin-left: 12%;
+    margin-left: 10%;
+    margin-right: 15%;
+    margin-bottom: 1%;
 }
 .SkillCardIcon > *{
     width: 40%;
@@ -31,6 +35,7 @@
     text-align: left;
     margin-left: 10%;
     margin-right: 15%;
+    margin-top: 2%;
 }
 
 

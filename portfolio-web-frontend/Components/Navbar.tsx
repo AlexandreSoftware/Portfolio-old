@@ -64,7 +64,7 @@ const Navbar = () => {
           </header>
         { isPortait &&
           <AnimatePresence exitBeforeEnter>
-          {!closeDialog &&<DropDownMenu/>}
+            {!closeDialog &&<DropDownMenu/>}
           </AnimatePresence>
         }
       </div>

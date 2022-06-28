@@ -5,7 +5,6 @@ import Style from "./Styles/Background.module.css"
 export default function Background() {
     let [context] =useContext(ThemeContext)
     return <motion.div
-    key={context}
     initial = "backgroundInitial"
     animate = "backgroundAnimate"
     variants={

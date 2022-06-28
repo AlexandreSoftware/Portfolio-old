@@ -1,5 +1,6 @@
 .Navbar-Header{
     position: relative;
+    z-index: 2;
     height: 10vh;
     display:flex;
     flex-direction: row;
