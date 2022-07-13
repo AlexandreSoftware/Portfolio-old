@@ -2,7 +2,7 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import { useContext, useState, useEffect } from "react";
-import ThemeContext, { Theme } from "../../utils/ThemeContext";
+import ThemeContext, { Theme } from "../../../utils/ThemeContext";
 import Styles from "./Styles/Skillcard.module.css"
 interface SkillCardProps{
     icon :IconDefinition,

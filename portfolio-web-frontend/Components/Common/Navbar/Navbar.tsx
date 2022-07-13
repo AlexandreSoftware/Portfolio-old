@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Styles from "./Styles/Navbar.module.css"
-import GetIcon from './GetIcon';
+import GetIcon from '../GetIcon';
 import { useContext, useEffect, useState } from 'react';
-import ThemeContext, { Theme } from '../utils/ThemeContext';
+import ThemeContext, { Theme } from '../../../utils/ThemeContext';
 import AlignedText from './AlignedText';
 import ColorPicker from './ColorPicker';
 import DropDownMenu from './DropDownMenu';

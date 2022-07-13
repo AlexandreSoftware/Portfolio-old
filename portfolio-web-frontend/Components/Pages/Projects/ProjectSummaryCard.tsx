@@ -1,4 +1,4 @@
-import StyledButton from "../StyledButton"
+import StyledButton from "../../Common/StyledButton"
 import Style from "./Styles/ProjectSummaryCard.module.css"
 interface ProjectSummaryCardProps{
     imageLink:string,

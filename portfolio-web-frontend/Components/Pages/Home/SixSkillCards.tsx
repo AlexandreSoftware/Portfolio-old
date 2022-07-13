@@ -1,7 +1,7 @@
 import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
 import { faBox, faCartArrowDown, faComputer, faEarth, faPager, faPerson, faShip, faShippingFast, faTruck, faUser } from "@fortawesome/free-solid-svg-icons"
 import { useContext, useEffect, useState } from "react";
-import ThemeContext, { Theme } from "../../utils/ThemeContext";
+import ThemeContext, { Theme } from "../../../utils/ThemeContext";
 import SkillCard from "./SkillCard"
 import Styles from "./Styles/SixSkillCards.module.css"
 export default function SixSkillCards() {

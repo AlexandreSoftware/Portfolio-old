@@ -1,8 +1,8 @@
 import { motion } from "framer-motion"
 import { useContext, useRef, useState } from "react"
-import OldThemeContext from "../utils/OldThemeContext"
-import ThemeContext, { Theme } from "../utils/ThemeContext"
-import BackgroundChangeBall from "./BackgroundChangeBall"
+import OldThemeContext from "../../../utils/OldThemeContext"
+import ThemeContext, { Theme } from "../../../utils/ThemeContext"
+import BackgroundChangeBall from "../Background/BackgroundChangeBall"
 import Style from "./Styles/ColorCircle.module.css"
 interface ColorProps{
     Color:string

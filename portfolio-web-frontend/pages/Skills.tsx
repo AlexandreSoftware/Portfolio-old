@@ -1,8 +1,8 @@
 import { useContext, useState, useEffect } from "react";
-import BackgroundWLetters from "../Components/BackgroundWLetters";
-import GetIcon from "../Components/GetIcon";
-import IndividualSkill from "../Components/Skills/IndividualSkill";
-import SkillsContainer from "../Components/Skills/SkillsContainer";
+import BackgroundWLetters from "../Components/Common/Background/BackgroundWLetters";
+import GetIcon from "../Components/Common/GetIcon";
+import IndividualSkill from "../Components/Pages/Skills/IndividualSkill";
+import SkillsContainer from "../Components/Pages/Skills/SkillsContainer";
 import ThemeContext, { Theme } from "../utils/ThemeContext";
 import Style from "./Styles/Skills.module.css"
 export default function Skills() {

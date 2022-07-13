@@ -1,11 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { useState, useContext, useEffect } from "react"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
-import Background from "./Background"
-import Footer from "./Footer"
-import LightBar from "./LightBar"
-import Navbar from "./Navbar"
-import SocialsCard from "./SocialsCard"
+import Background from "./Common/Background/Background"
+import Footer from "./Common/Footer/Footer"
+import LightBar from "./Common/Background/LightBar"
+import Navbar from "./Common/Navbar/Navbar"
+import SocialsCard from "./Common/SocialsCards/SocialsCard"
 
 interface AppProps{
     children: any

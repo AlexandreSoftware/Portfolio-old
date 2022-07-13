@@ -1,4 +1,4 @@
-import ProjectSummaryCard from "../Components/Projects/ProjectSummaryCard";
+import ProjectSummaryCard from "../Components/Pages/Projects/ProjectSummaryCard";
 
 export default function Projects() {
     return <div>

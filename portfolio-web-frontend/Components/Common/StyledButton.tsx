@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { useContext } from "react"
-import ThemeContext, { Theme } from "../utils/ThemeContext"
+import ThemeContext, { Theme } from "../../utils/ThemeContext"
 import Style from "./Styles/StyledButton.module.css"
 interface StyledButtonProps{
     whereTo : "internal" | "external",

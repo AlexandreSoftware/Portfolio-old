@@ -1,7 +1,7 @@
 import axios from "axios";
 import { motion } from "framer-motion";
-import BlogSummaryCard from "../Components/Blog/BlogSummaryCard";
-import ProjectSummaryCard from "../Components/Projects/ProjectSummaryCard";
+import BlogSummaryCard from "../Components/Pages/Blog/BlogSummaryCard";
+import ProjectSummaryCard from "../Components/Pages/Projects/ProjectSummaryCard";
 import BlogPost from "../model/BlogPost";
 
 interface BlogProps{

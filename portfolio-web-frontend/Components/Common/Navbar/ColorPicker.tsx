@@ -1,7 +1,7 @@
 import { faPalette } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Dispatch, SetStateAction } from "react"
-import { Theme } from "../utils/ThemeContext"
+import { Theme } from "../../../utils/ThemeContext"
 import ColorCircle from "./ColorCircle"
 import DropDownMenu from "./DropDownMenu"
 import Style from "./Styles/ColorPicker.module.css"

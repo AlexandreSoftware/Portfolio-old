@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useContext, useState, useEffect } from "react";
-import ProfileImage from "../Components/About/ProfileImage";
-import BackgroundWLetters from "../Components/BackgroundWLetters";
-import GetIcon from "../Components/GetIcon";
+import ProfileImage from "../Components/Pages/About/ProfileImage";
+import BackgroundWLetters from "../Components/Common/Background/BackgroundWLetters";
+import GetIcon from "../Components/Common/GetIcon";
 import ThemeContext, { Theme } from "../utils/ThemeContext";
 import Style from "./Styles/About.module.css"
 export default function About() {

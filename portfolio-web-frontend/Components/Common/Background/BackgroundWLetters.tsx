@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useContext } from "react";
-import ThemeContext, { Theme } from "../utils/ThemeContext";
+import ThemeContext, { Theme } from "../../../utils/ThemeContext";
 import Style from "./Styles/BackgroundWLetters.module.css"
 export default function BackgroundWLetters() {
     let [context] =useContext(ThemeContext)

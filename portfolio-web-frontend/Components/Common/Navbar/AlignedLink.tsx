@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Link from "next/dist/client/link";
 import { useContext } from "react";
-import ThemeContext, { Theme } from "../utils/ThemeContext";
+import ThemeContext, { Theme } from "../../../utils/ThemeContext";
 import AlignedText from "./AlignedText";
 import Style from "./Styles/AlignedLink.module.css"
 interface AlignedLinkProps{

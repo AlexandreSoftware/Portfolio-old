@@ -1,6 +1,6 @@
 import Style from "./Styles/DropDownMenu.module.css"
 import ColorCircle from "./ColorCircle"
-import ThemeContext, { Theme } from "../utils/ThemeContext"
+import ThemeContext, { Theme } from "../../../utils/ThemeContext"
 import { useContext } from "react"
 import { motion } from "framer-motion"
 export default function DropDownMenu() {
