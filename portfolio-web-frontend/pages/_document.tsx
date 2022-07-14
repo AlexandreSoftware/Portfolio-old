@@ -7,7 +7,7 @@ export default function MyDocument() {
     return (
       <Html lang="en">
         <Head>
-          <script src="/noflicker.js" />
+          
         </Head>
         <body>
           <Main />
