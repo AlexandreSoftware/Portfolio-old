@@ -1,13 +1,11 @@
-.AlignedLinkContainer{
-    display: flex;
-    justify-content: center;
-}
 .AlignedLink{
-    /*for some reason just setting the height to 100% does nothing*/
-    aspect-ratio: 2/1;
-    border-radius: 7%;
-    min-width: 10vw;
+    color: rgb(241, 241, 241);
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.AlignedLink-Base:hover{
+    border-top: 1px solid var(--base-info);
+
 }
