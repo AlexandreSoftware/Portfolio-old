@@ -1,34 +1,35 @@
 import '../styles/globals.css'
 import "../styles/index.css"
 import type { AppProps } from 'next/app'
-import ThemeContext, { Theme, ThemeContextProvider } from '../utils/ThemeContext'
+import {ThemeContextProvider } from '../utils/ThemeContext'
 import { OldThemeContextProvider } from '../utils/OldThemeContext'
-import Background from '../Components/Background'
-import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
 import Head from 'next/head'
-import { useContext, useEffect, useState } from 'react'
-import Loading from '../Components/Loading'
-import SocialsCard from '../Components/SocialsCard'
-import LightBar from '../Components/LightBar'
 import App from '../Components/App'
 import { AnimatePresence } from 'framer-motion'
+import { OldHtmlContextProvider } from '../utils/OldHtmlContext'
+import { ChakraProvider } from '@chakra-ui/react'
+import Script from 'next/script'
 
 function MyApp({ Component, pageProps }: AppProps) {
   
   return (
-  <ThemeContextProvider>
-    <OldThemeContextProvider>
-        <Head>
-          <title>Xandrf Portfolio</title>
-        </Head>
-        <App>
-          <AnimatePresence exitBeforeEnter>
-            <Component {...pageProps} />
-          </AnimatePresence>
-        </App>
-    </OldThemeContextProvider>
-  </ThemeContextProvider>
+    <ThemeContextProvider>
+      <OldThemeContextProvider>
+          <OldHtmlContextProvider>
+            <ChakraProvider>
+              <Head>
+                <title>Xandrf Portfolio</title>
+              </Head>
+              <Script src="/NoFlicker.js" strategy='beforeInteractive' />
+                <AnimatePresence>
+                  <App>
+                      <Component {...pageProps} />
+                  </App>
+                </AnimatePresence>
+            </ChakraProvider>
+          </OldHtmlContextProvider>
+      </OldThemeContextProvider>
+    </ThemeContextProvider>
   )
 }
 

@@ -1,0 +1,22 @@
+.AlignedLink{
+    color: rgb(211, 211, 211);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AlignedLink:hover{
+    color: white;
+}
+.AlignedLink-Base:hover{
+    border-top: 1px solid var(--base-info);
+}
+.AlignedLink-HighTechPurple:hover{
+    border-top: 1px solid var(--Purpletech-Secondarycolor);
+}
+.AlignedLink-HighTechRed:hover{
+    border-top: 1px solid var(--HighTechRed-SecondaryColor);
+}
+.AlignedLink-KissLand:hover{
+    border-top: 1px solid var(--Kissland-blue);
+}

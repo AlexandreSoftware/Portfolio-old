@@ -1,0 +1,13 @@
+.DropDownMenu{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap:wrap;
+    padding-left: 0;
+    align-self: stretch;
+}
+.DropDownMenu > li {
+    margin: 0 2%;
+    text-align: center;
+}

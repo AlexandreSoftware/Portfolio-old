@@ -1,12 +1,12 @@
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons"
 import { AnimatePresence, motion } from "framer-motion"
 import { useContext, useEffect, useState } from "react"
-import BackgroundWLetters from "../Components/BackgroundWLetters"
-import GetIcon from "../Components/GetIcon"
-import ProjectCards from "../Components/Home/ProjectCards"
-import ProjectPricingCards from "../Components/Home/ProjectPricingCards"
-import SixSkillCards from "../Components/Home/SixSkillCards"
-import StyledButton from "../Components/StyledButton"
+import BackgroundWLetters from "../Components/Common/Background/BackgroundWLetters"
+import GetIcon from "../Components/Common/GetIcon"
+import ProjectCards from "../Components/Pages/Home/ProjectCards"
+import ProjectPricingCards from "../Components/Pages/Home/ProjectPricingCards"
+import SixSkillCards from "../Components/Pages/Home/SixSkillCards"
+import StyledButton from "../Components/Common/StyledButton"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
 import Style from "./Styles/Home.module.css"
 export default function Home() {
@@ -41,7 +41,6 @@ export default function Home() {
             }} className={Style.HomePage}>
                 <div className={`${Style["Home-logo"]} ${Style[`Home-${Theme[context]}`]}`}>
                     {!isSSR && <motion.img
-                        key={icon}
                         initial="imageInitial"
                         animate="imageAnimate"
                         variants={{

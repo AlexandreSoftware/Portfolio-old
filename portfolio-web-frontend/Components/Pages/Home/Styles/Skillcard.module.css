@@ -1,0 +1,60 @@
+.SkillCard{
+    border-radius: 1%;
+    max-width: 45vh;
+    min-height: 60vh;
+}
+.SkillCardIcon{
+    border: 2px solid black;
+    width: 10vh;
+    height: 10vh;
+    margin-left: 10%;
+    margin-top:  10%;
+    border-radius: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background: var(--white);
+}
+.SkillCardIcon svg{
+    width: 50%;
+    height: 50%;
+}
+.SkillCard h2{
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 15%;
+    margin-bottom: 1%;
+}
+.SkillCardIcon > *{
+    width: 40%;
+    height: 40%;
+    
+}
+.SkillCard > p{
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 15%;
+    margin-top: 2%;
+}
+
+
+.SkillCard-Base{
+    background: var(--base-primarycolor);
+    transition: background 500ms linear;
+}
+.SkillCard-HighTechPurple{
+    background: var(--Purpletech-Primarycolor);
+    transition: background 500ms linear;
+}
+.SkillCard-HighTechRed{
+    background: var(--HighTechRed-PrimaryColor);
+    color: white;
+    transition: background 500ms linear;
+}
+.SkillCard-KissLand{
+    background: #0A0D0A;
+    background: var(--Kissland-primaryColor);
+    color: white;
+    transition: background 500ms linear;
+}
