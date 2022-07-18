@@ -1,5 +1,4 @@
 import ReactMarkdown from "react-markdown"
-import StyledButton from "../StyledButton"
 import Style from "./Styles/BlogPostComponent.module.css"
 interface BlogPostProps{
     imageLink:string,
