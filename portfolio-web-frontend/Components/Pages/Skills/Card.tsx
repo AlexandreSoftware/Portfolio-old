@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from "react";
-import ThemeContext, { Theme } from "../../utils/ThemeContext";
+import ThemeContext, { Theme } from "../../../utils/ThemeContext";
 import Style from "./Styles/Card.module.css"
 
 export default function Card() {
