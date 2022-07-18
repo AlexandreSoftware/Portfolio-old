@@ -2,7 +2,7 @@
     position: absolute;
 
     border: 1px solid black;
-    border-radius: 10%;
+    border-radius: 5%;
     padding: 0.5% 0.5%;
     list-style-type: none;
     margin-top: 1%;
@@ -12,7 +12,7 @@
     grid-template-columns: auto auto;
     align-items: center;
     justify-content: center;
-    background-color: rgb(53, 53, 53);
+    background-color: var(--chakra-colors-blackAlpha-600);
 
 }
 .DropDownMenu > li {
@@ -20,6 +20,7 @@
     margin: 1vh 1vw;
     text-align: center;
 }
+/*
 .DropDownMenu-Base{
     background: var(--base-primarycolor);
 }
@@ -32,4 +33,4 @@
 .DropDownMenu-KissLand{
     background: #0A0D0A;
 
-}
+} */
