@@ -9,7 +9,7 @@ interface ColorProps{
     Theme:Theme,
     id :string
 }
-export default function Color(props:ColorProps) {
+export default function ColorCircle(props:ColorProps) {
     let [ishovered,setIsHovered] =  useState(false)
     let [isReverse,setIsReverse] =  useState(false)
     let ishoveredref =  useRef(false)

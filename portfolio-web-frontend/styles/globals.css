@@ -227,3 +227,21 @@ body{
 .overflow_hidden{
   overflow: hidden;
 }
+.Background-Base{
+  background: var(--base-primarycolor);
+}
+
+.Background-HighTechPurple{
+    background: var(--Purpletech-Primarycolor);
+}
+
+.Background-HighTechRed{
+    background: var(--HighTechRed-PrimaryColor);
+}
+
+.Background-KissLand{
+    background: var(--Kissland-primaryColor);
+}
+
+
+

@@ -10,14 +10,20 @@ import Link from 'next/link';
 import ColorPickerButton from './ColorPickerButton';
 import { AnimatePresence, motion } from 'framer-motion';
 import AlignedLink from './AlignedLink';
+import LanguageContext, {Language} from '../../../utils/LanguageContext';
+import LanguagePickerButton from './LanguagePickerButton';
+import NavBarMenu from './NavBarMenu';
 const Navbar = () => {
-    const [context,SetContext] =useContext(ThemeContext)
-    const [icon,SetIcon] = useState(GetIcon(Theme.Base))
-    const [closeDialog,SetCloseDialog] = useState(false)
-    const [isSSR, setIsSSR] = useState(true);
-    const [isPortait,SetIsPortait] = useState(false)
+    const [themeContext] =useContext(ThemeContext),
+      [languageContext] =useContext(LanguageContext),
+      [icon,SetIcon] = useState(GetIcon(Theme.Base)),
+      [closeDialog,SetCloseDialog] = useState(false),
+      [isSSR, setIsSSR] = useState(true),
+      [isPortait,SetIsPortait] = useState(false);
+    const isEnglish = languageContext == Language.EN_US;
+    const isPortuguese = languageContext == Language.PT_BR
     useEffect(()=>{
-        SetIcon(GetIcon(context))
+        SetIcon(GetIcon(themeContext))
         setIsSSR(false)
         if (window.innerWidth < 1024) {
           SetIsPortait(true)
@@ -40,33 +46,30 @@ const Navbar = () => {
       SetCloseDialog(true)
     },[isPortait])
     useEffect(()=>{
-        SetIcon(GetIcon(context))
-    },[context])
+        SetIcon(GetIcon(themeContext))
+    },[themeContext])
   return (
       <div className={Styles.ExtendedNavbarContainer}>
           <header
-          className={`${Styles["Navbar-Header"]} ${isSSR?"":Styles[`Navbar-Header-${Theme[context]}`]}`}>
+          className={`${Styles["Navbar-Header"]} ${isSSR?"":Styles[`Navbar-Header-${Theme[themeContext]}`]}`}>
             <div className={Styles.ImageContainer}>{!isSSR && <Link href={"/"} className='Navbar-Icon'>{<img src={icon} />}</Link>}</div>
             
-            <AlignedLink href="Projects" >Projects</AlignedLink>
-            <AlignedLink href={"Blog"}>Blog</AlignedLink>
-            <AlignedLink href={"Skills"}>Skills</AlignedLink>
-            <AlignedLink href={"About"}>About</AlignedLink>
-            {
-              !isPortait ? 
-              <div className={Styles.ColorPicker}>
-                <ColorPicker/>
-              </div>:
-              <div className={Styles.ColorButtonPicker}>
-                <ColorPickerButton closeStateDispatch={SetCloseDialog} closeState={closeDialog}/>
-              </div>
-            }
+            <AlignedLink href="Projects">
+              {isEnglish ? "Projects" : isPortuguese ? "Projetos" : ""} 
+            </AlignedLink>
+            <AlignedLink href={"Blog"}>
+              {isEnglish ? "Blog" : isPortuguese ? "Blog" : ""} 
+            </AlignedLink>
+            <AlignedLink href={"Skills"}>
+              {isEnglish ? "Skills" : isPortuguese ? "Habilidades" : ""} 
+            </AlignedLink>
+            <AlignedLink href={"About"}>
+              {isEnglish ? "About" : isPortuguese ? "Sobre" : ""} 
+            </AlignedLink>
+            <div>
+              <NavBarMenu/>
+            </div>
           </header>
-        { isPortait &&
-          <AnimatePresence exitBeforeEnter>
-            {!closeDialog &&<DropDownMenu/>}
-          </AnimatePresence>
-        }
       </div>
   );
 };

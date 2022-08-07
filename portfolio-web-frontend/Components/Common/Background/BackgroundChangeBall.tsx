@@ -21,7 +21,6 @@ export default function BackgroundChangeBall(props:BackgroundChangeBallProps) {
     circleposition =[topoffset,leftoffset];
     useEffect(()=>{
     },[])
-    //document.body.classList.add("overflow_hidden")
     return (<motion.div
         initial="backgroundBallInitial"
         animate="backgroundBallAnimate"
@@ -42,7 +41,7 @@ export default function BackgroundChangeBall(props:BackgroundChangeBallProps) {
         >
         { circleposition[0] != 0 &&
             (<motion.div 
-                    className={`${Style.OverlayBall}  ${Style[`OverlayBall-${Theme[props.colorToChange]}`]}`}
+                    className={`${Style.OverlayBall}  ${`Background-${Theme[props.colorToChange]}`}`}
                     initial="InitialBall"
                     animate="AnimateBall"
                     variants={{

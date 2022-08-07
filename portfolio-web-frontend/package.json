@@ -10,7 +10,6 @@
     "export": "next build && next export"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.2.4",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -27,6 +26,8 @@
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.8.4",
     "next-optimized-images": "^2.6.2",
+    "primeicons": "^5.0.0",
+    "primereact": "^8.3.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-loading": "^2.0.3",

@@ -57,8 +57,3 @@
     display: flex;
     justify-content: center;
 }
-@media (max-aspect-ratio: 16/9) {
-    .Navbar-Header > .ColorPicker{
-        flex: 1.5;
-    }
-}
