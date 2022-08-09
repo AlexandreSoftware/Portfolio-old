@@ -1,0 +1,58 @@
+.ExtendedNavbarContainer{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 9vh;
+    z-index: 10;
+}
+.Navbar-Header{
+    position: relative;
+    z-index: 2;
+    height: 9vh;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.623);
+}
+.Navbar-Header > .ImageContainer {
+    margin-right: auto;
+    text-align: left;
+    flex: 0.5;
+}
+.Navbar-Header > .ImageContainer > img{
+    width: 9vh;
+    height: 9vh;
+    margin-left: 1vh;
+}
+.Navbar-Header > *{
+    flex: 1;
+}
+
+.unstiledLink{
+    text-decoration: none;
+    color: white;
+}
+
+
+.Navbar-Header-Base{
+    background-color: var(--base-primarycolor);
+    transition: background-color 300ms linear;
+}
+.Navbar-Header-HighTechPurple{
+    background-color: var(--Purpletech-Primarycolor);
+    transition: background-color 300ms linear;
+}
+.Navbar-Header-HighTechRed{
+    background-color: var(--HighTechRed-PrimaryColor);
+    transition: background-color 300ms linear;
+}
+.Navbar-Header-KissLand{
+    background-color: #0A0D0A;
+    transition: background-color 300ms linear;
+}
+
+.ColorButtonPicker{
+    display: flex;
+    justify-content: center;
+}

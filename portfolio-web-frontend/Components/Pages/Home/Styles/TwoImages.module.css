@@ -1,0 +1,40 @@
+.TwoImagesContainer{
+    width: 100%;
+    height: 100%;
+}
+.TwoImagesContainer > div {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+}
+.LeftImage{
+    left: 0;
+}
+.RightImage{
+    right: 0;
+}
+.LeftImage > * {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.RightImage > * {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover ;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+@media (max-aspect-ratio: 16/12)  {
+    .LeftImage{
+        background: none;
+        display: none !important;
+    }
+    .RightImage{
+        width: 100% !important;
+    }
+}

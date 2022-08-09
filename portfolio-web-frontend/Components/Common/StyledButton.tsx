@@ -7,8 +7,8 @@ interface StyledButtonProps{
     whereTo : "internal" | "external",
     link : string
     children :string
-    height : number,
-    width : number
+    height? : number,
+    width? : number
 }
 export default function StyledButton(props:StyledButtonProps) {
     const [context,SetContext] =useContext(ThemeContext)

@@ -4,7 +4,7 @@ import ThemeContext, { Theme } from "../utils/ThemeContext"
 import Background from "./Common/Background/Background"
 import Footer from "./Common/Footer/Footer"
 import LightBar from "./Common/Background/LightBar"
-import Navbar from "./Common/Navbar/Navbar"
+import Navbar from "./Common/Navbar/OldNavbar"
 import SocialsCard from "./Common/SocialsCards/SocialsCard"
 
 interface AppProps{
@@ -18,7 +18,6 @@ export default function App(props:AppProps) {
     },[])
     return (
         <>
-        <Navbar/>
         {(!isSSR && context==Theme.HighTechRed) && <>
         <LightBar side="Left"></LightBar><LightBar side="Right"></LightBar>
          </>}

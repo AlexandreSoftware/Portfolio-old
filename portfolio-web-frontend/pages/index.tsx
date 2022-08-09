@@ -9,6 +9,9 @@ import SixSkillCards from "../Components/Pages/Home/SixSkillCards"
 import StyledButton from "../Components/Common/StyledButton"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
 import Style from "./Styles/Home.module.css"
+import OldNavbar from "../Components/Common/Navbar/OldNavbar"
+import TwoImages from "../Components/Pages/Home/TwoImages"
+import Image from "next/image"
 export default function Home() {
     const [context,SetContext] =useContext(ThemeContext)
     const [icon,SetIcon] = useState(GetIcon(Theme.Base))
@@ -39,6 +42,7 @@ export default function Home() {
                     }
                 }
             }} className={Style.HomePage}>
+                <TwoImages LeftImage={<img src={"/Profile Picture/Irl profile picture.jpeg"} width={100} height={100}/>} RightImage={<img src={"/Profile Picture/vtuber profile picture.png"} width={100} height={100}/>}/>
                 <div className={`${Style["Home-logo"]} ${Style[`Home-${Theme[context]}`]}`}>
                     {!isSSR && <motion.img
                         initial="imageInitial"
@@ -55,6 +59,7 @@ export default function Home() {
                                 }
                             }
                         }} src={icon} />}
+                
                 <motion.h1
                     initial="headerInitial"
                     animate="headerAnimate"
@@ -72,6 +77,8 @@ export default function Home() {
                         }
                     }}
                 >Welcome to my Portfolio</motion.h1>
+
+
                 {!isSSR && <p className={`${Style["Home-paragraph"]}   ${Style[`Home-paragraph-${Theme[context]}`]}`}>
                     My name is 
                     Carlos Alexandre Oliveira Junior
@@ -79,7 +86,12 @@ export default function Home() {
                     Im currently working as a freelancer developer
                     and i’m open to formal work
                 </p>}
+                <div className={Style.ResumeDownloadButton}>
+                    <StyledButton whereTo="external" link="https://github.com/xandrf/MyResume/blob/main/Resume-Portuguese.pdf">Download My Resume</StyledButton>
+                </div>
+
             </div>      
+            <OldNavbar></OldNavbar>
             <div className={Style.SixSkillCardsContainer}>
                 <SixSkillCards/>
             </div>
