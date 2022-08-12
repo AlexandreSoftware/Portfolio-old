@@ -3,8 +3,7 @@ import { useContext } from "react";
 import ThemeContext, { Theme } from "../../../utils/ThemeContext";
 import Style from "./Styles/BackgroundWLetters.module.css"
 export default function BackgroundWLetters() {
-    let [context] =useContext(ThemeContext)
-    console.log(`Background-${Theme[context]}`)
+    let [context] =useContext(ThemeContext);
     return <motion.div 
     initial = "backgroundInitial"
     animate = "backgroundAnimate"
