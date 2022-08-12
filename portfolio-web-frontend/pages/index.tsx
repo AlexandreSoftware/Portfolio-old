@@ -9,7 +9,7 @@ import SixSkillCards from "../Components/Pages/Home/SixSkillCards"
 import StyledButton from "../Components/Common/StyledButton"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
 import Style from "./Styles/Home.module.css"
-import OldNavbar from "../Components/Common/Navbar/OldNavbar"
+import OldNavbar from "../Components/Common/Navbar/Navbar"
 import TwoImages from "../Components/Pages/Home/TwoImages"
 import Image from "next/image"
 export default function Home() {

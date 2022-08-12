@@ -17,9 +17,10 @@ const OldNavbar = () => {
     const [themeContext] =useContext(ThemeContext),
       [languageContext] =useContext(LanguageContext),
       [icon,SetIcon] = useState(GetIcon(Theme.Base)),
-      [closeDialog,SetCloseDialog] = useState(false),
       [isSSR, setIsSSR] = useState(true),
-      [isPortait,SetIsPortait] = useState(false);
+      [isPortait,SetIsPortait] = useState(false),
+      [isIntersecting,SetIsIntersecting] = useState(false),
+      intersectingimage = React.useRef<HTMLDivElement>(null);
     const isEnglish = languageContext == Language.EN_US;
     const isPortuguese = languageContext == Language.PT_BR
     useEffect(()=>{
@@ -38,21 +39,37 @@ const OldNavbar = () => {
           } 
           else if(window.innerWidth > 1024){
             SetIsPortait(false)
-            SetCloseDialog(false)
           }
         }
+        window.addEventListener("scroll", handleScroll)
+
+
+
+
     },[])
-    useEffect(()=>{
-      SetCloseDialog(true)
-    },[isPortait])
+    const handleScroll = ()=>{
+      console.log("offsetTop " + intersectingimage.current!.offsetTop)
+      console.log("ScrollTop " + (document.scrollingElement?.scrollTop!))
+      console.log(intersectingimage.current!.offsetTop <=  ~~document.scrollingElement!.scrollTop);
+      if(intersectingimage.current!.offsetTop <=  ~~document.scrollingElement!.scrollTop) {
+        if(!isIntersecting){
+          SetIsIntersecting(true)
+        }
+      }
+      else{
+          SetIsIntersecting(false)
+      }
+    }
     useEffect(()=>{
         SetIcon(GetIcon(themeContext))
     },[themeContext])
+
+    
+    
   return (
-      <div className={Styles.ExtendedNavbarContainer}>
-          <header
+      <div className={Styles.ExtendedNavbarContainer} ref={intersectingimage} > 
+          <header id='navbar-header'
           className={`${Styles["Navbar-Header"]} ${isSSR?"":Styles[`Navbar-Header-${Theme[themeContext]}`]}`}>
-            <div className={Styles.ImageContainer}>{!isSSR && <Link href={"/"} className='Navbar-Icon'>{<img src={icon} />}</Link>}</div>
             
             <AlignedLink href="Projects">
               {isEnglish ? "Projects" : isPortuguese ? "Projetos" : ""} 
@@ -60,6 +77,12 @@ const OldNavbar = () => {
             <AlignedLink href={"Blog"}>
               {isEnglish ? "Blog" : isPortuguese ? "Blog" : ""} 
             </AlignedLink>
+            <AlignedLink href={"PlaceHolder"}>
+              {isEnglish ? "PlaceHolder" : isPortuguese ? "PlaceHolder" : ""} 
+            </AlignedLink>
+            <div id="navbar-image-container" className={`${isIntersecting ? Styles.ImageContainerIntersecting :""} ${Styles.ImageContainer}`}>
+              {!isSSR && <Link href={"/"} className='Navbar-Icon'>{<img src={icon} />}</Link>}
+            </div>
             <AlignedLink href={"Skills"}>
               {isEnglish ? "Skills" : isPortuguese ? "Habilidades" : ""} 
             </AlignedLink>

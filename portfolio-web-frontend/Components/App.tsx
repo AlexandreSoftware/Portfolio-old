@@ -4,7 +4,7 @@ import ThemeContext, { Theme } from "../utils/ThemeContext"
 import Background from "./Common/Background/Background"
 import Footer from "./Common/Footer/Footer"
 import LightBar from "./Common/Background/LightBar"
-import Navbar from "./Common/Navbar/OldNavbar"
+import Navbar from "./Common/Navbar/Navbar"
 import SocialsCard from "./Common/SocialsCards/SocialsCard"
 
 interface AppProps{

@@ -1,6 +1,6 @@
 .ExtendedNavbarContainer{
     position: sticky;
-    top: 0;
+    top: -1px;
     width: 100%;
     height: 9vh;
     z-index: 10;
@@ -15,19 +15,30 @@
     justify-content: space-around;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.623);
 }
-.Navbar-Header > .ImageContainer {
-    margin-right: auto;
-    text-align: left;
-    flex: 0.5;
-}
-.Navbar-Header > .ImageContainer > img{
-    width: 9vh;
-    height: 9vh;
-    margin-left: 1vh;
-}
-.Navbar-Header > *{
+.Navbar-Header > .GhostImageContainer{
     flex: 1;
 }
+
+.Navbar-Header > *{
+    flex: 0.5;
+}
+.Navbar-Header > .ImageContainer {
+    position: sticky;
+    height : 40vh;
+    flex: 1.2;
+    bottom: -5vh;
+    transition : 80ms;
+}
+.Navbar-Header > .ImageContainer > img{
+    height: 100% !important;
+    width: 100% !important;
+    
+}
+.ImageContainerIntersecting  {
+
+    height: 10vh !important;
+}
+
 
 .unstiledLink{
     text-decoration: none;
@@ -55,4 +66,11 @@
 .ColorButtonPicker{
     display: flex;
     justify-content: center;
+}
+
+
+@media (max-aspect-ratio: 16/9)  {
+    .ImageContainerIntersecting > img{
+        
+    }
 }
