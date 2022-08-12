@@ -1,5 +1,8 @@
 (function initTheme() {
     var theme = localStorage.getItem('theme')
+    if(theme == "undefined"|| theme == "null"){
+      localStorage.setItem("base")
+    }
     if (theme == "Base") {
         document.querySelector('html').style.background="#171A21"
     }
