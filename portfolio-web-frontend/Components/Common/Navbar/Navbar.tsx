@@ -16,7 +16,7 @@ import NavBarMenu from './NavBarMenu';
 const OldNavbar = () => {
     const [themeContext] =useContext(ThemeContext),
       [languageContext] =useContext(LanguageContext),
-      [icon,SetIcon] = useState(GetIcon(Theme.Base)),
+      [icon,SetIcon] = useState(GetIcon(Theme.Base,false)),
       [isSSR, setIsSSR] = useState(true),
       [isPortait,SetIsPortait] = useState(false),
       [isIntersecting,SetIsIntersecting] = useState(false),
@@ -24,7 +24,7 @@ const OldNavbar = () => {
     const isEnglish = languageContext == Language.EN_US;
     const isPortuguese = languageContext == Language.PT_BR
     useEffect(()=>{
-        SetIcon(GetIcon(themeContext))
+        SetIcon(GetIcon(themeContext,false))
         setIsSSR(false)
         if (window.innerWidth < 1024) {
           SetIsPortait(true)
@@ -57,7 +57,7 @@ const OldNavbar = () => {
       }
     }
     useEffect(()=>{
-        SetIcon(GetIcon(themeContext))
+        SetIcon(GetIcon(themeContext,false))
     },[themeContext])
 
     

@@ -10,11 +10,11 @@ import KissLandLogoNotext from "/Icons/Notext/XandrfDevLogoKissLandNotext.svg"
 
 import { Theme } from "../../utils/ThemeContext"
 import { motion } from "framer-motion"
-export default function GetIcon(context:Theme,Notext:boolean) {
+export default function GetIcon(context:Theme,element:boolean) {
     
     
     let iconConditional ;
-    if(!Notext){
+    if(!element){
         iconConditional = context== Theme.Base ?
             BaseLogo:
                 context == Theme.HighTechPurple ?
