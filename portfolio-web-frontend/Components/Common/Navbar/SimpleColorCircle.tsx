@@ -17,7 +17,8 @@ export default function SimpleColorCircle(props:SimpleColorProps) {
     let [oldThemeContext,SetOldThemeContext] = useContext(OldThemeContext)
     let clicked = useRef(false);
     return(
-        <BackgroundChangeBall reverse={false} element={} colorToChange={props.Theme}/>
+        // <BackgroundChangeBall reverse={false} colorToChange={props.Theme}/>
+        <div></div>
     )
 
 }
