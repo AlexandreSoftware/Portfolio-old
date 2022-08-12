@@ -5,18 +5,19 @@
 }
 .SkillCardIcon{
     border: 2px solid black;
-    width: 10vh;
-    height: 10vh;
+    width: 8vh;
+    height: 8vh;
     margin-left: 10%;
     margin-top:  10%;
-    border-radius: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: black;
     background: var(--white);
+    transform: rotate(45deg);
 }
 .SkillCardIcon svg{
+    transform : rotate(-45deg);
     width: 50%;
     height: 50%;
 }
