@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import { useContext, useState, useEffect } from "react";
 import ThemeContext, { Theme } from "../../../utils/ThemeContext";
+import GetIcon from "../../Common/GetIcon";
 import Styles from "./Styles/Skillcard.module.css"
 interface SkillCardProps{
     icon :IconDefinition,
@@ -25,7 +26,7 @@ export default function SkillCard(props:SkillCardProps) {
         }
     }}
     className={`${Styles.SkillCard} ${isSSR?"":Styles[`SkillCard-${Theme[context]}`]}`}>
-        <div className={Styles.SkillCardIcon + ` ${isSSR?"":Styles[`SkillCardIcon-${Theme[context]}`]}`}>
+        <div className={Styles.SkillCardIcon + ` ${isSSR?"":Styles[`SkillCardIcon-${Theme[context]}`]}`} style={{backgroundImage:"url("+GetIcon(context,true)+")"}}   >
             <FontAwesomeIcon icon={props.icon} width={100} height={100} />
         </div>
         <h2>{props.Title}</h2>

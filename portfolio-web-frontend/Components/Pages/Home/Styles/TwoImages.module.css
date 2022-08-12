@@ -1,0 +1,40 @@
+.TwoImagesContainer{
+}
+.TwoImagesContainer > div {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+}
+.LeftImage{
+    left: 0;
+    background-size: cover ;
+    background-color: black;
+    background-position: top center;
+    background-repeat:no-repeat;
+}
+.RightImage{
+    right: 0;
+    background-image: url("/Profile Picture/vtuber profile picture.png");
+    background-size: cover ;
+    background-color: black;
+    background-position: top right;
+    background-repeat:no-repeat;
+}
+.LeftImage > * {
+    position: relative;
+}
+.RightImage > * {
+    position: relative;
+
+}
+@media (max-aspect-ratio: 16/12)  {
+    .LeftImage{
+        background: none;
+        display: none !important;
+    }
+    .RightImage{
+        width: 100% !important;
+    }
+}

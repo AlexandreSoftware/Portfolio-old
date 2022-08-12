@@ -10,14 +10,21 @@ import Link from 'next/link';
 import ColorPickerButton from './ColorPickerButton';
 import { AnimatePresence, motion } from 'framer-motion';
 import AlignedLink from './AlignedLink';
-const Navbar = () => {
-    const [context,SetContext] =useContext(ThemeContext)
-    const [icon,SetIcon] = useState(GetIcon(Theme.Base))
-    const [closeDialog,SetCloseDialog] = useState(false)
-    const [isSSR, setIsSSR] = useState(true);
-    const [isPortait,SetIsPortait] = useState(false)
+import LanguageContext, {Language} from '../../../utils/LanguageContext';
+import LanguagePickerButton from './LanguagePickerButton';
+import NavBarMenu from './NavBarMenu';
+const OldNavbar = () => {
+    const [themeContext] =useContext(ThemeContext),
+      [languageContext] =useContext(LanguageContext),
+      [icon,SetIcon] = useState(GetIcon(Theme.Base,false)),
+      [isSSR, setIsSSR] = useState(true),
+      [isPortait,SetIsPortait] = useState(false),
+      [isIntersecting,SetIsIntersecting] = useState(false),
+      intersectingimage = React.useRef<HTMLDivElement>(null);
+    const isEnglish = languageContext == Language.EN_US;
+    const isPortuguese = languageContext == Language.PT_BR
     useEffect(()=>{
-        SetIcon(GetIcon(context))
+        SetIcon(GetIcon(themeContext,false))
         setIsSSR(false)
         if (window.innerWidth < 1024) {
           SetIsPortait(true)
@@ -26,48 +33,63 @@ const Navbar = () => {
           SetIsPortait(false)
         }
         window.onresize= ()=>{
-          console.log(isPortait)
           if (window.innerWidth < 1024) {
             SetIsPortait(true)
           } 
           else if(window.innerWidth > 1024){
             SetIsPortait(false)
-            SetCloseDialog(false)
           }
         }
+        window.addEventListener("scroll", handleScroll)
+
+
+
+
     },[])
-    useEffect(()=>{
-      SetCloseDialog(true)
-    },[isPortait])
-    useEffect(()=>{
-        SetIcon(GetIcon(context))
-    },[context])
-  return (
-      <div className={Styles.ExtendedNavbarContainer}>
-          <header
-          className={`${Styles["Navbar-Header"]} ${isSSR?"":Styles[`Navbar-Header-${Theme[context]}`]}`}>
-            <div className={Styles.ImageContainer}>{!isSSR && <Link href={"/"} className='Navbar-Icon'>{<img src={icon} />}</Link>}</div>
-            
-            <AlignedLink href="Projects" >Projects</AlignedLink>
-            <AlignedLink href={"Blog"}>Blog</AlignedLink>
-            <AlignedLink href={"Skills"}>Skills</AlignedLink>
-            <AlignedLink href={"About"}>About</AlignedLink>
-            {
-              !isPortait ? 
-              <div className={Styles.ColorPicker}>
-                <ColorPicker/>
-              </div>:
-              <div className={Styles.ColorButtonPicker}>
-                <ColorPickerButton closeStateDispatch={SetCloseDialog} closeState={closeDialog}/>
-              </div>
-            }
-          </header>
-        { isPortait &&
-          <AnimatePresence exitBeforeEnter>
-            {!closeDialog &&<DropDownMenu/>}
-          </AnimatePresence>
+    const handleScroll = ()=>{
+      if(intersectingimage.current!.offsetTop <=  ~~document.scrollingElement!.scrollTop) {
+        if(!isIntersecting){
+          SetIsIntersecting(true)
         }
+      }
+      else{
+          SetIsIntersecting(false)
+      }
+    }
+    useEffect(()=>{
+        SetIcon(GetIcon(themeContext,false))
+    },[themeContext])
+
+    
+    
+  return (
+      <div className={Styles.ExtendedNavbarContainer} ref={intersectingimage} > 
+          <header id='navbar-header'
+          className={`${Styles["Navbar-Header"]} ${isSSR?"":Styles[`Navbar-Header-${Theme[themeContext]}`]}`}>
+            
+            <AlignedLink href="Projects">
+              {isEnglish ? "Projects" : isPortuguese ? "Projetos" : ""} 
+            </AlignedLink>
+            <AlignedLink href={"Blog"}>
+              {isEnglish ? "Blog" : isPortuguese ? "Blog" : ""} 
+            </AlignedLink>
+            <AlignedLink href={"PlaceHolder"}>
+              {isEnglish ? "PlaceHolder" : isPortuguese ? "PlaceHolder" : ""} 
+            </AlignedLink>
+            <div id="navbar-image-container" className={`${isIntersecting ? Styles.ImageContainerIntersecting :""} ${Styles.ImageContainer}`}>
+              {!isSSR && <Link href={"/"} className='Navbar-Icon'>{<img src={icon} />}</Link>}
+            </div>
+            <AlignedLink href={"Skills"}>
+              {isEnglish ? "Skills" : isPortuguese ? "Habilidades" : ""} 
+            </AlignedLink>
+            <AlignedLink href={"About"}>
+              {isEnglish ? "About" : isPortuguese ? "Sobre" : ""} 
+            </AlignedLink>
+            <div>
+              <NavBarMenu/>
+            </div>
+          </header>
       </div>
   );
 };
-export default Navbar;
+export default OldNavbar;

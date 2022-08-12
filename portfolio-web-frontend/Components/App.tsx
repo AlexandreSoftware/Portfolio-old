@@ -18,7 +18,6 @@ export default function App(props:AppProps) {
     },[])
     return (
         <>
-        <Navbar/>
         {(!isSSR && context==Theme.HighTechRed) && <>
         <LightBar side="Left"></LightBar><LightBar side="Right"></LightBar>
          </>}

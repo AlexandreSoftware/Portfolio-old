@@ -1,8 +1,9 @@
 (function initTheme() {
     var theme = localStorage.getItem('theme')
-    console.log(theme)
+    if(theme == "undefined"|| theme == "null"){
+      localStorage.setItem("base")
+    }
     if (theme == "Base") {
-      console.log("passed")
         document.querySelector('html').style.background="#171A21"
     }
     else if (theme == "HighTechPurple"){

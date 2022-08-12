@@ -4,19 +4,22 @@
     min-height: 60vh;
 }
 .SkillCardIcon{
-    border: 2px solid black;
     width: 10vh;
     height: 10vh;
     margin-left: 10%;
     margin-top:  10%;
-    border-radius: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: black;
-    background: var(--white);
+    
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+
+
 }
 .SkillCardIcon svg{
+    /* transform : rotate(-45deg); */
     width: 50%;
     height: 50%;
 }

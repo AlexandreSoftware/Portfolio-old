@@ -4,7 +4,7 @@ import ThemeContext, { Theme } from "../../../utils/ThemeContext"
 import { useContext } from "react"
 import { motion } from "framer-motion"
 export default function DropDownMenu() {
-    const [context,SetContext] =useContext(ThemeContext)
+    const [Themecontext,SetThemeContext] =useContext(ThemeContext)
     return(
         <motion.ul
         initial="initial"
@@ -29,7 +29,7 @@ export default function DropDownMenu() {
                 }
             }
         }}
-        className={`${Style.DropDownMenu} ${Style[`DropDownMenu-${Theme[context]}`]}`}>
+        className={`${Style.DropDownMenu} ${Style[`DropDownMenu-${Theme[Themecontext]}`]}`}>
             <li><ColorCircle Color="#171A21" Theme={Theme.Base}  id="ColorBaseButtonddm"/></li>
             <li><ColorCircle Color="#3C1361" Theme={Theme.HighTechPurple}  id="ColorPurpleButtonddm"/></li>
             <li><ColorCircle Color="#FF0000" Theme={Theme.HighTechRed}  id="ColorRedButtonddm"/></li>
