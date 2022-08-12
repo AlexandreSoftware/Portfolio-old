@@ -33,7 +33,6 @@ const OldNavbar = () => {
           SetIsPortait(false)
         }
         window.onresize= ()=>{
-          console.log(isPortait)
           if (window.innerWidth < 1024) {
             SetIsPortait(true)
           } 
@@ -48,9 +47,6 @@ const OldNavbar = () => {
 
     },[])
     const handleScroll = ()=>{
-      console.log("offsetTop " + intersectingimage.current!.offsetTop)
-      console.log("ScrollTop " + (document.scrollingElement?.scrollTop!))
-      console.log(intersectingimage.current!.offsetTop <=  ~~document.scrollingElement!.scrollTop);
       if(intersectingimage.current!.offsetTop <=  ~~document.scrollingElement!.scrollTop) {
         if(!isIntersecting){
           SetIsIntersecting(true)
