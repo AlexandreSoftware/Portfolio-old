@@ -1,12 +1,16 @@
 .SocialsCard{
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
-    width: 7vw;
-    height: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
     z-index: 5;
+    padding-left: 5%;
+    padding-top: 0.5%;
+}
+.SocialsCard > *{
+    margin-left: 1vh;
 }
