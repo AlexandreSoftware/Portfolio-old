@@ -7,14 +7,14 @@ import ThemeContext, { Theme } from "../utils/ThemeContext";
 import Style from "./Styles/About.module.css"
 export default function About() {
     const [context,SetContext] =useContext(ThemeContext)
-    const [icon,SetIcon] = useState(GetIcon(Theme.Base))
+    const [icon,SetIcon] = useState(GetIcon(Theme.Base,false))
     const [isSSR, setIsSSR] = useState(true);
     useEffect(()=>{
-        SetIcon(GetIcon(context))
+        SetIcon(GetIcon(context,false))
         setIsSSR(false)
     },[])
     useEffect(()=>{
-        SetIcon(GetIcon(context))
+        SetIcon(GetIcon(context,false))
     },[context])
     return (
         <motion.div

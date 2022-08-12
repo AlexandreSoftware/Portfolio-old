@@ -11,7 +11,6 @@ import ColorPickerButton from './ColorPickerButton';
 import { AnimatePresence, motion } from 'framer-motion';
 import AlignedLink from './AlignedLink';
 import LanguageContext, {Language} from '../../../utils/LanguageContext';
-import LanguagePickerButton from './LanguagePickerButton';
 import NavBarMenu from './NavBarMenu';
 const OldNavbar = () => {
     const [themeContext] =useContext(ThemeContext),
