@@ -1,4 +1,3 @@
-import { Button } from "@chakra-ui/react"
 import { faPalette } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Dispatch, SetStateAction } from "react"
@@ -12,9 +11,9 @@ interface ColorPickerButtonProps{
 export default function ColorPickerButton(props:ColorPickerButtonProps) {
     return (
         <>
-            <Button colorScheme="blackAlpha" className={Style.ColorPicker} onClick={()=>{props.closeStateDispatch(!props.closeState)}} size="md">
+            <button className={Style.ColorPicker} onClick={()=>{props.closeStateDispatch(!props.closeState)}}>
                 <FontAwesomeIcon icon={faPalette} />
-            </Button>
+            </button>
         </>
 
     )

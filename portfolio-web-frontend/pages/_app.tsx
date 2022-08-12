@@ -7,7 +7,6 @@ import Head from 'next/head'
 import App from '../Components/App'
 import { AnimatePresence } from 'framer-motion'
 import { OldHtmlContextProvider } from '../utils/OldHtmlContext'
-import { ChakraProvider } from '@chakra-ui/react'
 import Script from 'next/script'
 import { LanguageContextProvider } from '../utils/LanguageContext'
 
