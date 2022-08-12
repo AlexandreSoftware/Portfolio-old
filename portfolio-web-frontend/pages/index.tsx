@@ -42,7 +42,7 @@ export default function Home() {
                     }
                 }
             }} className={Style.HomePage}>
-                <TwoImages LeftImage={<img src={"/Profile Picture/Irl profile picture.jpeg"} width={100} height={100}/>} RightImage={<img src={"/Profile Picture/vtuber profile picture.png"} width={100} height={100}/>}/>
+                <TwoImages LeftImage={"/Profile Picture/Irl profile picture.jpeg"} RightImage={"/Profile Picture/vtuber profile picture.png"}/>
                 <div className={Style["Home-logo"]}>
                     {!isSSR && <motion.img
                         initial="imageInitial"
