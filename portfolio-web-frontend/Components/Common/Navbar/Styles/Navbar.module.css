@@ -24,8 +24,7 @@
 }
 .Navbar-Header > .ImageContainer {
     position: sticky;
-    height : 40vh;
-    flex: 1.2;
+    height : 30vh;
     bottom: -5vh;
     transition : 80ms;
 }

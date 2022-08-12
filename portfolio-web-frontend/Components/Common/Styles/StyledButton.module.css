@@ -2,44 +2,48 @@
     margin-bottom: 10%;
 }
 .ButtonContainer button{
-    border-radius: 12%;
+    border-radius: 5%;
+    border: 1px solid black;
 }
 
 .Button-Base{
-    background-color: var(--base-info);
+    background-color: var(--base-primarycolor-alt);
     color: white;
     transition: background-color 300ms linear;
 }
 .Button-Base:hover{
-    background-color: var(--Kissland-blue);
+    background-color: var(--base-primarycolor);
     transition: background-color 300ms linear;
 }
 
 
 .Button-HighTechPurple{
-    background-color: var(--Purpletech-altpurple);
+    background-color: var(--Purpletech-Secondarycolor);
     color: white;
     transition: background-color 300ms linear;
 }
 .Button-HighTechPurple:hover{
-    background-color: var(--Purpletech-altpink);
+    background-color: var(--Purpletech-Primarycolor);
     transition: background-color 300ms linear;
 }
 
+.Button-HighTechRed{
+    background-color: var(--HighTechRed-SecondaryColor);
+    color: white;
+    transition: background-color 300ms linear;
+}
+.Button-HighTechRed:hover{
+    background-color: var(--HighTechRed-PrimaryColor);
+    transition: background-color 300ms linear;
+}
+
+
 .Button-KissLand{
-    background-color: var(--Kissland-blue-alt2);
+    background-color: var(--Kissland-SecondaryColor);
     color: white;
     transition: background-color 300ms linear;
 }
 .Button-KissLand:hover{
-    background-color: var(--Kissland-blue);
+    background-color: var(--Kissland-primaryColor);
     transition: background-color 300ms linear;
-}
-
-.Button-KissLand{
-    background-color: var(--Kissland-blue-alt2);
-    color: white;
-}
-.Button-KissLand:hover{
-    background-color: var(--Kissland-blue);
 }

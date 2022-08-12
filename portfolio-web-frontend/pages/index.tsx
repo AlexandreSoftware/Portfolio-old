@@ -14,14 +14,14 @@ import TwoImages from "../Components/Pages/Home/TwoImages"
 import Image from "next/image"
 export default function Home() {
     const [context,SetContext] =useContext(ThemeContext)
-    const [icon,SetIcon] = useState(GetIcon(Theme.Base))
+    const [icon,SetIcon] = useState(GetIcon(Theme.Base,false))
     const [isSSR, setIsSSR] = useState(true);
     useEffect(()=>{
-        SetIcon(GetIcon(context))
+        SetIcon(GetIcon(context,false))
         setIsSSR(false)
     },[])
     useEffect(()=>{
-        SetIcon(GetIcon(context))
+        SetIcon(GetIcon(context,false))
     },[context])
     return (
         <>
@@ -43,7 +43,7 @@ export default function Home() {
                 }
             }} className={Style.HomePage}>
                 <TwoImages LeftImage={<img src={"/Profile Picture/Irl profile picture.jpeg"} width={100} height={100}/>} RightImage={<img src={"/Profile Picture/vtuber profile picture.png"} width={100} height={100}/>}/>
-                <div className={`${Style["Home-logo"]} ${Style[`Home-${Theme[context]}`]}`}>
+                <div className={Style["Home-logo"]}>
                     {!isSSR && <motion.img
                         initial="imageInitial"
                         animate="imageAnimate"
@@ -79,7 +79,7 @@ export default function Home() {
                 >Welcome to my Portfolio</motion.h1>
 
 
-                {!isSSR && <p className={`${Style["Home-paragraph"]}   ${Style[`Home-paragraph-${Theme[context]}`]}`}>
+                {!isSSR && <p className={Style["Home-paragraph"]}>
                     My name is 
                     Carlos Alexandre Oliveira Junior
                     I’m a .Net/Node Fullstack Developer
@@ -87,7 +87,7 @@ export default function Home() {
                     and i’m open to formal work
                 </p>}
                 <div className={Style.ResumeDownloadButton}>
-                    <StyledButton whereTo="external" link="https://github.com/xandrf/MyResume/blob/main/Resume-Portuguese.pdf">Download My Resume</StyledButton>
+                    <StyledButton whereTo="external" link="https://github.com/xandrf/MyResume/blob/main/Resume-Portuguese.pdf" height={10} width={20}>Download My Resume</StyledButton>
                 </div>
 
             </div>      
