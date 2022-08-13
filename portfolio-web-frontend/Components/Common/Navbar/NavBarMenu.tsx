@@ -34,24 +34,28 @@ export default function NavBarMenu() {
             items:[
                 {
                     label:"Base",
+                    icon:(<SimpleColorCircle Color="#171A21"/>),
                     command:()=>{
                         SetTheme(Theme.Base)
                     }
                 },
                 {
                     label:"HighTechPurple",
+                    icon:(<SimpleColorCircle Color="#3C1361"/>),
                     command:()=>{
                         SetTheme(Theme.HighTechPurple)
-                    }
+                    },
                 },
                 {
                     label:"HighTechRed",
+                    icon:(<SimpleColorCircle Color="#840404"/>),
                     command:()=>{
                         SetTheme(Theme.HighTechRed)
                     }
                 },
                 {
                     label:"KissLand",
+                    icon:(<SimpleColorCircle Color="#229867"/>),
                     command:()=>{
                         SetTheme(Theme.KissLand)
                     }
@@ -63,7 +67,7 @@ export default function NavBarMenu() {
         <>
             <Button type="button" icon="pi pi-bars" onClick={(event) =>  menu.current.toggle(event) } className="p-button-secondary"
             ></Button>
-            <SlideMenu popup ref={menu} viewportHeight={225} model={data} backLabel={languageContext == Language.EN_US ? "Back":languageContext == Language.PT_BR ?"Voltar":""}/>
+            <SlideMenu popup ref={menu} viewportHeight={250} model={data} backLabel={languageContext == Language.EN_US ? "Back":languageContext == Language.PT_BR ?"Voltar":""}/>
         </>
 
     )
