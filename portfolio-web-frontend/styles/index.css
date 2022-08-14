@@ -30,6 +30,8 @@ html{
   --Purpletech-altpink : #FFA9E7;
   --Purpletech-purplegradient : linear-gradient(219.29deg, #3C1361 18.67%, #FE4900 86%);
   --Purpletech-PurpleOrangeGradientDiagonal : linear-gradient(145.71deg, #3C1361 28.69%, #F05E23 88.53%);
+  --Purpletech-PurpleOrangeGradientHorizontal : linear-gradient(90deg, #3C1361 25.83%, #F05E23 121.85%);
+
   --Purpletech-PurpleOrangeGradientVertical : linear-gradient(180deg, #3C1361 14.17%, #F05E23 94.57%);
   
   
