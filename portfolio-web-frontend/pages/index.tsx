@@ -9,9 +9,10 @@ import SixSkillCards from "../Components/Pages/Home/SixSkillCards"
 import StyledButton from "../Components/Common/StyledButton"
 import ThemeContext, { Theme } from "../utils/ThemeContext"
 import Style from "./Styles/Home.module.css"
-import OldNavbar from "../Components/Common/Navbar/Navbar"
+import Navbar from "../Components/Common/Navbar/Navbar"
 import TwoImages from "../Components/Pages/Home/TwoImages"
-import Image from "next/image"
+import IntroductionCard from "../Components/Pages/Home/IntroductionCard"
+
 export default function Home() {
     const [context,SetContext] =useContext(ThemeContext)
     const [icon,SetIcon] = useState(GetIcon(Theme.Base,false))
@@ -77,21 +78,13 @@ export default function Home() {
                         }
                     }}
                 >Welcome to my Portfolio</motion.h1>
-
-
-                {!isSSR && <p className={Style["Home-paragraph"]}>
-                    My name is 
-                    Carlos Alexandre Oliveira Junior
-                    I’m a .Net/Node Fullstack Developer
-                    Im currently working as a freelancer developer
-                    and i’m open to formal work
-                </p>}
                 <div className={Style.ResumeDownloadButton}>
                     <StyledButton whereTo="external" link="https://github.com/xandrf/MyResume/blob/main/Resume-Portuguese.pdf" height={10} width={20}>Download My Resume</StyledButton>
                 </div>
 
             </div>      
-            <OldNavbar></OldNavbar>
+            <Navbar></Navbar>
+            <IntroductionCard></IntroductionCard>
             <div className={Style.SixSkillCardsContainer}>
                 <SixSkillCards/>
             </div>

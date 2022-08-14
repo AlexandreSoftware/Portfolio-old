@@ -6,6 +6,16 @@
     align-items: flex-start;   
 }
 
+.IntroductionCard .InfoList{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.IntroductionCard .InfoList .InfoListLink{
+    color: white;
+}
+
+
 .IntroductionCard-Base{
     background-color: var(--base-info);
  }

@@ -12,9 +12,13 @@
 }
 .DetailsCard > *{
     margin-left: 10%;
+    margin-right: 20%;
+    text-align: left;
 }
+
 .DetailsCard .Title{
     margin-top: 10%;
+    
 }
 .DetailsCard .LittleBar{
     background-color: red;
