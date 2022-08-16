@@ -22,7 +22,6 @@ export default function App(props:AppProps) {
         <LightBar side="Left"></LightBar><LightBar side="Right"></LightBar>
          </>}
             <motion.div>
-                {!isSSR &&<Background/>}
                 <div >
                     {props.children}
                 </div>

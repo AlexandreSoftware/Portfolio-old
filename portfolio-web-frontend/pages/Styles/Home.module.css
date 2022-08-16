@@ -54,6 +54,11 @@
     align-items: center;
 }
 
+@media (max-aspect-ratio: 16/12)  {
+    .Home-logo{
+        height: 50vh;
+    }
+}
 @media (max-aspect-ratio: 16/9)  {
     .Home-logo > .Home-paragraph{
         padding-right: 0;

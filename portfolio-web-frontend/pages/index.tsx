@@ -28,9 +28,7 @@ export default function Home() {
     },[context])
     return (
         <>
-            <AnimatePresence exitBeforeEnter>
-                {!isSSR && <BackgroundWLetters/>}
-            </AnimatePresence>
+            
             <motion.div
             initial="initial"
             animate="animate"
@@ -97,12 +95,16 @@ export default function Home() {
             <div className={Style.ProjectsContainer}> 
                 <ProjectCards/>
             </div>
+            <AnimatePresence exitBeforeEnter>
+            <BackgroundWLetters></BackgroundWLetters>
+            </AnimatePresence>
             <div className={Style.ProjectpricingCards}>
                 <ProjectPricingCards/>
             </div>
             <StyledButton link="mailto:xandrf@xandrfdev.com" whereTo="external" width={15} height={6}>
                 Contact Me
             </StyledButton>
+
         </motion.div>
     </>
     )
