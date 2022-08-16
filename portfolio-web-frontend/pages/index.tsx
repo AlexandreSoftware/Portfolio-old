@@ -12,6 +12,7 @@ import Style from "./Styles/Home.module.css"
 import Navbar from "../Components/Common/Navbar/Navbar"
 import TwoImages from "../Components/Pages/Home/TwoImages"
 import IntroductionCard from "../Components/Pages/Home/IntroductionCard"
+import SocialsCard from "../Components/Common/SocialsCards/SocialsCard"
 
 export default function Home() {
     const [context,SetContext] =useContext(ThemeContext)
@@ -43,6 +44,7 @@ export default function Home() {
                     }
                 }
             }} className={Style.HomePage}>
+                <SocialsCard/>
                 <TwoImages LeftImage={"/Profile Picture/Irl profile picture.jpeg"} RightImage={"/Profile Picture/vtuber profile picture.png"}/>
                 <div className={Style["Home-logo"]}>
                     {!isSSR && <motion.img
@@ -89,7 +91,6 @@ export default function Home() {
                 <SixSkillCards/>
             </div>
             <div className={Style.ProjectsContainer}> 
-                <h2>Projects</h2>
                 <ProjectCards/>
             </div>
             <div className={Style.ProjectpricingCards}>

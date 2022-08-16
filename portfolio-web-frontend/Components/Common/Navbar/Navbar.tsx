@@ -46,7 +46,7 @@ const OldNavbar = () => {
 
     },[])
     const handleScroll = ()=>{
-      if(intersectingimage.current!.offsetTop <=  ~~document.scrollingElement!.scrollTop) {
+      if(intersectingimage && intersectingimage.current && intersectingimage.current.offsetTop && intersectingimage.current!.offsetTop <=  ~~document.scrollingElement!.scrollTop) {
         if(!isIntersecting){
           SetIsIntersecting(true)
         }

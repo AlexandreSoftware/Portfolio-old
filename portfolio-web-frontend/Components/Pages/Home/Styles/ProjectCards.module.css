@@ -1,11 +1,4 @@
 .ProjectCards{
-    width: 70%;
-    margin-left: 15%;
-}
-@media (max-aspect-ratio: 16/9)  {
-    .ProjectCards{
-        width: 100%;
-        margin-left: 0%;
-    }   
-    
+    width: 100%;
+    margin-left: 0%;
 }

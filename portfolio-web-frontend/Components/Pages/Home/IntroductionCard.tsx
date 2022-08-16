@@ -1,6 +1,7 @@
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import ThemeContext, { Theme } from "../../../utils/ThemeContext"
+import SocialsCard from "../../Common/SocialsCards/SocialsCard";
 import DetailsCard from "./DetailsCard"
 import ExpertiseCard from "./ExpertiseCard";
 import Style from "./Styles/IntroductionCard.module.css"
@@ -21,6 +22,7 @@ export default function IntroductionCard() {
                 <li>Email : xandrf@xandrfdev.com</li>
                 <li>Phone : +55 (13) 982148535</li>
                 <li>Github : <a href="https://github.com/xandrf" className={Style.InfoListLink}>https://github.com/xandrf</a></li>
+                <SocialsCard></SocialsCard>
             </ul>
             </DetailsCard>
             <DetailsCard Title="My Expertise">
