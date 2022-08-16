@@ -4,31 +4,29 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;   
+    background-color: var(--primary-color-text);
 }
 
 .IntroductionCard .InfoList{
+
     list-style-type: none;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    height: 100%;
     padding-left: 0;
+}
+.IntroductionCard .InfoList li{
+    margin-bottom: 2%;
+}
+.IntroductionCard .InfoList .LastInfoList{
+    margin-top: auto;
+    margin-bottom: 10%;
 }
 
 .IntroductionCard .InfoList .InfoListLink{
     color: white;
 }
-
-
-.IntroductionCard-Base{
-    background-color: var(--base-info);
- }
-.IntroductionCard-HighTechPurple{
-    background: var(--Purpletech-PurpleOrangeGradientHorizontal);
-}
-.IntroductionCard-HighTechRed{
-    background-color: red;
-}
-.IntroductionCard-KissLand{
-    background-color: var(--KissLand-TertiaryColor-alt2);
-}
-
 
 .IntroductionCard > *{
     flex : 1;

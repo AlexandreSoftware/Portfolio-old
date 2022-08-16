@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import BackgroundWLetters from "../Components/Common/Background/BackgroundWLetters";
 import GetIcon from "../Components/Common/GetIcon";
+import Navbar from "../Components/Common/Navbar/Navbar";
 import IndividualSkill from "../Components/Pages/Skills/IndividualSkill";
 import SkillsContainer from "../Components/Pages/Skills/SkillsContainer";
 import ThemeContext, { Theme } from "../utils/ThemeContext";
@@ -18,8 +19,9 @@ export default function Skills() {
     },[context])
     return (
         <div className={Style.Skills}>
+            <Navbar navbarIntersects={false}/>
             {!isSSR &&<BackgroundWLetters/>}
-            {!isSSR && icon}
+            {!isSSR && <img src={icon}/>}
             <div className={Style.SkillsContainer}>
                 <SkillsContainer>
                     <IndividualSkill Name="C#" Level={4} />

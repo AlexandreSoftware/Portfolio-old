@@ -1,36 +1,18 @@
 .ProjectCard{
     display: grid;
     min-height: 50vh;
+    width: 100%;
     grid-template-columns: 50% 50%;
     grid-template-rows: 30% 70%;
     align-items: center;
 
 }
-.ProjectCard-Base{
-
+.ProjectCard-bg{
+    background-color: var(--surface-b) ;
 }
-.ProjectCard-Base-alt{
-
+.ProjectCard-bg-alt{
+    background-color: var(--surface-100);
 }
-.ProjectCard-HighTechPurple{
-    
-}
-.ProjectCard-HighTechPurple-alt{
-
-}
-.ProjectCard-HighTechRed{
-    background-color: red;
-}
-.ProjectCard-HighTechRed-alt{
-    background-color: beige;
-}
-.ProjectCard-KissLand{
-    
-}
-.ProjectCard-KissLand-alt{
-
-}
-
 .ProjectCard-Right{
     grid-template-areas:
     "header image"
@@ -72,14 +54,13 @@
     vertical-align: top;
     margin-top: 0;
 }
-@media (max-aspect-ratio: 16/9)  {
+@media (max-aspect-ratio: 12/9)  {
     .ProjectCard{
         grid-template-columns: auto;
-        grid-template-rows: 4fr min-content 1fr;
+        grid-template-rows: 2fr min-content 1fr;
         grid-template-areas: "image"
                              "header"
                              "paragraph";
-        margin-bottom: 20%;
     }   
     .ProjectCard > h3 {
         text-align: left;

@@ -7,7 +7,6 @@
     flex: 1;
 }
 .ExpertiseCard .TitleAndDescription{
-    border-bottom: 1px solid black;
     margin-right: 10%;
 }
 .ExpertiseCard .TitleAndDescription h3{
@@ -27,7 +26,7 @@
 .ExpertiseCard .Icon{
     display: flex;
     justify-content: left;
-    align-items: flex-start;
+    align-items: center;
     flex: 0.3 ;
 }
 .ExpertiseCard .Icon svg{

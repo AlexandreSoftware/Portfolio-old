@@ -5,9 +5,12 @@
     justify-content: flex-start;
     align-items: center;
     z-index: 5;
-    padding-left: 5%;
     padding-top: 0.5%;
 }
 .SocialsCard > *{
     margin-left: 1vh;
+    
+}
+.SocialsCard svg{
+    height: 50% !important;
 }

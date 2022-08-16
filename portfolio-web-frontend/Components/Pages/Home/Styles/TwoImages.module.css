@@ -19,7 +19,7 @@
     background-image: url("/Profile Picture/vtuber profile picture.png");
     background-size: cover ;
     background-color: black;
-    background-position: top right;
+    background-position: top center;
     background-repeat:no-repeat;
 }
 .LeftImage > * {

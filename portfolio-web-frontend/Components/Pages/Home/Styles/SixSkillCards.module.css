@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    background-color: var(--gray-800);
 }
 .SixSkillCards > *{
     margin: 3%;

@@ -1,4 +1,4 @@
-import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons"
+import { faCartArrowDown, faPrint } from "@fortawesome/free-solid-svg-icons"
 import { AnimatePresence, motion } from "framer-motion"
 import { useContext, useEffect, useState } from "react"
 import BackgroundWLetters from "../Components/Common/Background/BackgroundWLetters"
@@ -13,6 +13,7 @@ import Navbar from "../Components/Common/Navbar/Navbar"
 import TwoImages from "../Components/Pages/Home/TwoImages"
 import IntroductionCard from "../Components/Pages/Home/IntroductionCard"
 import SocialsCard from "../Components/Common/SocialsCards/SocialsCard"
+import { zIndex } from "html2canvas/dist/types/css/property-descriptors/z-index"
 
 export default function Home() {
     const [context,SetContext] =useContext(ThemeContext)
@@ -44,7 +45,9 @@ export default function Home() {
                     }
                 }
             }} className={Style.HomePage}>
-                <SocialsCard/>
+                <div style={{paddingLeft:"5%",width:"100%", zIndex:"11"}}>
+                    <SocialsCard/>
+                </div>
                 <TwoImages LeftImage={"/Profile Picture/Irl profile picture.jpeg"} RightImage={"/Profile Picture/vtuber profile picture.png"}/>
                 <div className={Style["Home-logo"]}>
                     {!isSSR && <motion.img
@@ -62,30 +65,31 @@ export default function Home() {
                                 }
                             }
                         }} src={icon} />}
-                
-                <motion.h1
-                    initial="headerInitial"
-                    animate="headerAnimate"
-                    variants={{
-                        headerInitial:{
-                            scale:0.3,
-                            opacity:0
-                        },
-                        headerAnimate:{
-                            scale:1,
-                            opacity:1,
-                            transition:{
-                                delay:.3
+                <div className={Style.ButtonAndHeader}>
+                    <motion.h1
+                        initial="headerInitial"
+                        animate="headerAnimate"
+                        variants={{
+                            headerInitial:{
+                                scale:0.3,
+                                opacity:0
+                            },
+                            headerAnimate:{
+                                scale:1,
+                                opacity:1,
+                                transition:{
+                                    delay:.3
+                                }
                             }
-                        }
-                    }}
-                >Welcome to my Portfolio</motion.h1>
-                <div className={Style.ResumeDownloadButton}>
-                    <StyledButton whereTo="external" link="https://github.com/xandrf/MyResume/blob/main/Resume-Portuguese.pdf" height={10} width={20}>Download My Resume</StyledButton>
+                        }}
+                        >Welcome to my Portfolio</motion.h1>
+                    <div className={Style.ResumeDownloadButton}>
+                        <StyledButton whereTo="external" link="https://github.com/xandrf/MyResume/blob/main/Resume-Portuguese.pdf" height={7} width={20} icon={faPrint}>Print Resume</StyledButton>
+                    </div>
                 </div>
 
             </div>      
-            <Navbar></Navbar>
+            <Navbar navbarIntersects={true} />
             <IntroductionCard></IntroductionCard>
             <div className={Style.SixSkillCardsContainer}>
                 <SixSkillCards/>
@@ -96,7 +100,7 @@ export default function Home() {
             <div className={Style.ProjectpricingCards}>
                 <ProjectPricingCards/>
             </div>
-            <StyledButton link="mailto:xandrf@xandrfdev.com" whereTo="external" width={18} height={8}>
+            <StyledButton link="mailto:xandrf@xandrfdev.com" whereTo="external" width={15} height={6}>
                 Contact Me
             </StyledButton>
         </motion.div>

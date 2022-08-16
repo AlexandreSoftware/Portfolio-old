@@ -5,13 +5,8 @@ import ThemeContext, { Theme } from "../../../utils/ThemeContext";
 import SkillCard from "./SkillCard"
 import Styles from "./Styles/SixSkillCards.module.css"
 export default function SixSkillCards() {
-    const [context,SetContext] =useContext(ThemeContext)
-    const [isSSR, setIsSSR] = useState(true);
-    useEffect(()=>{
-        setIsSSR(false)
-    },[])
     return (
-        <div className={Styles.SixSkillCards + ` ${isSSR?"":Styles[`SixSkillCards-${Theme[context]}`]}`}>
+        <div className={Styles.SixSkillCards}>
             <SkillCard  Title={"A Dedicated Developer"}icon={faComputer} >
                 Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. 
