@@ -15,6 +15,7 @@ import IntroductionCard from "../Components/Pages/Home/IntroductionCard"
 import SocialsCard from "../Components/Common/SocialsCards/SocialsCard"
 import { zIndex } from "html2canvas/dist/types/css/property-descriptors/z-index"
 import LanguageContext, { Language } from "../utils/LanguageContext"
+import LittleBar from "../Components/Common/LittleBar"
 
 export default function Home() {
     const [themeContext,SetThemeContext] =useContext(ThemeContext),
