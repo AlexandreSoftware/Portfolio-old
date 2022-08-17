@@ -39,17 +39,6 @@ export default function SixSkillCards() {
             "Already have a Design in mind, Great, Your vision will be put into code, creating a great product":
             "Ja tem um design em mente, Otimo, Sua vizao agora sera transormada em codigo, criando um lindo produto"}
             </SkillCard>
-            <SkillCard  Title={languageContext == Language.EN_US ? "Brings your design to life" : "Faz seu design uma realidade"}icon={faUser} >
-            {languageContext == Language.EN_US ?
-            "Already have a Design in mind, Great, Your vision will be put into code, creating a great product":
-            "Ja tem um design em mente, Otimo, Sua vizao agora sera transormada em codigo, criando um lindo produto"}
-            </SkillCard>
-            <SkillCard  Title={languageContext == Language.EN_US ? "Brings your design to life" : "Faz seu design uma realidade"}icon={faUser} >
-            {languageContext == Language.EN_US ?
-            "Already have a Design in mind, Great, Your vision will be put into code, creating a great product":
-            "Ja tem um design em mente, Otimo, Sua vizao agora sera transormada em codigo, criando um lindo produto"}
-            </SkillCard>
-
         </div>
     )
 }
