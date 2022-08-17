@@ -1,5 +1,6 @@
 .ButtonContainer{
     margin-bottom: 10%;
+    transform-origin: left center;
 }
 .ButtonContainer button{
     display: flex;

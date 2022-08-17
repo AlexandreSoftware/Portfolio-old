@@ -5,7 +5,6 @@
     grid-template-columns: 50% 50%;
     grid-template-rows: 30% 70%;
     align-items: center;
-
 }
 .ProjectCard-bg{
     background-color: var(--surface-b) ;

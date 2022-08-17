@@ -14,18 +14,20 @@ import TwoImages from "../Components/Pages/Home/TwoImages"
 import IntroductionCard from "../Components/Pages/Home/IntroductionCard"
 import SocialsCard from "../Components/Common/SocialsCards/SocialsCard"
 import { zIndex } from "html2canvas/dist/types/css/property-descriptors/z-index"
+import LanguageContext, { Language } from "../utils/LanguageContext"
 
 export default function Home() {
-    const [context,SetContext] =useContext(ThemeContext)
-    const [icon,SetIcon] = useState(GetIcon(Theme.Base,false))
-    const [isSSR, setIsSSR] = useState(true);
+    const [themeContext,SetThemeContext] =useContext(ThemeContext),
+     [languageContext,SetLanguageContext] =useContext(LanguageContext),
+     [icon,SetIcon] = useState(GetIcon(Theme.Base,false)),
+     [isSSR, setIsSSR] = useState(true);
     useEffect(()=>{
-        SetIcon(GetIcon(context,false))
+        SetIcon(GetIcon(themeContext,false))
         setIsSSR(false)
     },[])
     useEffect(()=>{
-        SetIcon(GetIcon(context,false))
-    },[context])
+        SetIcon(GetIcon(themeContext,false))
+    },[themeContext])
     return (
         <>
             
@@ -80,9 +82,9 @@ export default function Home() {
                                 }
                             }
                         }}
-                        >Welcome to my Portfolio</motion.h1>
+                        >{languageContext == Language.EN_US ? "Welcome to my Portfolio": "Bem-vindo ao meu Portfólio"} </motion.h1>
                     <div className={Style.ResumeDownloadButton}>
-                        <StyledButton whereTo="external" link="https://github.com/xandrf/MyResume/blob/main/Resume-Portuguese.pdf" height={7} width={20} icon={faPrint}>Print Resume</StyledButton>
+                        <StyledButton whereTo="external" link="https://github.com/xandrf/MyResume/blob/main/Resume-Portuguese.pdf" height={7} width={20} icon={faPrint}>{languageContext == Language.EN_US ?  "Print Resume" : "Imprimir Cv"}</StyledButton>
                     </div>
                 </div>
 
