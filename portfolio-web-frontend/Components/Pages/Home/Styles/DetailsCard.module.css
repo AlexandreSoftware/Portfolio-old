@@ -39,6 +39,12 @@
 .DetailsCard-KissLand{
     border-color: var(--Kissland-primaryColor);
 }
+.DetailsCard:hover > .LittleBar > *{
+    width: 160px;
+    transform-origin: left top;
+    transition: 0.5s;
+}
+
 @media (max-aspect-ratio: 16/9)  {
     .DetailsCard{
         border-right: none;       

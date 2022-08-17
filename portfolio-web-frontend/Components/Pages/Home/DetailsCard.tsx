@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useContext } from "react";
 import ThemeContext, { Theme } from "../../../utils/ThemeContext";
 import LittleBar from "../../Common/LittleBar";
@@ -9,15 +10,18 @@ interface DetailsCardProps{
 export default function DetailsCard(props:DetailsCardProps) {
     const [themeContext] =useContext(ThemeContext);
     return(
-        <div className={`${Style.DetailsCard} ${Style[`DetailsCard-${Theme[themeContext]}`]}`}>
+        <motion.div
+        className={`${Style.DetailsCard} ${Style[`DetailsCard-${Theme[themeContext]}`]}`}>
             <h2 className={Style.Title}>
                 {props.Title}
             </h2>
-            <LittleBar/>
+            <div className={Style.LittleBar}>
+                <LittleBar/>
+            </div>
             <div className={Style.Content}>
                 {props.children}
             </div>    
-        </div>
+        </motion.div>
 
     )
 }

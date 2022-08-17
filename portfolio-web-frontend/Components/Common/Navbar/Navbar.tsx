@@ -50,13 +50,17 @@ const Navbar = ( props : NavbarProps) => {
     },[])
 
     const handleScroll = ()=>{
-      if(intersectingimage && intersectingimage.current && intersectingimage.current.offsetTop && (intersectingimage.current!.offsetTop <=  ~~document.scrollingElement!.scrollTop || intersectingimage.current!.offsetTop ==  ~~document.scrollingElement!.scrollTop)) {
+      console.log(intersectingimage.current?.offsetHeight);
+      console.log(document.scrollingElement?.scrollTop)
+      if(intersectingimage && intersectingimage.current && intersectingimage.current.offsetTop && (intersectingimage.current!.offsetTop <=  ~~document.scrollingElement!.scrollTop  +100 || intersectingimage.current!.offsetTop == document.scrollingElement!.scrollTop )) {
         if(!isIntersecting){
           SetIsIntersecting(true)
         }
       }
       else{
-          SetIsIntersecting(false)
+        console.log("is intersecting") 
+        console.log(intersectingimage.current?.offsetTop)
+        SetIsIntersecting(false)
       }
     }
     useEffect(()=>{

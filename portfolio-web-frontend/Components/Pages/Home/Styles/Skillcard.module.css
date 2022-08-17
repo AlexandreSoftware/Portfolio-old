@@ -23,6 +23,11 @@
     background-size: 100% 100%;
     margin-left: 2.5% !important;
 }
+.SkillCard:hover > .LittleBar > *{
+    width: 200px;
+    transform-origin: left top;
+    transition: 0.5s;
+}
 .SkillCardIcon svg{
     /* transform : rotate(-45deg); */
     width: 50%;

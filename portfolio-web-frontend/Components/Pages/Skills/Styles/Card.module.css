@@ -2,12 +2,12 @@
     aspect-ratio:  5 / 3;
     height: 90%;
     width: 90%;
-    vertical-align: middle;
-    background-color: white;
+    background-color: var(--surface-card);
 }
 .CardContainer{
+    transform: scale(0.5);
     aspect-ratio:  5 / 3;
-    height: 3vw;
+    height: 1.5vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,10 +17,10 @@
     background-color : var(--Purpletech-altpurple)
 }
 
-.CardContainer-KissLand{
-    background-color: #01FF67;
-}
 .CardContainer-HighTechRed {
-    background-color: #ff0000;
-    
+    background-color: var(--HighTechRed-PrimaryColor);    
 }
+.CardContainer-KissLand{
+    background-color: var(--KissLand-TertiaryColor-alt2);
+}
+    

@@ -3,7 +3,7 @@
     position: relative;
 }
 .SkillCard{
-    margin: 1%;
+    margin: 0.5%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -13,7 +13,7 @@
 
 .SkillCard > *{
     
-    margin-right: 1vw;
+    margin-right: 0.25vw;
 }
 .SkillCard > div:last-of-type {
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);    
@@ -24,6 +24,6 @@
 .text{
     position: absolute; 
     right: 100%;
-    
+    padding-right: 1%;    
     
 }

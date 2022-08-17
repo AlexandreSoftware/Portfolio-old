@@ -16,7 +16,9 @@ export default function ExpertiseCard(props:ExpertiseCardProps) {
             <div className={Style.TitleAndDescription}>
                 <h3>{props.Title}</h3>
                 <p>{props.description}</p>
-                <LittleBar/>
+                <div className={Style.LittleBar}>
+                    <LittleBar/>
+                </div>
             </div>
         </div>
 

@@ -15,8 +15,8 @@
     border-top: 1px solid var(--Purpletech-Secondarycolor);
 }
 .AlignedLink-HighTechRed:hover{
-    border-top: 1px solid var(--HighTechRed-SecondaryColor);
+    border-top: 1px solid var(--HighTechRed-PrimaryColor);
 }
 .AlignedLink-KissLand:hover{
-    border-top: 1px solid var(--Kissland-blue);
+    border-top: 1px solid  var(--KissLand-TertiaryColor);
 }
