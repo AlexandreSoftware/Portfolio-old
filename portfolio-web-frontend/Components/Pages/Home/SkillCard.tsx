@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useContext, useState, useEffect } from "react";
 import ThemeContext, { Theme } from "../../../utils/ThemeContext";
 import GetIcon from "../../Common/GetIcon";
+import LittleBar from "../../Common/LittleBar";
 import Styles from "./Styles/Skillcard.module.css"
 interface SkillCardProps{
     icon :IconDefinition,
@@ -30,6 +31,7 @@ export default function SkillCard(props:SkillCardProps) {
             <FontAwesomeIcon icon={props.icon} width={100} height={100} />
         </div>
         <h2>{props.Title}</h2>
+        <LittleBar/>
         <p>
             {props.children}
         </p>

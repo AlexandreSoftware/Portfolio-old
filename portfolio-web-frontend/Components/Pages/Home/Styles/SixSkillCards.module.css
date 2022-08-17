@@ -1,12 +1,13 @@
 .SixSkillCards{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     align-items: center;
     justify-content: center;
     background-color: var(--gray-800);
 }
 .SixSkillCards > *{
-    margin: 3%;
+    margin: 1%;
 }
 
 .SixSkillCards-Base{
