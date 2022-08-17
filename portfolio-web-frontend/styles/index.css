@@ -12,7 +12,7 @@ code {
     monospace;
 }
 html{
-  height: 100%;
+
   
   --base-primarycolor : #171A21;
   --base-primarycolor-alt : #323031;
@@ -22,16 +22,21 @@ html{
   --white : #FFFFFF;
 
   --Purpletech-Primarycolor : #3C1361;
+  --PurpleTechPrimaryColor2 : #290F40;
   --Purpletech-Primarycolor-alt: #3F2E56;
   --Purpletech-Secondarycolor : #F05E23;
+  --PurpleTech-Secondarycolor2 : #C23F0A;
   --Purpletech-altpurple : #B298DC;
   --Purpletech-altpink : #FFA9E7;
   --Purpletech-purplegradient : linear-gradient(219.29deg, #3C1361 18.67%, #FE4900 86%);
   --Purpletech-PurpleOrangeGradientDiagonal : linear-gradient(145.71deg, #3C1361 28.69%, #F05E23 88.53%);
+  --Purpletech-PurpleOrangeGradientHorizontal : linear-gradient(90deg, #3C1361 25.83%, #F05E23 121.85%);
+
   --Purpletech-PurpleOrangeGradientVertical : linear-gradient(180deg, #3C1361 14.17%, #F05E23 94.57%);
   
   
-  --HighTechRed-PrimaryColor : #840404;
+  --HighTechRed-PrimaryColor : #E10000;
+  --HighTechRed-PrimaryColor2 : #840404;
   --HighTechRed-SecondaryColor : #2F1114;
   --HighTechRed-SecondaryColor-alt : #240F11;
   --HighTechRed-SecondaryColor-alt2 : #191316;
@@ -59,10 +64,10 @@ html{
 }
 
 html{
-  height: 100%;
+
 }
 
 body{
   
-  height: 100%;
+
 }

@@ -23,7 +23,7 @@ export default function ProjectPricingCard(props: ProjectPricingCardProps) {
                 <div className={Style.pricing}>${props.pricing}</div>
                 <ol className={Style.list}>{props.children}</ol>
                 <div className={Style.ProjectButton}>
-                    <StyledButton link="/Home" whereTo="internal" width={15} height={6}>
+                    <StyledButton link="/Home" whereTo="internal" width={15} height={5.5}>
                         Contact Me
                     </StyledButton>
                 </div>

@@ -1,0 +1,39 @@
+.IntroductionCard{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;   
+    background-color: var(--primary-color-text);
+}
+
+.IntroductionCard .InfoList{
+
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 0;
+}
+.IntroductionCard .InfoList li{
+    margin-bottom: 2%;
+}
+.IntroductionCard .InfoList .LastInfoList{
+    margin-top: auto;
+    margin-bottom: 10%;
+}
+
+.IntroductionCard .InfoList .InfoListLink{
+    color: white;
+}
+
+.IntroductionCard > *{
+    flex : 1;
+}
+@media (max-aspect-ratio: 16/9)  {
+    .IntroductionCard{
+        flex-direction: column;
+        height: 180vh;
+    }
+}

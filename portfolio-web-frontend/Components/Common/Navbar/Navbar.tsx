@@ -12,7 +12,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 import AlignedLink from './AlignedLink';
 import LanguageContext, {Language} from '../../../utils/LanguageContext';
 import NavBarMenu from './NavBarMenu';
-const OldNavbar = () => {
+interface NavbarProps{
+    navbarIntersects : boolean 
+}
+const Navbar = ( props : NavbarProps) => {
     const [themeContext] =useContext(ThemeContext),
       [languageContext] =useContext(LanguageContext),
       [icon,SetIcon] = useState(GetIcon(Theme.Base,false)),
@@ -23,6 +26,8 @@ const OldNavbar = () => {
     const isEnglish = languageContext == Language.EN_US;
     const isPortuguese = languageContext == Language.PT_BR
     useEffect(()=>{
+        if(document.scrollingElement && intersectingimage.current && (intersectingimage.current.offsetTop == 0 ) )
+          SetIsIntersecting(true)
         SetIcon(GetIcon(themeContext,false))
         setIsSSR(false)
         if (window.innerWidth < 1024) {
@@ -39,14 +44,13 @@ const OldNavbar = () => {
             SetIsPortait(false)
           }
         }
-        window.addEventListener("scroll", handleScroll)
-
-
-
-
+        if(props.navbarIntersects){
+          window.addEventListener("scroll", handleScroll)
+        }
     },[])
+
     const handleScroll = ()=>{
-      if(intersectingimage.current!.offsetTop <=  ~~document.scrollingElement!.scrollTop) {
+      if(intersectingimage && intersectingimage.current && intersectingimage.current.offsetTop && (intersectingimage.current!.offsetTop <=  ~~document.scrollingElement!.scrollTop || intersectingimage.current!.offsetTop ==  ~~document.scrollingElement!.scrollTop)) {
         if(!isIntersecting){
           SetIsIntersecting(true)
         }
@@ -91,4 +95,4 @@ const OldNavbar = () => {
       </div>
   );
 };
-export default OldNavbar;
+export default Navbar;

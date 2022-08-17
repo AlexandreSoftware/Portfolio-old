@@ -1,3 +1,5 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { useContext } from "react"
@@ -6,7 +8,8 @@ import Style from "./Styles/StyledButton.module.css"
 interface StyledButtonProps{
     whereTo : "internal" | "external",
     link : string
-    children :string
+    icon? : IconProp,
+    children :string,
     height? : number,
     width? : number
 }
@@ -29,12 +32,18 @@ export default function StyledButton(props:StyledButtonProps) {
             {props.whereTo == "internal" ? 
                 <Link href={props.link}>
                     <button className={Style[`Button-${Theme[context]}`]} style={{height : props.height + "vh", width: props.width + "vh"}}>
-                        {props.children}
+                        {props.icon && <FontAwesomeIcon icon={props.icon} height={50}/>}
+                        <div>
+                            {props.children}
+                        </div>
                     </button>    
                 </Link>: 
                 <a href={props.link} >
                     <button className={Style[`Button-${Theme[context]}`]} style={{height : props.height + "vh", width: props.width + "vh"}}>
-                        {props.children}
+                        {props.icon && <FontAwesomeIcon icon={props.icon} height={50}/>}
+                        <div>
+                            {props.children}
+                        </div>
                     </button>    
                 </a>
 

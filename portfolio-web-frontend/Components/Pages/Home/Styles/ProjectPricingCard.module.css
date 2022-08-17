@@ -2,26 +2,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 .ProjectPricingCard-Base{
-    background: var(--base-primarycolor-alt);
+    border-color: var(--base-primarycolor-alt) !important;
 }
 .ProjectPricingCard-HighTechPurple{
-    background: var(--Purpletech-PurpleOrangeGradientDiagonal);
+    border-color: var(--Purpletech-Secondarycolor) !important;
 }
 .ProjectPricingCard-HighTechRed{
-    background: var(--HighTechRed-black);
+    border-color: var(--HighTechRed-PrimaryColor2) !important;
 }
 .ProjectPricingCard-KissLand{
-    background: var(--Kissland-SecondaryColor);
+    border-color: var(--Kissland-green) !important;
 }
 .ProjectPricingCard{
-    border: 1px solid black;
+    background-color: var(--surface-card);
+    border: 1px solid;
     aspect-ratio: 2/3;
     display: flex;
     flex-direction: column;
     justify-content: flex;   
     align-items: center; 
+}
+.ProjectPricingCard ol{
+    margin-top: 2%;
+    width: 75%;
 }
 .ProjectPricingCard ol li{
     list-style: "*";

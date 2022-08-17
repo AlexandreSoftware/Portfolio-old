@@ -1,21 +1,65 @@
 .ProjectCard{
     display: grid;
     min-height: 50vh;
-    grid-template-columns: 55% 45%;
-    grid-template-rows: 10% 90%;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 70%;
     align-items: center;
-    grid-template-areas:
-      "header image"
-      "paragraph image";
 }
-@media (max-aspect-ratio: 16/9)  {
+.ProjectCard-bg{
+    background-color: var(--surface-b) ;
+}
+.ProjectCard-bg-alt{
+    background-color: var(--surface-100);
+}
+.ProjectCard-Right{
+    grid-template-areas:
+    "header image"
+    "paragraph image";
+}
+.ProjectCard-Left{
+    grid-template-areas:
+    "image header"
+    "image paragraph";
+}
+.ProjectCard > h3 {
+    grid-area: header;
+    text-align: left;
+    vertical-align: top;
+    padding-left: 5%;   
+}
+.ProjectCard > p {
+    grid-area: paragraph;
+    text-align: left;
+    align-self: flex-start;
+    padding-left: 5%;
+}
+.ProjectCard .image{
+    grid-area: image;
+    height: 100%;
+    width: 100%;
+}
+.ProjectCard img{
+    grid-area: image;
+    height: 100%;
+    width: 100%;
+}
+.ProjectCard .image span{
+    grid-area: image;
+    width: 100% !important;
+    height: 100% !important;
+}
+.ProjectCard .image img{
+    vertical-align: top;
+    margin-top: 0;
+}
+@media (max-aspect-ratio: 12/9)  {
     .ProjectCard{
         grid-template-columns: auto;
-        grid-template-rows: 4fr min-content 1fr;
+        grid-template-rows: 2fr min-content 1fr;
         grid-template-areas: "image"
                              "header"
                              "paragraph";
-        margin-bottom: 20%;
     }   
     .ProjectCard > h3 {
         text-align: left;
@@ -48,36 +92,3 @@
         padding: 0;
     }
 }
-.ProjectCard > h3 {
-    grid-area: header;
-    text-align: left;
-    vertical-align: top;
-    padding-left: 5%;   
-}
-.ProjectCard > p {
-    grid-area: paragraph;
-    text-align: left;
-    align-self: flex-start;
-    padding-left: 5%;
-}
-.ProjectCard .image{
-    grid-area: image;
-    height: 100%;
-    width: 100%;
-    padding: 2%;
-}
-.ProjectCard img{
-    grid-area: image;
-    height: 100%;
-    width: 100%;
-}
-.ProjectCard .image span{
-    grid-area: image;
-    width: 100% !important;
-    height: 100% !important;
-}
-.ProjectCard .image img{
-    vertical-align: top;
-    margin-top: 0;
-}
-

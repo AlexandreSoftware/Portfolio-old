@@ -4,20 +4,23 @@
     display: inline-block;
     position: absolute;
     top: 0;
+    z-index: -1;
     height: 100%;
     width: 50%;
 }
 .LeftImage{
     left: 0;
-    background-size: cover ;
+    background-size: contain ;
+    background-attachment :fixed;
     background-color: black;
-    background-position: top center;
+    background-position: top left;
     background-repeat:no-repeat;
 }
 .RightImage{
     right: 0;
     background-image: url("/Profile Picture/vtuber profile picture.png");
-    background-size: cover ;
+    background-size: contain ;
+    background-attachment :fixed;
     background-color: black;
     background-position: top right;
     background-repeat:no-repeat;
@@ -36,5 +39,6 @@
     }
     .RightImage{
         width: 100% !important;
+        height: 50%;
     }
 }

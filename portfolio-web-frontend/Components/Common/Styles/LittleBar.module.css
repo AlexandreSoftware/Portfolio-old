@@ -1,0 +1,18 @@
+.LittleBar{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 40px;
+    height: 1px;
+}
+.LittleBar-Base{
+    background-color: var(--base-info);
+}
+.LittleBar-HighTechPurple{
+    background-color: var(--Purpletech-Secondarycolor);
+}
+.LittleBar-HighTechRed{
+    background-color: var(--HighTechRed-PrimaryColor);
+}
+.LittleBar-KissLand{
+    background-color: var(--KissLand-TertiaryColor);
+}

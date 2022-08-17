@@ -1,9 +1,20 @@
 .ButtonContainer{
     margin-bottom: 10%;
+    transform-origin: left center;
 }
 .ButtonContainer button{
-    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
     border: 1px solid black;
+}
+.ButtonContainer button > div{
+    height: auto;
+}
+.ButtonContainer button > *{
+    height: 50%;
+    padding-right: 5%;
 }
 
 .Button-Base{
@@ -23,7 +34,7 @@
     transition: background-color 300ms linear;
 }
 .Button-HighTechPurple:hover{
-    background-color: var(--Purpletech-Primarycolor);
+    background-color: var(--PurpleTech-Secondarycolor2);
     transition: background-color 300ms linear;
 }
 
@@ -33,17 +44,17 @@
     transition: background-color 300ms linear;
 }
 .Button-HighTechRed:hover{
-    background-color: var(--HighTechRed-PrimaryColor);
+    background-color: var(--HighTechRed-SecondaryColor-alt);
     transition: background-color 300ms linear;
 }
 
 
 .Button-KissLand{
-    background-color: var(--Kissland-SecondaryColor);
+    background-color: var(--KissLand-TertiaryColor);
     color: white;
     transition: background-color 300ms linear;
 }
 .Button-KissLand:hover{
-    background-color: var(--Kissland-primaryColor);
+    background-color: var(--KissLand-TertiaryColor-alt2);
     transition: background-color 300ms linear;
 }
