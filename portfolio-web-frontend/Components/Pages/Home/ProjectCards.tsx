@@ -14,7 +14,7 @@ useEffect(()=>{
     SetIsSSR(false)
 },[])
 return(
-    !isSSR &&
+    !isSSR ?
     <div className={Style.ProjectCards}>
             <ProjectCard title="Wordle Clone" image="/Projects/WordleCloneProject.svg" left={false} alt={false} >
                 {languageContext == Language.EN_US ? "Remake of the popular game \"Wordle\", Created using :":"Popular jogo \"Wordle\" Refeito utilizando : "} 
@@ -43,6 +43,6 @@ return(
                     <li>Figma <FontAwesomeIcon icon={faFigma}></FontAwesomeIcon></li>
                 </ul>
             </ProjectCard>
-        </div>
+        </div>:<></>
     )
 }
