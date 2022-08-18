@@ -1,0 +1,8 @@
+.TimelineContainer{
+    margin-top: 10%;
+    width: 100%;
+
+}
+.TimelineContainer > *{
+    width: 100%;
+}

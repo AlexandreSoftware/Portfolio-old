@@ -1,8 +1,9 @@
 .DetailsCard{
     color: white;
-    height: 100%;
+    height: max-content;
     width: 100%;
     border-bottom: none;
+    border-top: 1px solid;
     border-right: 1px solid;
     border-bottom: 1px solid;
     display: flex;
@@ -33,7 +34,7 @@
 }
 
 .DetailsCard-HighTechRed{
-    border-color: black;
+    border-color: var(--HighTechRed-PrimaryColor);
 }
 
 .DetailsCard-KissLand{

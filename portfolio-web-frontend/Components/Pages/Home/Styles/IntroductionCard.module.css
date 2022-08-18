@@ -6,7 +6,9 @@
     align-items: flex-start;   
     background-color: var(--primary-color-text);
 }
-
+.IntroductionCard > * {
+    height: 100%;
+}
 .IntroductionCard .InfoList{
 
     list-style-type: none;

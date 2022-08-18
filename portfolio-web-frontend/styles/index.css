@@ -1,3 +1,16 @@
+.p-timeline-event-opposite{
+  display: none;
+}
+.p-timeline-event-content{
+  margin-bottom: 2%;
+}
+.p-component-overlay > .p-dialog{
+  max-width: 50%;
+}
+.p-component-overlay .p-dialog .p-dialog-header{
+    padding-bottom: 2.5%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -61,13 +74,4 @@ html{
   --Kissland-blue-alt2 : #017798;
   --Kissland-blue-alt3 : #003287;
   
-}
-
-html{
-
-}
-
-body{
-  
-
 }

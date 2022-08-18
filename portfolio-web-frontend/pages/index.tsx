@@ -16,6 +16,7 @@ import SocialsCard from "../Components/Common/SocialsCards/SocialsCard"
 import { zIndex } from "html2canvas/dist/types/css/property-descriptors/z-index"
 import LanguageContext, { Language } from "../utils/LanguageContext"
 import LittleBar from "../Components/Common/LittleBar"
+import ResumeCard from "../Components/Pages/Home/ResumeCard"
 
 export default function Home() {
     const [themeContext,SetThemeContext] =useContext(ThemeContext),
@@ -92,6 +93,7 @@ export default function Home() {
             </div>      
             <Navbar navbarIntersects={true} />
             <IntroductionCard></IntroductionCard>
+            <ResumeCard/>
             <div className={Style.SixSkillCardsContainer}>
                 <SixSkillCards/>
             </div>
