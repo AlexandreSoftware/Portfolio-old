@@ -23,7 +23,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;   
-    background-color: var(--primary-color-text);
+    background-color: var(--gray-800);
     border-bottom: 1px solid red;
 }
 .ResumeCard 

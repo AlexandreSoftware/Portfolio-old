@@ -1,7 +1,7 @@
 .ExperienceAndEducationCard{
     width: 90%;
     height: 100%;
-    background-color: var(--gray-800);
+    background-color: var(--surface-b);
     border: 1px solid;
     display: flex;
     justify-content: start;

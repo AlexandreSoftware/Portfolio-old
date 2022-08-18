@@ -1,7 +1,6 @@
 .DetailsCard{
     color: white;
     height: max-content;
-    width: 100%;
     border-bottom: none;
     border-top: 1px solid;
     border-right: 1px solid;
@@ -11,6 +10,7 @@
     align-items: flex-start;
     flex-direction: column;
     flex: 1;
+    overflow: hidden;
 }
 .DetailsCard > *{
     margin-left: 10%;
@@ -19,6 +19,7 @@
 }
 .DetailsCard .Content{
     height: 100%;
+    width: 70%;
 }
 .DetailsCard .Title{
     margin-top: 10%;

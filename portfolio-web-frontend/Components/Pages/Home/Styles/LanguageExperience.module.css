@@ -1,0 +1,41 @@
+
+.ExperienceBarItem_Base{
+    border-color: var(--base-info) !important;
+    transition: background 500ms linear;
+}
+.ExperienceBarItem_HighTechPurple{
+    border-color: var(--Purpletech-Primarycolor) !important;
+    transition: background 500ms linear;
+}
+.ExperienceBarItem_HighTechRed{
+    border-color: var(--HighTechRed-PrimaryColor) !important;
+    color: white;
+        transition: background 500ms linear;
+}
+.ExperienceBarItem_KissLand{
+    border-color: var(--Kissland-green) !important;
+    color: white;
+    transition: background 500ms linear;
+}
+.ExperienceBarItem{
+    position: relative;
+    margin-top: 5%;
+    width: 110%;
+    height: 10vh;
+    padding-bottom: 5vh;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 5%;
+    background-color: var(--surface-b);
+    border: 1px solid;
+}
+.ExperienceBarItem .LanguageExperienceItemInside {
+    float: right;
+    position: relative;
+    right: -8%;
+}
+.ExperienceBarItem .LanguageExperienceItemInside > div{
+    display: inline-block;
+    vertical-align: bottom;
+    padding-right: 2%;
+}
