@@ -104,7 +104,9 @@ export default function Home() {
             <BackgroundWLetters></BackgroundWLetters>
             </AnimatePresence>
             <div className={Style.ProjectpricingCards}>
-                <ProjectPricingCards/>
+                {!isSSR&&
+                    <ProjectPricingCards/>
+                }
             </div>
             <StyledButton link="mailto:xandrf@xandrfdev.com" whereTo="external" width={15} height={6}>
                 Contact Me

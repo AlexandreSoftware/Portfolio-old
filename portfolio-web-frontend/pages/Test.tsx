@@ -1,4 +1,3 @@
-import ProjectSummaryCard from "../Components/Pages/Projects/ProjectSummaryCard"
 import Style from "./Styles/Test.module.css"
 import { Theme } from "../utils/ThemeContext"
 import BackgroundChangeBall from "../Components/Common/Background/BackgroundChangeBall"
