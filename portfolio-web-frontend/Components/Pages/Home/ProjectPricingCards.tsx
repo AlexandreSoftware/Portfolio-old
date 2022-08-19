@@ -51,17 +51,14 @@ export default function ProjectPricingCards() {
     ]
     return(
         <div className={Style.ProjectPricingCards}>
-            <AliceCarousel items={carouselItems} responsive={()=>{
-                {
-                return{
-                    0:{
+            <AliceCarousel items={carouselItems} responsive={{
+                    0: {
                         items: 1,
                     },
                     1024: {
                         items: 3
                     }
-                }
-            }
-        }} />
+                    }
+} />
         </div>    )
 }
