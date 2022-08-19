@@ -24,10 +24,10 @@ export default function ResumeCard(){
                     <Education/>
                 </DetailsCard>
                 <div className={Style.TwoDetails}>
-                    <DetailsCard Title={languageContext == Language.EN_US ? "Programming Experience":"Minhas Especialidades"}>
+                    <DetailsCard Title={languageContext == Language.EN_US ? "Programming Experience":"Experiencia em Programacao"}>
                         <PagesExperience/>   
                     </DetailsCard>
-                    <DetailsCard Title={languageContext == Language.EN_US ? "Language Proficiency":"Minhas Especialidades"}>
+                    <DetailsCard Title={languageContext == Language.EN_US ? "Language Proficiency":"Proficiencia em Linguas"}>
                         <LanguageExperience/>
                     </DetailsCard>
                 </div>

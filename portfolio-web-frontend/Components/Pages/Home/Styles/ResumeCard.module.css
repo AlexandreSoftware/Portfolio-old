@@ -11,24 +11,29 @@
     flex-direction: column;
     height: max-content;
 }
+.ResumeCard > *{
+    height: 100%;
+}
 .ResumeCard .TwoDetails > *{
     flex: 1;
 }
-.ResumeCard> *{
+.ResumeCard{
     border-bottom: none;
 }
 .ResumeCard{
     width: 100%;
-    min-height: 150vh;
+    height: 135vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;   
     background-color: var(--gray-800);
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid ;
+} 
+.ResumeCard .InfoList:last-child{
+    height: max-content;
 }
-.ResumeCard 
 .ResumeCard .InfoList{
-
+    height: 100%;
     list-style-type: none;
     display: flex;
     justify-content: start;
@@ -47,13 +52,13 @@
 .ResumeCard .InfoList .InfoListLink{
     color: white;
 }
-
 .ResumeCard > *{
     flex : 1;
+    border-bottom: none;
 }
 @media (max-aspect-ratio: 16/9)  {
     .ResumeCard{
         flex-direction: column;
-        min-height: 450vh;
+        height: 450vh;
     }
 }
