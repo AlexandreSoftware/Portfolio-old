@@ -1,6 +1,6 @@
 import { Timeline } from "primereact/timeline"
 import Style from "./Styles/ExperienceBar.module.css"
-import VerticalBar from "./verticalbar"
+import VerticalBar from "./VerticalBar"
 interface ExperienceBarProps{
     experiencecheckpoints : [string,string,string,string,string],
     progresspercent : number
