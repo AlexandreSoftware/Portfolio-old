@@ -1,6 +1,10 @@
+.link{
+    height: 100%;
+    width: 100%;
+}
 .AlignedLink{
     color: rgb(236, 236, 236);
-    height: 100%;
+        height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,8 +19,8 @@
     border-top: 1px solid var(--Purpletech-Secondarycolor);
 }
 .AlignedLink-HighTechRed:hover{
-    border-top: 1px solid var(--HighTechRed-SecondaryColor);
+    border-top: 1px solid var(--HighTechRed-PrimaryColor);
 }
 .AlignedLink-KissLand:hover{
-    border-top: 1px solid var(--Kissland-blue);
+    border-top: 1px solid  var(--KissLand-TertiaryColor);
 }

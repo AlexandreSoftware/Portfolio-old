@@ -1,34 +1,48 @@
 .SkillCard{
+    position: relative;
     border-radius: 1%;
-    max-width: 45vh;
-    min-height: 60vh;
+    padding-top: 5vh;
+    min-height: 50vh;
+    max-width: 30vw;
     border: 1px solid;
     background-color: var(--surface-section);
 }
 .SkillCardIcon{
+    position: absolute;
+    top: -5vh;
+    left: 0;
     width: 10vh;
     height: 10vh;
-    margin-left: 10%;
-    margin-top:  10%;
+    
+    
     display: flex;
     align-items: center;
     justify-content: center;
     color: black;
     background-repeat:no-repeat;
     background-size: 100% 100%;
-
-
+    margin-left: 2.5% !important;
+}
+.SkillCard:hover > .LittleBar > *{
+    width: 200px;
+    transform-origin: left top;
+    transition: 0.5s;
 }
 .SkillCardIcon svg{
     /* transform : rotate(-45deg); */
     width: 50%;
     height: 50%;
 }
+.SkillCard > *{
+    margin-left: 10%;
+}
 .SkillCard h2{
     text-align: left;
     margin-left: 10%;
     margin-right: 15%;
     margin-bottom: 1%;
+    margin-bottom: 2%;
+    margin-top: 0;
 }
 .SkillCardIcon > *{
     width: 40%;
@@ -39,7 +53,7 @@
     text-align: left;
     margin-left: 10%;
     margin-right: 15%;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 
@@ -60,4 +74,9 @@
     border-color: var(--Kissland-green);
     color: white;
     transition: background 500ms linear;
+}
+@media (max-aspect-ratio: 12/9)  {
+    .SkillCard{
+        max-width: 40%;
+    }
 }

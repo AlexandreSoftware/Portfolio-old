@@ -15,6 +15,8 @@ import IntroductionCard from "../Components/Pages/Home/IntroductionCard"
 import SocialsCard from "../Components/Common/SocialsCards/SocialsCard"
 import { zIndex } from "html2canvas/dist/types/css/property-descriptors/z-index"
 import LanguageContext, { Language } from "../utils/LanguageContext"
+import LittleBar from "../Components/Common/LittleBar"
+import ResumeCard from "../Components/Pages/Home/ResumeCard"
 
 export default function Home() {
     const [themeContext,SetThemeContext] =useContext(ThemeContext),
@@ -90,18 +92,23 @@ export default function Home() {
 
             </div>      
             <Navbar navbarIntersects={true} />
-            <IntroductionCard></IntroductionCard>
-            <div className={Style.SixSkillCardsContainer}>
+            <div id="Introduction">
+                <IntroductionCard></IntroductionCard>
+            </div>
+            <ResumeCard/>
+            <div id="Skillcards" className={Style.SixSkillCardsContainer}>
                 <SixSkillCards/>
             </div>
-            <div className={Style.ProjectsContainer}> 
+            <div id="Projects" className={Style.ProjectsContainer}> 
                 <ProjectCards/>
             </div>
             <AnimatePresence exitBeforeEnter>
-            <BackgroundWLetters></BackgroundWLetters>
+                <BackgroundWLetters></BackgroundWLetters>
             </AnimatePresence>
-            <div className={Style.ProjectpricingCards}>
-                <ProjectPricingCards/>
+            <div id="ProjectPricing" className={Style.ProjectpricingCards}>
+                {!isSSR&&
+                    <ProjectPricingCards/>
+                }
             </div>
             <StyledButton link="mailto:xandrf@xandrfdev.com" whereTo="external" width={15} height={6}>
                 Contact Me

@@ -9,13 +9,10 @@ import { AnimatePresence } from 'framer-motion'
 import { OldHtmlContextProvider } from '../utils/OldHtmlContext'
 import Script from 'next/script'
 import { LanguageContextProvider } from '../utils/LanguageContext'
-
 import "primereact/resources/themes/mdc-dark-indigo/theme.css";    //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
- 
 function MyApp({ Component, pageProps }: AppProps) {
-  
   return (
     <ThemeContextProvider>
       <OldThemeContextProvider>

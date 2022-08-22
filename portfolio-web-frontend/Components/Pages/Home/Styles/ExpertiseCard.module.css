@@ -3,6 +3,11 @@
     margin-top: 2%;
     margin-bottom: 2%;
 }
+.ExpertiseCard:hover .LittleBar > *{
+    width: 160px;
+    transform-origin: left top;
+    transition: 0.5s;
+}
 .ExpertiseCard > * {
     flex: 1;
 }

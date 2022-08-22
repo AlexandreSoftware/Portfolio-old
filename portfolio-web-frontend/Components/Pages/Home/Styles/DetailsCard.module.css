@@ -1,15 +1,17 @@
 .DetailsCard{
     color: white;
-    height: 100%;
-    width: 100%;
+    height: max-content;
     border-bottom: none;
-    border-right: 1px solid;
+    border-top: 1px solid;
+    border-right: 0.5px solid;
+    border-left: 0.5px solid;
     border-bottom: 1px solid;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     flex: 1;
+    overflow: hidden;
 }
 .DetailsCard > *{
     margin-left: 10%;
@@ -18,6 +20,7 @@
 }
 .DetailsCard .Content{
     height: 100%;
+    width: 70%;
 }
 .DetailsCard .Title{
     margin-top: 10%;
@@ -33,12 +36,18 @@
 }
 
 .DetailsCard-HighTechRed{
-    border-color: black;
+    border-color: var(--HighTechRed-PrimaryColor);
 }
 
 .DetailsCard-KissLand{
     border-color: var(--Kissland-primaryColor);
 }
+.DetailsCard:hover > .LittleBar > *{
+    width: 160px;
+    transform-origin: left top;
+    transition: 0.5s;
+}
+
 @media (max-aspect-ratio: 16/9)  {
     .DetailsCard{
         border-right: none;       

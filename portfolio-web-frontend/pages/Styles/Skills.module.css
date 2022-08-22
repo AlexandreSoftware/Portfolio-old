@@ -1,6 +1,7 @@
 .Skills{
     position: relative;
     text-align: center;
+    background-color: black;
 }
 .Skills > img{
     width: 40%;

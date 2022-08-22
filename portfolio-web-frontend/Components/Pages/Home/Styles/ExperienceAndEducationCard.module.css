@@ -1,0 +1,57 @@
+.ExperienceAndEducationCard{
+    width: 90%;
+    height: 100%;
+    background-color: var(--surface-b);
+    border: 1px solid;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.ExperienceAndEducationCard h2,.ExperienceAndEducationCard h3,.ExperienceAndEducationCard h4,
+.ExperienceAndEducationCard h5,.ExperienceAndEducationCard h6{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.ExperienceAndEducationCard .Title{
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+.ExperienceAndEducationCard button{
+    font-size: 0.55em;
+}
+.ExperienceAndEducationCard .StyledButton{
+    margin-top: auto;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: 0;
+}
+.ExperienceAndEducationCard > *{
+    padding-left: 10%;   
+    padding-right: 10%;
+}
+.ExperienceAndEducationDialogue h2, .ExperienceAndEducationDialogue h3, .ExperienceAndEducationDialogue h4,
+.ExperienceAndEducationDialogue h5, .ExperienceAndEducationDialogue h6{
+    margin: 0;
+}
+.ExperienceAndEducationDialogue p {
+    padding-right: 10%;
+}
+
+.ExperienceAndEducationCard-Base{
+    border-color: var(--base-info);
+    transition: background 500ms linear;
+}
+.ExperienceAndEducationCard-HighTechPurple{
+    border-color: var(--Purpletech-Primarycolor);
+    transition: background 500ms linear;
+}
+.ExperienceAndEducationCard-HighTechRed{
+    border-color: var(--HighTechRed-PrimaryColor);
+    color: white;
+    transition: background 500ms linear;
+}
+.ExperienceAndEducationCard-KissLand{
+    border-color: var(--Kissland-green);
+    color: white;
+    transition: background 500ms linear;
+}
