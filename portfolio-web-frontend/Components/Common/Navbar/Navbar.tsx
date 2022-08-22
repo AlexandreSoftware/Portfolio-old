@@ -58,8 +58,6 @@ const Navbar = ( props : NavbarProps) => {
         }
       }
       else{
-        console.log("is intersecting") 
-        console.log(intersectingimage.current?.offsetTop)
         SetIsIntersecting(false)
       }
     }
@@ -74,23 +72,23 @@ const Navbar = ( props : NavbarProps) => {
           <header id='navbar-header'
           className={`${Styles["Navbar-Header"]} ${isSSR?"":Styles[`Navbar-Header-${Theme[themeContext]}`]}`}>
             
-            <AlignedLink href="Projects">
-              {isEnglish ? "Projects" : isPortuguese ? "Projetos" : ""} 
+            <AlignedLink href="Introduction" id={true}>
+              {isEnglish ? "Introduction" : isPortuguese ? "Introducao" : ""} 
             </AlignedLink>
-            <AlignedLink href={"Blog"}>
+            <AlignedLink href={"Skillcards"} id={true}>
               {isEnglish ? "Blog" : isPortuguese ? "Blog" : ""} 
             </AlignedLink>
-            <AlignedLink href={"PlaceHolder"}>
-              {isEnglish ? "PlaceHolder" : isPortuguese ? "PlaceHolder" : ""} 
+            <AlignedLink href={"Projects"} id={true}>
+              {isEnglish ? "Projects" : isPortuguese ? "Projetos" : ""} 
             </AlignedLink>
             <div id="navbar-image-container" className={`${isIntersecting ? Styles.ImageContainerIntersecting :""} ${Styles.ImageContainer}`}>
               {!isSSR && <Link href={"/"} className='Navbar-Icon'>{<img src={icon} />}</Link>}
             </div>
-            <AlignedLink href={"Skills"}>
-              {isEnglish ? "Skills" : isPortuguese ? "Habilidades" : ""} 
+            <AlignedLink href={"ProjectPricing"} id={true}>
+              {isEnglish ? "Pricing" : isPortuguese ? "Precos" : ""} 
             </AlignedLink>
-            <AlignedLink href={"About"}>
-              {isEnglish ? "About" : isPortuguese ? "Sobre" : ""} 
+            <AlignedLink href={"Blog"} id={false}>
+              {isEnglish ? "Blog : WIP" : isPortuguese ? "Blog : WIP" : ""} 
             </AlignedLink>
             <div>
               <NavBarMenu/>

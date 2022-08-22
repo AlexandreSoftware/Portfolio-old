@@ -92,18 +92,20 @@ export default function Home() {
 
             </div>      
             <Navbar navbarIntersects={true} />
-            <IntroductionCard></IntroductionCard>
+            <div id="Introduction">
+                <IntroductionCard></IntroductionCard>
+            </div>
             <ResumeCard/>
-            <div className={Style.SixSkillCardsContainer}>
+            <div id="Skillcards" className={Style.SixSkillCardsContainer}>
                 <SixSkillCards/>
             </div>
-            <div className={Style.ProjectsContainer}> 
+            <div id="Projects" className={Style.ProjectsContainer}> 
                 <ProjectCards/>
             </div>
             <AnimatePresence exitBeforeEnter>
-            <BackgroundWLetters></BackgroundWLetters>
+                <BackgroundWLetters></BackgroundWLetters>
             </AnimatePresence>
-            <div className={Style.ProjectpricingCards}>
+            <div id="ProjectPricing" className={Style.ProjectpricingCards}>
                 {!isSSR&&
                     <ProjectPricingCards/>
                 }

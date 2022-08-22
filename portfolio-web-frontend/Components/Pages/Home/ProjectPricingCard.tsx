@@ -3,6 +3,7 @@ import Style from "./Styles/ProjectPricingCard.module.css"
 import Listelement from "./ListElement"
 import ThemeContext, { Theme } from "../../../utils/ThemeContext"
 import StyledButton from "../../Common/StyledButton"
+import { motion } from "framer-motion"
 interface ProjectPricingCardProps{
     title: string,
     pricing : number,
@@ -16,7 +17,11 @@ export default function ProjectPricingCard(props: ProjectPricingCardProps) {
         setIsSSR(false)
     })
     return(
-        <div className={Style.ProjectPricingCardContainer}>
+        <motion.div
+        whileHover={{
+            scale:1.2
+        }}
+        className={Style.ProjectPricingCardContainer}>
             <div className={`${Style.ProjectPricingCard} ${isSSR?"":Style[`ProjectPricingCard-${Theme[context]}`]}`}>
                 <h3>{props.title}</h3>
                 <div>Pricing Starting at </div>
@@ -29,6 +34,6 @@ export default function ProjectPricingCard(props: ProjectPricingCardProps) {
                 </div>
             </div>
             <div className={Style.asterisk}>*{props.asterisk}</div>
-        </div>
+        </motion.div>
     )
 }

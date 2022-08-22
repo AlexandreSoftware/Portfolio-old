@@ -6,13 +6,13 @@
 
 }
 .ProjectPricingCard-Base{
-    border-color: var(--base-primarycolor-alt) !important;
+    border-color: var(--base-primarycolor) !important;
 }
 .ProjectPricingCard-HighTechPurple{
     border-color: var(--Purpletech-Secondarycolor) !important;
 }
 .ProjectPricingCard-HighTechRed{
-    border-color: var(--HighTechRed-PrimaryColor2) !important;
+    border-color: var(--HighTechRed-PrimaryColor) !important;
 }
 .ProjectPricingCard-KissLand{
     border-color: var(--Kissland-green) !important;
@@ -20,19 +20,19 @@
 .ProjectPricingCard{
     background-color: var(--surface-card);
     border: 1px solid;
-    width: 40vh;
-    height: 60vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex;   
     align-items: center; 
 }
 .ProjectPricingCard ol{
-    margin-top: 2%;
+    margin-top: 10%;
     width: 75%;
 }
 .ProjectPricingCard ol li{
-    list-style: "*";
+    list-style: "-";
     padding-left: 2%;
     text-align: left;
 }

@@ -33,9 +33,9 @@ export default function ProjectPricingCards() {
                 <ListElement>{"3 "+(languageContext == Language.EN_US ? "Months of support*" : "Meses De Suporte")}</ListElement>
                 <ListElement>{(languageContext == Language.EN_US ? "Painless deployment" : "Deploy Sem Complicacoes")}</ListElement>
             </ProjectPricingCard>
-            <ProjectPricingCard pricing={500} title={languageContext == Language.EN_US ? "Ultimate Project":"Projeto Ultimate"} asterisk={languageContext == Language.EN_US ? "support is paid by month, the first 3 months are on a negotiable discount": "suporte e pago por mes, os primeiros 3 meses tem um desconto negociavel"}>                
-                <ListElement>{"* "+ (languageContext == Language.EN_US ? "Pages" : "Paginas")}</ListElement>
-                <ListElement>{(languageContext == Language.EN_US ? "" : "Entrega em 1-2 meses**")}</ListElement>
+            <ProjectPricingCard pricing={500} title={languageContext == Language.EN_US ? "Custom Project":"Projeto Customizado"} asterisk={languageContext == Language.EN_US ? "support is paid by month, the first 3 months are on a negotiable discount": "suporte e pago por mes, os primeiros 3 meses tem um desconto negociavel"}>                
+                <ListElement>{" * "+ (languageContext == Language.EN_US ? "Pages" : "Paginas")}</ListElement>
+                <ListElement>{(languageContext == Language.EN_US ? "* months delivery**" : "Entrega em * meses**")}</ListElement>
                 <ListElement>{"3 "+(languageContext == Language.EN_US ? "Months of support*" : "Meses De Suporte")}</ListElement>
                 <ListElement>{(languageContext == Language.EN_US ? "Painless deployment" : "Deploy Sem Complicacoes")}</ListElement>
             </ProjectPricingCard>    
