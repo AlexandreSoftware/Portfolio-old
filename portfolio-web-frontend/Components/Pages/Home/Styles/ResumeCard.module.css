@@ -1,7 +1,7 @@
 .ResumeCardTitle{
     width: 100%;
     text-align: left;
-    background-color: var(--primary-color-text);
+    background-color: #0c0c0c;
     margin: 0;
     padding: 2.5%;
     padding-left: 10% ;
@@ -27,7 +27,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;   
-    background-color: var(--gray-800);
+    background-color: #0c0c0c;
     border-bottom: 1px solid ;
 } 
 .ResumeCard .InfoList:last-child{
