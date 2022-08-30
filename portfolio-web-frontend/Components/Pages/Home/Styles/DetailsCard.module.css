@@ -40,7 +40,7 @@
 }
 
 .DetailsCard-KissLand{
-    border-color: var(--Kissland-primaryColor);
+    border-color: var(--Kissland-green);
 }
 .DetailsCard:hover > .LittleBar > *{
     width: 160px;
