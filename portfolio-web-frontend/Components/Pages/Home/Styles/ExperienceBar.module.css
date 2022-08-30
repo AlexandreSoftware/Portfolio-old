@@ -40,16 +40,16 @@
     
 }
 .ProgressBar-Base{
-    background-color: cyan;
+    background-color: var(--base-info);
 }
 .ProgressBar-HighTechPurple{
-    background-color: orange;
+    background-color: var(--Purpletech-Secondarycolor);
 }
 .ProgressBar-HighTechRed{
     background-color: red;
 }
 .ProgressBar-KissLand{
-    background-color: rgb(15, 236, 15);
+    background-color: var(--Kissland-green);
 }
 @media (max-aspect-ratio: 16/9)  {
     .ExperienceBar{

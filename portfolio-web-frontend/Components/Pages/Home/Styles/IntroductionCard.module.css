@@ -1,5 +1,6 @@
 .IntroductionCard{
     width: 100%;
+    min-width: 100%;
     height: 60vh;
     display: flex;
     justify-content: flex-start;
@@ -8,6 +9,8 @@
 }
 .IntroductionCard > * {
     height: 100%;
+    width: 100%;
+    border-top: none ;
 }
 .IntroductionCard .InfoList{
 
