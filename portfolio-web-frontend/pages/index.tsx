@@ -92,7 +92,7 @@ export default function Home() {
 
             </div>      
             <Navbar navbarIntersects={true} />
-            <div id="Introduction">
+            <div id="Introduction" className={Style.Introduction}>
                 <IntroductionCard></IntroductionCard>
             </div>
             <ResumeCard/>

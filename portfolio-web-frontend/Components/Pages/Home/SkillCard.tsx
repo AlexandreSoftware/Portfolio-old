@@ -30,12 +30,14 @@ export default function SkillCard(props:SkillCardProps) {
         <div className={Style.SkillCardIcon + ` ${isSSR?"":Style[`SkillCardIcon-${Theme[context]}`]}`} style={{backgroundImage:"url("+GetIcon(context,true)+")"}}   >
             <FontAwesomeIcon icon={props.icon} width={100} height={100} /> 
         </div>
-        <h2>{props.Title}</h2>
-        <div className={Style.LittleBar}>
-            <LittleBar/>
+        <div className={Style.SkillcardContent}>
+            <h2>{props.Title}</h2>
+            <div className={Style.LittleBar}>
+                <LittleBar/>
+            </div>
+            <p>
+                {props.children}
+            </p>
         </div>
-        <p>
-            {props.children}
-        </p>
     </motion.div>)
 }

@@ -6,6 +6,8 @@ import LanguageContext, { Language } from '../../../utils/LanguageContext';
 import SimpleColorCircle from './SimpleColorCircle';
 import ThemeContext, { Theme} from '../../../utils/ThemeContext';
 import { MenuItem } from 'primereact/menuitem';
+import { faBars, faIcons } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function NavBarMenu() {
     const menu :any = useRef(null),
     [languageContext,SetLanguage] =useContext(LanguageContext),
@@ -65,7 +67,7 @@ export default function NavBarMenu() {
     ]
     return(
         <>
-            <Button type="button" icon="pi pi-bars" onClick={(event) =>  menu.current.toggle(event) } className="p-button-secondary"
+            <Button type="button" icon={<FontAwesomeIcon icon={faBars}/>} onClick={(event) =>  menu.current.toggle(event) } className="p-button-secondary"
             ></Button>
             <SlideMenu popup ref={menu} viewportHeight={250} model={data} backLabel={languageContext == Language.EN_US ? "Back":languageContext == Language.PT_BR ?"Voltar":""}/>
         </>

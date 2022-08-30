@@ -16,33 +16,43 @@ useEffect(()=>{
 return(
     !isSSR ?
     <div className={Style.ProjectCards}>
-            <ProjectCard title="Wordle Clone" image="/Projects/WordleCloneProject.svg" left={false} alt={false} >
-                {languageContext == Language.EN_US ? "Remake of the popular game \"Wordle\", Created using :":"Popular jogo \"Wordle\" Refeito utilizando : "} 
-                <ul>
-                    <li>Next.Js <FontAwesomeIcon icon={faReact}/></li>
-                    <li>Bootstrap <FontAwesomeIcon icon={faBootstrap}/></li>
-                    <li>Framer motion <FontAwesomeIcon icon={faReacteurope}/></li>
-                    <li>Typescript <FontAwesomeIcon icon={faJs}/></li>
-                    <li>Express <FontAwesomeIcon icon={faJs}/></li>
-                    <li>MongoDb <FontAwesomeIcon icon={faDatabase}></FontAwesomeIcon></li>
-                    <li>Redis <FontAwesomeIcon icon={faDatabase}></FontAwesomeIcon></li>
-                    <li>Figma <FontAwesomeIcon icon={faFigma}></FontAwesomeIcon></li>
-                </ul>
-            </ProjectCard>
-            <ProjectCard title="Cesta" image="/Projects/CestaProject.svg" left={true} alt={true}>
-                {languageContext == Language.EN_US ? 
-                "Cesta is the last project i made while in university, Created using":
-                "Cesta foi o meu ultimo projeto feito enquanto na universidade, criado usando"} 
-                <ul>
-                    <li>React Native <FontAwesomeIcon icon={faReact}></FontAwesomeIcon></li>
-                    <li>Expo <FontAwesomeIcon icon={faReacteurope}></FontAwesomeIcon></li>
-                    <li>Font awesome <FontAwesomeIcon icon={faFontAwesome}></FontAwesomeIcon></li>
-                    <li>Asp.net <FontAwesomeIcon icon={faCode}></FontAwesomeIcon></li>
-                    <li>C# <FontAwesomeIcon icon={faCode}></FontAwesomeIcon></li>
-                    <li>PostgeSql <FontAwesomeIcon icon={faDatabase}></FontAwesomeIcon></li>
-                    <li>Figma <FontAwesomeIcon icon={faFigma}></FontAwesomeIcon></li>
-                </ul>
-            </ProjectCard>
-        </div>:<></>
+        <ProjectCard title="Porcupine" image="/Projects/ourico.png" left={false} alt={false} >
+            {languageContext == Language.EN_US ? "The bridge for every tool in the market":"A ponte entre todas as ferramentas no mercado"} 
+            <ul>
+                <li>C# <FontAwesomeIcon icon={faCode}></FontAwesomeIcon></li>
+            </ul>
+        </ProjectCard>
+        <ProjectCard title="Hedgehog" image="/Projects/ourico_2.png" left={true} alt={true} >
+            {languageContext == Language.EN_US ? "The best way of connecting you application to the Metaverse":"A melhor forma de connectar sua aplicacao ao metaverso"} 
+
+        </ProjectCard>
+        <ProjectCard title="Wordle Clone" image="/Projects/WordleCloneProject.svg" left={false} alt={false} >
+            {languageContext == Language.EN_US ? "Remake of the popular game \"Wordle\", Created using :":"Popular jogo \"Wordle\" Refeito utilizando : "} 
+            <ul>
+                <li>Next.Js <FontAwesomeIcon icon={faReact}/></li>
+                <li>Bootstrap <FontAwesomeIcon icon={faBootstrap}/></li>
+                <li>Framer motion <FontAwesomeIcon icon={faReacteurope}/></li>
+                <li>Typescript <FontAwesomeIcon icon={faJs}/></li>
+                <li>Express <FontAwesomeIcon icon={faJs}/></li>
+                <li>MongoDb <FontAwesomeIcon icon={faDatabase}></FontAwesomeIcon></li>
+                <li>Redis <FontAwesomeIcon icon={faDatabase}></FontAwesomeIcon></li>
+                <li>Figma <FontAwesomeIcon icon={faFigma}></FontAwesomeIcon></li>
+            </ul>
+        </ProjectCard>
+        <ProjectCard title="Cesta" image="/Projects/CestaProject.svg" left={true} alt={true}>
+            {languageContext == Language.EN_US ? 
+            "Cesta is the last project i made while in university, Created using":
+            "Cesta foi o meu ultimo projeto feito enquanto na universidade, criado usando"} 
+            <ul>
+                <li>React Native <FontAwesomeIcon icon={faReact}></FontAwesomeIcon></li>
+                <li>Expo <FontAwesomeIcon icon={faReacteurope}></FontAwesomeIcon></li>
+                <li>Font awesome <FontAwesomeIcon icon={faFontAwesome}></FontAwesomeIcon></li>
+                <li>Asp.net <FontAwesomeIcon icon={faCode}></FontAwesomeIcon></li>
+                <li>C# <FontAwesomeIcon icon={faCode}></FontAwesomeIcon></li>
+                <li>PostgeSql <FontAwesomeIcon icon={faDatabase}></FontAwesomeIcon></li>
+                <li>Figma <FontAwesomeIcon icon={faFigma}></FontAwesomeIcon></li>
+            </ul>
+        </ProjectCard>
+    </div>:<></>
     )
 }

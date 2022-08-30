@@ -40,5 +40,6 @@
     .RightImage{
         width: 100% !important;
         height: 50%;
+        background-position-y: 60% ;
     }
 }
