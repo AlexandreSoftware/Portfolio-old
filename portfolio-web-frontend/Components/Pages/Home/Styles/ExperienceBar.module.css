@@ -17,10 +17,19 @@
     background-color: grey;
     height: 10px;
     width: 80.6%;
+    display: flex;
 }
 .Bar .ProgressBar{
+    display : block;
     height: 100%;
-    background-color: red;
+}
+.Bar .ProgressBarEnd{
+    display: block;
+    width: 5%;
+    
+    border-top-right-radius: 60%;
+    border-bottom-right-radius: 60%;
+    height: 100%;
 }
 .ExperienceBarCheckPoints > .ExperienceCheckpoint{
     flex: 1;
@@ -29,6 +38,18 @@
     justify-content: flex-start;
     align-items: flex-start;
     
+}
+.ProgressBar-Base{
+    background-color: cyan;
+}
+.ProgressBar-HighTechPurple{
+    background-color: orange;
+}
+.ProgressBar-HighTechRed{
+    background-color: red;
+}
+.ProgressBar-KissLand{
+    background-color: rgb(15, 236, 15);
 }
 @media (max-aspect-ratio: 16/9)  {
     .ExperienceBar{
